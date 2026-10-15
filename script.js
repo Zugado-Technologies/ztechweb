@@ -34,19 +34,18 @@ function initCountdown() {
 
   if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
-  // Stored target or set to 14 days, 8 hours, 54 minutes from now
-  const STORAGE_KEY = 'zugado_launch_target_timestamp';
+  // Stored target set to 2 days from now
+  const STORAGE_KEY = 'zugado_launch_target_2days';
   let targetTime = localStorage.getItem(STORAGE_KEY);
 
   if (!targetTime || isNaN(targetTime)) {
-    // 14 days, 8 hours, 54 minutes, 11 seconds into the future (matches reference starting point)
+    // Set launch target to 2 days from now
     const futureDate = new Date();
-    futureDate.setDate(futureDate.getDate() + 14);
-    futureDate.setHours(futureDate.getHours() + 8);
-    futureDate.setMinutes(futureDate.getMinutes() + 54);
-    futureDate.setSeconds(futureDate.getSeconds() + 11);
+    futureDate.setDate(futureDate.getDate() + 2);
     targetTime = futureDate.getTime();
     localStorage.setItem(STORAGE_KEY, targetTime.toString());
+    // Clear legacy storage key
+    localStorage.removeItem('zugado_launch_target_timestamp');
   } else {
     targetTime = parseInt(targetTime, 10);
   }
