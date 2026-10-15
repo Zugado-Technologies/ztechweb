@@ -1,98 +1,127 @@
 /**
- * Zugado Technologies — Launching Soon Interactive Script
- * Handles real-time countdown, 3D tilt effects, modal interactions, and newsletter subscriptions.
+ * Zugado Technologies — V2 Interactive Script
+ * Canvas node network, 3D mouse parallax tilt, and responsive navigation.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Dynamic Countdown Timer
-  initCountdown();
-
-  // 2. Interactive 3D Stage Tilt
-  init3DTilt();
-
-  // 3. Modal Dialog Triggers
-  initModal();
-
-  // 4. Form Submissions
-  initForms();
-
-  // 5. Dynamic Year
-  const yearEl = document.getElementById('current-year');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
+  initNetworkCanvas();
+  init3DStageTilt();
+  initNavigation();
 });
 
 /**
- * Real-time Countdown Timer
+ * 1. Interactive Background Network Canvas
  */
-function initCountdown() {
-  const daysEl = document.getElementById('days-val');
-  const hoursEl = document.getElementById('hours-val');
-  const minutesEl = document.getElementById('minutes-val');
-  const secondsEl = document.getElementById('seconds-val');
+function initNetworkCanvas() {
+  const canvas = document.getElementById('bg-network-canvas');
+  if (!canvas) return;
 
-  if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let particles = [];
+  let mouse = { x: null, y: null, radius: 150 };
 
-  // Stored target set to 2 days from now
-  const STORAGE_KEY = 'zugado_launch_target_2days';
-  let targetTime = localStorage.getItem(STORAGE_KEY);
-
-  if (!targetTime || isNaN(targetTime)) {
-    // Set launch target to 2 days from now
-    const futureDate = new Date();
-    futureDate.setDate(futureDate.getDate() + 2);
-    targetTime = futureDate.getTime();
-    localStorage.setItem(STORAGE_KEY, targetTime.toString());
-    // Clear legacy storage key
-    localStorage.removeItem('zugado_launch_target_timestamp');
-  } else {
-    targetTime = parseInt(targetTime, 10);
+  function resize() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    createParticles();
   }
 
-  function updateTimer() {
-    const now = Date.now();
-    let diff = targetTime - now;
+  function createParticles() {
+    particles = [];
+    const count = Math.floor((width * height) / 18000); // Dynamic count based on screen area
+    const clampedCount = Math.min(Math.max(count, 35), 90);
 
-    if (diff <= 0) {
-      diff = 0;
-      daysEl.textContent = '00';
-      hoursEl.textContent = '00';
-      minutesEl.textContent = '00';
-      secondsEl.textContent = '00';
-      return;
-    }
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-    const pad = (n) => (n < 10 ? '0' + n : n.toString());
-
-    if (daysEl.textContent !== pad(days)) daysEl.textContent = pad(days);
-    if (hoursEl.textContent !== pad(hours)) hoursEl.textContent = pad(hours);
-    if (minutesEl.textContent !== pad(minutes)) minutesEl.textContent = pad(minutes);
-    if (secondsEl.textContent !== pad(seconds)) {
-      secondsEl.textContent = pad(seconds);
-      // Subtle pulse effect on second tick
-      secondsEl.parentElement.classList.add('tick-pulse');
-      setTimeout(() => secondsEl.parentElement.classList.remove('tick-pulse'), 300);
+    for (let i = 0; i < clampedCount; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.6,
+        vy: (Math.random() - 0.5) * 0.6,
+        radius: Math.random() * 1.8 + 1,
+        color: Math.random() > 0.4 ? 'rgba(245, 205, 27, ' : 'rgba(255, 255, 255, ',
+        baseAlpha: Math.random() * 0.35 + 0.15,
+      });
     }
   }
 
-  updateTimer();
-  setInterval(updateTimer, 1000);
+  window.addEventListener('resize', resize);
+  window.addEventListener('mousemove', (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  window.addEventListener('mouseleave', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  resize();
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Update and draw particles
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+
+      // Bounce off edges
+      if (p.x < 0 || p.x > width) p.vx *= -1;
+      if (p.y < 0 || p.y > height) p.vy *= -1;
+
+      // Mouse repulsion/interaction
+      if (mouse.x !== null) {
+        const dx = mouse.x - p.x;
+        const dy = mouse.y - p.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < mouse.radius) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          p.x -= (dx / dist) * force * 2.5;
+          p.y -= (dy / dist) * force * 2.5;
+        }
+      }
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = p.color + p.baseAlpha + ')';
+      ctx.fill();
+
+      // Connect nearby particles
+      for (let j = i + 1; j < particles.length; j++) {
+        const p2 = particles[j];
+        const dx = p.x - p2.x;
+        const dy = p.y - p2.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 130) {
+          const alpha = (1 - dist / 130) * 0.18;
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.strokeStyle = `rgba(245, 205, 27, ${alpha})`;
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
 }
 
 /**
- * 3D Parallax Tilt Effect on Centerpiece
+ * 2. 3D Interactive Parallax Tilt on Stage
  */
-function init3DTilt() {
-  const stage = document.getElementById('visual-stage');
-  const tiltCard = document.getElementById('tilt-element');
+function init3DStageTilt() {
+  const stage = document.getElementById('tech-stage');
+  const card = document.getElementById('tech-card');
+  const coords = document.getElementById('stage-coords');
 
-  if (!stage || !tiltCard || window.matchMedia('(max-width: 1024px)').matches) return;
+  if (!stage || !card || window.matchMedia('(max-width: 1024px)').matches) return;
 
   stage.addEventListener('mousemove', (e) => {
     const rect = stage.getBoundingClientRect();
@@ -102,113 +131,52 @@ function init3DTilt() {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    const rotateX = ((y - centerY) / centerY) * -10;
-    const rotateY = ((x - centerX) / centerX) * 10;
+    const normX = (x - centerX) / centerX;
+    const normY = (y - centerY) / centerY;
 
-    tiltCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    const rotX = normY * -12;
+    const rotY = normX * 12;
+
+    card.style.transform = `rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+
+    if (coords) {
+      coords.textContent = `X: ${normX.toFixed(2)} • Y: ${normY.toFixed(2)}`;
+    }
   });
 
   stage.addEventListener('mouseleave', () => {
-    tiltCard.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-  });
-}
-
-/**
- * Modal Handling
- */
-function initModal() {
-  const modal = document.getElementById('notify-modal');
-  const openBtns = document.querySelectorAll('.open-modal-btn');
-  const closeBtn = document.getElementById('modal-close');
-  const emailInput = document.getElementById('modal-email-input');
-
-  if (!modal) return;
-
-  function openModal() {
-    modal.classList.add('active');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    setTimeout(() => {
-      if (emailInput) emailInput.focus();
-    }, 200);
-  }
-
-  function closeModal() {
-    modal.classList.remove('active');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  openBtns.forEach((btn) => btn.addEventListener('click', openModal));
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-
-  // Close when clicking backdrop
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  // Close on Escape key
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      closeModal();
+    card.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    if (coords) {
+      coords.textContent = 'X: 0.00 • Y: 0.00';
     }
   });
 }
 
 /**
- * Form Submission handling (Inline and Modal)
+ * 3. Navigation & Smooth Scroll
  */
-function initForms() {
-  const inlineForm = document.getElementById('inline-sub-form');
-  const inlineInput = document.getElementById('inline-email-input');
-  const inlineFeedback = document.getElementById('inline-feedback');
+function initNavigation() {
+  const toggle = document.getElementById('mobile-toggle');
+  const navMenu = document.getElementById('nav-menu');
 
-  const modalForm = document.getElementById('modal-sub-form');
-  const modalInput = document.getElementById('modal-email-input');
-  const modalFeedback = document.getElementById('modal-feedback');
-
-  function handleSubscribe(e, inputEl, feedbackEl, isModal) {
-    e.preventDefault();
-    const email = inputEl.value.trim();
-
-    // Simple email validation regex
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      feedbackEl.className = 'form-feedback error';
-      feedbackEl.textContent = 'Please enter a valid email address.';
-      return;
-    }
-
-    // Success State
-    feedbackEl.className = 'form-feedback success';
-    feedbackEl.innerHTML = '&#10003; You are on the VIP launch list! We will notify you soon.';
-    inputEl.value = '';
-
-    // Save to localStorage simulation
-    const subscribers = JSON.parse(localStorage.getItem('zugado_subscribers') || '[]');
-    if (!subscribers.includes(email)) {
-      subscribers.push(email);
-      localStorage.setItem('zugado_subscribers', JSON.stringify(subscribers));
-    }
-
-    if (isModal) {
-      setTimeout(() => {
-        const modal = document.getElementById('notify-modal');
-        if (modal) {
-          modal.classList.remove('active');
-          document.body.style.overflow = '';
-        }
-      }, 2500);
-    }
+  if (toggle && navMenu) {
+    toggle.addEventListener('click', () => {
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !isExpanded);
+      navMenu.classList.toggle('active');
+    });
   }
 
-  if (inlineForm && inlineInput && inlineFeedback) {
-    inlineForm.addEventListener('submit', (e) => handleSubscribe(e, inlineInput, inlineFeedback, false));
-  }
-
-  if (modalForm && modalInput && modalFeedback) {
-    modalForm.addEventListener('submit', (e) => handleSubscribe(e, modalInput, modalFeedback, true));
-  }
+  // Smooth scroll links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
 }

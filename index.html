@@ -3,240 +3,249 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zugado Technologies — Launching Soon</title>
-  <meta name="description" content="Zugado Technologies is crafting modern enterprise software, cloud platforms, and intelligent digital experiences. Our new website will be launching soon." />
-  <meta name="theme-color" content="#F7CF33" />
+  <title>Zugado Technologies — Engineering Intelligent Systems & Digital Experiences</title>
+  <meta name="description" content="Zugado Technologies crafts high-impact enterprise software, scalable cloud architecture, and bespoke AI-driven platforms for modern industry leaders." />
+  <meta name="keywords" content="Zugado Technologies, Enterprise Software, Cloud Infrastructure, Artificial Intelligence, Digital Transformation, Software Engineering" />
+  <meta name="theme-color" content="#080a0f" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
 
-  <!-- Google Fonts: Plus Jakarta Sans -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=2.0" />
 </head>
-<body>
-  <!-- Outer Wrapper with the Signature Vibrant Yellow Border & Framing -->
-  <div class="page-frame">
-    <!-- Central White Canvas Container -->
-    <main class="canvas-card" id="main-content">
-      
-      <!-- Top Header Navigation -->
-      <header class="site-header">
-        <div class="brand-container">
-          <a href="#" class="brand-link" aria-label="Zugado Technologies Home">
-            <img src="assets/zugado_logo_dark.png" alt="Zugado Technologies" class="brand-logo" />
-          </a>
-        </div>
+<body class="dark-theme">
+  <!-- Interactive Tech Node Canvas (Background) -->
+  <canvas id="bg-network-canvas" class="bg-canvas" aria-hidden="true"></canvas>
 
-        <div class="header-meta">
-          <a href="mailto:hello@zugadotechnologies.com" class="meta-item email-link">
-            <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            <span>hello@zugadotechnologies.com</span>
-          </a>
+  <!-- Navigation Header -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-link" aria-label="Zugado Technologies Home">
+        <img src="assets/zugado_logo_white.png" alt="Zugado Technologies" class="brand-logo" />
+      </a>
 
-          <a href="tel:+18005550199" class="meta-item phone-link">
-            <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            <span>+1 (800) 555-0199</span>
-          </a>
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#services" class="nav-link">Capabilities</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
 
-          <button class="btn-notify open-modal-btn" id="header-notify-btn" aria-label="Open notification signup modal">
-            <svg class="bell-icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
-            </svg>
-            <span>NOTIFY ME</span>
-          </button>
-        </div>
-      </header>
-
-      <!-- Main Showcase Grid Section -->
-      <section class="hero-grid">
-        <!-- Left Side: Copy, Highlights & Countdown Timer -->
-        <div class="hero-content">
-          <div class="eyebrow-badge">
-            <span class="eyebrow-line"></span>
-            <span class="eyebrow-text">COMING SOON</span>
-          </div>
-
-          <h1 class="hero-title">
-            Our new website will be<br />
-            <span class="highlight-wrapper">
-              <span class="highlight-yellow">launching soon.</span>
-            </span>
-          </h1>
-
-          <p class="hero-description">
-            Zugado Technologies is engineering the future of high-impact digital experiences, bespoke enterprise software, and scalable cloud solutions. We are polishing the final details before unveiling our next chapter.
-          </p>
-
-          <!-- Countdown Timer Section -->
-          <div class="countdown-wrapper">
-            <div class="countdown-grid" id="countdown-timer" role="timer" aria-live="polite">
-              <div class="timer-card">
-                <div class="timer-num" id="days-val">02</div>
-                <div class="timer-label">Days</div>
-              </div>
-              <div class="timer-card">
-                <div class="timer-num" id="hours-val">00</div>
-                <div class="timer-label">Hours</div>
-              </div>
-              <div class="timer-card">
-                <div class="timer-num" id="minutes-val">00</div>
-                <div class="timer-label">Minutes</div>
-              </div>
-              <div class="timer-card">
-                <div class="timer-num" id="seconds-val">00</div>
-                <div class="timer-label">Seconds</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Quick Subscription Form -->
-          <form class="inline-subscribe-form" id="inline-sub-form">
-            <div class="input-group">
-              <svg class="mail-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              <input 
-                type="email" 
-                id="inline-email-input" 
-                placeholder="Enter your email for early access..." 
-                required 
-                autocomplete="email"
-                aria-label="Email address for notification updates"
-              />
-              <button type="submit" class="inline-submit-btn">
-                <span>Get Notified</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </button>
-            </div>
-            <p class="form-feedback" id="inline-feedback"></p>
-          </form>
-
-          <!-- Subtle Decorative Dot Matrix (as seen in reference) -->
-          <div class="decorative-dots left-dots" aria-hidden="true">
-            <div class="dot-grid"></div>
-          </div>
-        </div>
-
-        <!-- Right Side: 3D Visual Centerpiece & Brand Card -->
-        <div class="hero-visual-pane">
-          <!-- Dot grid backdrop -->
-          <div class="decorative-dots right-dots" aria-hidden="true">
-            <div class="dot-grid"></div>
-          </div>
-
-          <!-- 3D Interactive Floating Stage -->
-          <div class="visual-stage" id="visual-stage">
-            <div class="floating-tech-card" id="tilt-element">
-              <img 
-                src="assets/hero_tech.jpg" 
-                alt="Zugado Technologies 3D Architecture" 
-                class="hero-img"
-              />
-
-              <!-- Floating Tech Badge -->
-              <div class="tech-floating-pill">
-                <span class="pulsing-dot"></span>
-                <span>ENTERPRISE • AI • CLOUD</span>
-              </div>
-            </div>
-
-            <!-- Showcase Caption Element matching reference design -->
-            <div class="visual-caption">
-              <div class="caption-header">
-                <h2 class="caption-title">NEXT-GEN PLATFORM</h2>
-                <div class="caption-nav">
-                  <span class="nav-arrow">&larr;</span>
-                  <span class="nav-arrow active">&rarr;</span>
-                </div>
-              </div>
-              <p class="caption-text">
-                Crafting robust software ecosystems and high-performance digital tools that empower forward-thinking organizations worldwide.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Bottom Footer Navigation & Social Links -->
-      <footer class="site-footer">
-        <div class="copyright-text">
-          <span>ZUGADO TECHNOLOGIES &copy; <span id="current-year">2026</span> ALL RIGHTS RESERVED.</span>
-        </div>
-
-        <div class="social-links">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-            </svg>
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (formerly Twitter)">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-            </svg>
-          </a>
-          <a href="https://github.com/Zugado-Technologies" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
-            </svg>
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-            </svg>
-          </a>
-        </div>
-      </footer>
-    </main>
-  </div>
-
-  <!-- Interactive "Notify Me" Modal Dialog -->
-  <div class="modal-overlay" id="notify-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-card">
-      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">&times;</button>
-      <div class="modal-badge">
-        <span class="bell-glow-icon">🔔</span>
-        <span>EXCLUSIVE LAUNCH INVITE</span>
-      </div>
-      <h3 class="modal-title" id="modal-title">Be the first to experience Zugado</h3>
-      <p class="modal-desc">
-        Subscribe to receive private early access, product previews, and launch day updates straight to your inbox.
-      </p>
-
-      <form class="modal-form" id="modal-sub-form">
-        <div class="modal-input-wrap">
-          <input 
-            type="email" 
-            id="modal-email-input" 
-            placeholder="name@company.com" 
-            required 
-            autocomplete="email"
-            aria-label="Your work email address"
-          />
-        </div>
-        <button type="submit" class="modal-submit-btn">
-          <span>Notify Me on Launch</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon">
+      <!-- Header Action -->
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary nav-cta">
+          <span>Start a Project</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="cta-arrow">
             <line x1="5" y1="12" x2="19" y2="12"></line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
-        </button>
-      </form>
-      <p class="modal-feedback" id="modal-feedback"></p>
-      <p class="modal-disclaimer">Zero spam. You can unsubscribe with one click at any time.</p>
-    </div>
-  </div>
+        </a>
 
-  <script src="script.js"></script>
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        
+        <!-- Left: Hero Headline & Content -->
+        <div class="hero-text-col">
+          <div class="hero-pill-badge">
+            <span class="pill-pulse"></span>
+            <span class="pill-text">NEXT-GEN SOFTWARE & AI PLATFORMS</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Engineering the <span class="gradient-text">future</span> of intelligent systems.
+          </h1>
+
+          <p class="hero-subtext">
+            Zugado Technologies designs and deploys mission-critical enterprise software, scalable cloud ecosystems, and adaptive AI solutions engineered for exponential growth.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn-primary hero-btn-main">
+              <span>Schedule Architecture Review</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="cta-arrow">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#services" class="btn btn-secondary hero-btn-sub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>Explore Capabilities</span>
+            </a>
+          </div>
+
+          <!-- Trust & Performance Metrics Strip -->
+          <div class="hero-metrics-strip">
+            <div class="metric-item">
+              <div class="metric-value">99.99%</div>
+              <div class="metric-label">High-Availability SLA</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <div class="metric-value">&lt; 15ms</div>
+              <div class="metric-label">Engine Response Time</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <div class="metric-value">100%</div>
+              <div class="metric-label">Cloud-Native Architecture</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive 3D Tech Stage -->
+        <div class="hero-visual-col">
+          <div class="tech-3d-stage" id="tech-stage">
+            
+            <!-- Floating Interactive Isometric Core Card -->
+            <div class="tech-core-wrapper" id="tech-card">
+              <div class="tech-glow-backdrop" aria-hidden="true"></div>
+              
+              <!-- 3D Centerpiece Art -->
+              <div class="tech-img-container">
+                <img 
+                  src="assets/hero_tech.jpg" 
+                  alt="Zugado Autonomous Intelligence Core" 
+                  class="tech-core-image" 
+                />
+              </div>
+
+              <!-- Floating Live Telemetry Badge 1 -->
+              <div class="telemetry-pill top-pill">
+                <span class="telemetry-indicator online"></span>
+                <div class="telemetry-info">
+                  <span class="telemetry-tag">NEURAL PIPELINE</span>
+                  <span class="telemetry-metric">Active • 42 Nodes</span>
+                </div>
+              </div>
+
+              <!-- Floating Live Telemetry Badge 2 -->
+              <div class="telemetry-pill bottom-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="telemetry-icon">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                <div class="telemetry-info">
+                  <span class="telemetry-tag">ENTERPRISE SCALE</span>
+                  <span class="telemetry-metric">Multi-Cloud Deploy</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage Interactive Controls / Caption Bar -->
+            <div class="stage-footer-bar">
+              <div class="stage-meta">
+                <span class="stage-dot"></span>
+                <span class="stage-caption">ZUGADO ISOMETRIC PLATFORM CORE</span>
+              </div>
+              <div class="stage-coords" id="stage-coords">X: 0.00 • Y: 0.00</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: CAPABILITIES PREVIEW STRIP -->
+    <section class="section-preview" id="services">
+      <div class="preview-container">
+        <div class="section-eyebrow">CAPABILITIES ARCHITECTURE</div>
+        <h2 class="section-title">Built for speed, scale, and enterprise precision.</h2>
+        
+        <div class="preview-cards-grid">
+          <div class="preview-card">
+            <div class="card-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">Bespoke Enterprise Software</h3>
+            <p class="card-desc">Custom-built distributed architectures designed to solve complex business operations with bulletproof reliability.</p>
+          </div>
+
+          <div class="preview-card">
+            <div class="card-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Cloud Native & DevOps</h3>
+            <p class="card-desc">Automated CI/CD pipelines, Kubernetes microservices, and serverless compute engineered for infinite horizontal elasticity.</p>
+          </div>
+
+          <div class="preview-card">
+            <div class="card-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                <path d="M12 2a10 10 0 0 1 10 10h-10V2z"></path>
+                <path d="M12 12L2.5 7.5"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Applied AI & Data Systems</h3>
+            <p class="card-desc">Autonomous machine learning workflows, real-time analytics streaming, and enterprise LLM integrations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: INQUIRY / CONTACT CALLOUT -->
+    <section class="inquiry-section" id="contact">
+      <div class="inquiry-container">
+        <div class="inquiry-card">
+          <div class="inquiry-content">
+            <h2 class="inquiry-title">Ready to architect your next digital leap?</h2>
+            <p class="inquiry-desc">Discuss your system requirements, technical challenges, or upcoming product launch with our engineering team.</p>
+          </div>
+          <div class="inquiry-actions">
+            <a href="mailto:hello@zugadotechnologies.com" class="btn btn-primary inquiry-btn">
+              <span>hello@zugadotechnologies.com</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="cta-arrow">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="assets/zugado_logo_white.png" alt="Zugado Technologies" class="footer-logo" />
+        <p class="footer-copy">Zugado Technologies © 2026. All rights reserved.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="mailto:hello@zugadotechnologies.com" class="footer-meta-link">hello@zugadotechnologies.com</a>
+        <span class="footer-dot">•</span>
+        <a href="tel:+18005550199" class="footer-meta-link">+1 (800) 555–0199</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2.0"></script>
 </body>
 </html>
