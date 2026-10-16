@@ -18,7 +18,7 @@ body {
   font-family: var(--font-sans);
   color: var(--color-text);
   background-color: var(--color-bg);
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
@@ -35,7 +35,7 @@ img, svg, picture {
 a {
   color: inherit;
   text-decoration: none;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 /* ==========================================================================
@@ -66,41 +66,43 @@ a {
 }
 
 /* ==========================================================================
-   Stripe-Inspired Iridescent Mesh Hero Background & Animations
+   Stripe-Style Iridescent Slanted Gradient Canvas & Ribbon
    ========================================================================== */
 .hero-wrapper {
   position: relative;
   overflow: hidden;
-  padding: 5rem 0 6rem;
+  padding: 7rem 0 8.5rem;
 }
 
-.hero-mesh-gradient {
+/* Iconic Stripe Diagonal Slanted Mesh Background */
+.stripe-slanted-bg {
   position: absolute;
-  top: -20%;
-  right: -10%;
-  width: 75vw;
-  height: 850px;
+  top: -160px;
+  left: 0;
+  right: 0;
+  height: 980px;
   background: 
-    radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.22) 0%, transparent 55%),
-    radial-gradient(circle at 70% 60%, rgba(244, 63, 94, 0.16) 0%, transparent 50%),
-    radial-gradient(circle at 50% 80%, rgba(56, 189, 248, 0.2) 0%, transparent 60%),
-    radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.15) 0%, transparent 45%);
-  filter: blur(60px);
+    radial-gradient(ellipse at 85% 15%, rgba(99, 91, 255, 0.32) 0%, transparent 60%),
+    radial-gradient(ellipse at 95% 45%, rgba(255, 112, 56, 0.28) 0%, transparent 55%),
+    radial-gradient(ellipse at 65% 75%, rgba(255, 71, 133, 0.22) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 30%, rgba(0, 212, 255, 0.24) 0%, transparent 65%);
+  filter: blur(55px);
   pointer-events: none;
   z-index: 0;
-  animation: meshDrift 16s ease-in-out infinite alternate;
-  transform-origin: center center;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+  animation: stripeMeshFloat 14s ease-in-out infinite alternate;
 }
 
-@keyframes meshDrift {
+@keyframes stripeMeshFloat {
   0% {
-    transform: rotate(0deg) scale(1) translate(0, 0);
+    transform: skewY(-6deg) scale(1) translate(0, 0);
   }
   50% {
-    transform: rotate(4deg) scale(1.06) translate(-20px, 15px);
+    transform: skewY(-5deg) scale(1.04) translate(-25px, 20px);
   }
   100% {
-    transform: rotate(-3deg) scale(1.02) translate(15px, -10px);
+    transform: skewY(-6.5deg) scale(1.02) translate(20px, -15px);
   }
 }
 
@@ -109,18 +111,18 @@ a {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
   }
 }
 
 @keyframes pulseGlow {
   0%, 100% {
-    opacity: 0.6;
-    transform: scale(1);
+    box-shadow: 0 0 10px currentColor;
+    opacity: 0.8;
   }
   50% {
+    box-shadow: 0 0 20px currentColor;
     opacity: 1;
-    transform: scale(1.03);
   }
 }
 
@@ -129,45 +131,93 @@ a {
 }
 
 /* ==========================================================================
-   Typography
+   Scroll Reveal Animation System
+   ========================================================================== */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.delay-1 { transition-delay: 100ms; }
+.delay-2 { transition-delay: 200ms; }
+.delay-3 { transition-delay: 300ms; }
+.delay-4 { transition-delay: 400ms; }
+
+/* ==========================================================================
+   Typography (Stripe Style - Tight, Punchy, Crisp)
    ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.15;
   color: var(--color-text);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
 }
 
 .display-title {
-  font-size: clamp(2.6rem, 5.5vw, 4.25rem);
+  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
   font-weight: 800;
-  letter-spacing: -0.035em;
-  line-height: 1.08;
-  margin-bottom: 1.5rem;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-bottom: 1.75rem;
+  color: var(--color-text);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #0a2540 20%, #1e40af 60%, #635bff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .page-title {
-  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   margin-bottom: 1.25rem;
+  line-height: 1.1;
 }
 
 .section-title {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 700;
-  margin-bottom: 0.85rem;
-  letter-spacing: -0.025em;
+  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
 }
 
 .lead-text {
   font-size: clamp(1.125rem, 2vw, 1.25rem);
   color: var(--color-text-secondary);
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
-.text-muted {
-  color: var(--color-text-muted);
+.eyebrow-tag {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.eyebrow-tag::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: var(--radius-full);
 }
 
 .mono-tag {
@@ -179,13 +229,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Badges & Labels
+   Badges & Pills
    ========================================================================== */
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 0.95rem;
+  gap: 0.6rem;
+  padding: 0.45rem 1.05rem;
   font-size: 0.8125rem;
   font-weight: 600;
   border-radius: var(--radius-full);
@@ -194,6 +244,11 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--color-border);
   letter-spacing: 0.02em;
   transition: all var(--transition-fast);
+}
+
+.badge:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-1px);
 }
 
 .badge-primary {
@@ -207,11 +262,11 @@ h1, h2, h3, h4, h5, h6 {
   height: 7px;
   border-radius: 50%;
   background-color: currentColor;
-  box-shadow: 0 0 8px currentColor;
+  animation: pulseGlow 2.5s infinite ease-in-out;
 }
 
 /* ==========================================================================
-   Buttons & Links
+   Buttons (Stripe Rounded Pill Primitives)
    ========================================================================== */
 .btn {
   display: inline-flex;
@@ -221,7 +276,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
   font-size: 0.9375rem;
   font-weight: 600;
-  padding: 0.85rem 1.65rem;
+  padding: 0.85rem 1.85rem;
   border-radius: var(--radius-full);
   border: 1px solid transparent;
   cursor: pointer;
@@ -231,49 +286,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background-color: #0a2540;
   color: #ffffff;
-  border-color: var(--color-primary);
-  box-shadow: 0 4px 14px rgba(30, 64, 175, 0.25);
+  border-color: #0a2540;
+  box-shadow: 0 4px 14px rgba(10, 37, 64, 0.25);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-hover);
-  border-color: var(--color-primary-hover);
-  box-shadow: 0 6px 20px rgba(30, 64, 175, 0.35);
-  transform: translateY(-1px);
+  background-color: #1e40af;
+  border-color: #1e40af;
+  box-shadow: 0 8px 24px rgba(30, 64, 175, 0.35);
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: var(--color-text);
-  border-color: var(--color-border);
-  backdrop-filter: blur(8px);
+  background-color: #ffffff;
+  color: #0a2540;
+  border-color: #e6ebf1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .btn-secondary:hover {
-  background-color: #ffffff;
-  border-color: var(--color-border-hover);
-  box-shadow: var(--shadow-sm);
-  transform: translateY(-1px);
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 16px rgba(10, 37, 64, 0.08);
+  transform: translateY(-2px);
 }
 
 .btn-sm {
-  padding: 0.55rem 1.15rem;
+  padding: 0.6rem 1.25rem;
   font-size: 0.875rem;
 }
 
 .link-arrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.375rem;
+  gap: 0.4rem;
   font-weight: 600;
-  color: var(--color-primary);
-  transition: gap var(--transition-fast);
+  color: #0a2540;
+  transition: all var(--transition-fast);
 }
 
 .link-arrow:hover {
-  gap: 0.625rem;
+  gap: 0.75rem;
+  color: var(--color-primary);
 }
 
 .link-arrow svg {
@@ -283,31 +339,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .link-arrow:hover svg {
-  transform: translateX(3px);
+  transform: translateX(4px);
 }
 
 /* ==========================================================================
-   Section Layouts
+   Section Spacing & Grid Layouts
    ========================================================================== */
 .section {
-  padding: 5.5rem 0;
+  padding: 6.5rem 0;
   position: relative;
 }
 
 .section-hero {
-  padding: 6.5rem 0 5rem;
-  border-bottom: 1px solid var(--color-border-subtle);
+  padding: 6.5rem 0 5.5rem;
   position: relative;
   overflow: hidden;
 }
 
 .section-header {
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
 }
 
 .grid {
   display: grid;
-  gap: 2rem;
+  gap: 2.25rem;
 }
 
 .grid-2 {
@@ -316,6 +371,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .grid-3 {
   grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 640px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 768px) {
@@ -328,9 +393,12 @@ h1, h2, h3, h4, h5, h6 {
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
   }
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-/* Visual Media Frames */
+/* Media Frame Styling with Stripe Depth */
 .media-frame {
   position: relative;
   border-radius: var(--radius-lg);
@@ -342,8 +410,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .media-frame:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 28px 50px -10px rgba(15, 23, 42, 0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 32px 64px -12px rgba(10, 37, 64, 0.22);
 }
 
 .media-frame img {
@@ -355,39 +423,91 @@ h1, h2, h3, h4, h5, h6 {
 
 .floating-pill {
   position: absolute;
-  padding: 0.6rem 1.1rem;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0.65rem 1.25rem;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--radius-full);
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 12px 28px rgba(10, 37, 64, 0.14);
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.65rem;
   font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--color-text);
+  font-weight: 700;
+  color: #0a2540;
   z-index: 3;
 }
 
 .floating-pill-dark {
-  background: rgba(15, 23, 42, 0.88);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(10, 37, 64, 0.9);
+  border-color: rgba(255, 255, 255, 0.18);
   color: #ffffff;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
 }
 
+/* Notice Box */
 .notice-box {
-  padding: 1.25rem 1.5rem;
+  padding: 1.35rem 1.75rem;
   border-radius: var(--radius-md);
   background-color: var(--color-bg-subtle);
   border: 1px solid var(--color-border);
   font-size: 0.9375rem;
   color: var(--color-text-secondary);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .notice-box strong {
   color: var(--color-text);
 }
+
+/* ==========================================================================
+   Stripe-Style Interactive Developer Terminal Component
+   ========================================================================== */
+.dev-terminal {
+  background-color: #0a2540;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: #f8fafc;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red { background-color: #ff5f56; }
+.dot-yellow { background-color: #ffbd2e; }
+.dot-green { background-color: #27c93f; }
+
+.terminal-body {
+  padding: 1.5rem;
+  line-height: 1.75;
+  overflow-x: auto;
+}
+
+.code-keyword { color: #ff7b72; font-weight: 600; }
+.code-string { color: #a5d6ff; }
+.code-fn { color: #d2a8ff; }
+.code-comment { color: #8b949e; font-style: italic; }
+.code-prop { color: #79c0ff; }
+.code-bool { color: #7ee787; }
