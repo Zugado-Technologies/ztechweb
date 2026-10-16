@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers — Zugado Technologies</title>
+  <meta name="description" content="Explore career opportunities and talent submissions at Zugado Technologies." />
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <link rel="stylesheet" href="/src/styles/components.css" />
+</head>
+<body class="site-wrapper">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="/" class="brand-link" aria-label="Zugado Technologies Home">
+        <img src="/assets/zugado_logo_dark.png" alt="Zugado Technologies" class="brand-logo-img" />
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/company/" class="nav-link">Company</a>
+        <a href="/products/" class="nav-link">Products</a>
+        <a href="/labs/" class="nav-link">Zugado Labs</a>
+        <a href="/careers/" class="nav-link active">Careers</a>
+        <a href="/contact/" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="/contact/" class="btn btn-primary btn-sm">Discuss a project</a>
+        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <nav class="mobile-nav-links">
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/company/" class="mobile-nav-link">Company</a>
+      <a href="/products/" class="mobile-nav-link">Products</a>
+      <a href="/labs/" class="mobile-nav-link">Zugado Labs</a>
+      <a href="/careers/" class="mobile-nav-link active">Careers</a>
+      <a href="/contact/" class="mobile-nav-link">Contact</a>
+    </nav>
+    <a href="/contact/" class="btn btn-primary" style="margin-top: 1rem;">Discuss a project</a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="site-main" id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="section section-hero">
+      <div class="container container-narrow">
+        <div class="badge" style="margin-bottom: 1.5rem;">Talent & Opportunities</div>
+        <h1 class="page-title">Build with precision and purpose.</h1>
+        <p class="lead-text">
+          Zugado Technologies brings together engineers, systems designers, and product builders dedicated to crafting high-integrity digital platforms.
+        </p>
+      </div>
+    </section>
+
+    <!-- Culture & Approach Section -->
+    <section class="section">
+      <div class="container container-narrow">
+        
+        <div style="margin-bottom: 3.5rem;">
+          <h2 class="section-title">Our Working Environment</h2>
+          <p style="color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+            We maintain a high engineering bar with a low-ego, asynchronous culture. We value clear technical writing, rigorous problem decomposition, and ownership over bureaucratic processes.
+          </p>
+          <div class="grid grid-2" style="gap: 1.5rem; margin-top: 2rem;">
+            <div class="card">
+              <h3 style="font-size: 1.0625rem; font-weight: 700; margin-bottom: 0.5rem;">Engineering Autonomy</h3>
+              <p style="font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.5;">
+                We trust builders with high ownership over architectural decisions and execution standards.
+              </p>
+            </div>
+            <div class="card">
+              <h3 style="font-size: 1.0625rem; font-weight: 700; margin-bottom: 0.5rem;">Disciplined Pace</h3>
+              <p style="font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.5;">
+                Focus on fundamental code hygiene, thoughtful testing, and sustainable long-term progress.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Open Roles Policy -->
+        <div style="margin-bottom: 3.5rem;">
+          <h2 class="section-title">Current Openings</h2>
+          <div class="notice-box" style="margin-top: 1rem;">
+            <strong>Open Application Policy:</strong> We do not publish speculative or unfilled job listings. While we are not actively hiring for specific pre-defined roles at this exact moment, we consistently review qualified general applications from outstanding engineers, systems architects, and product developers.
+          </div>
+        </div>
+
+        <!-- General Talent Submission Form -->
+        <div>
+          <h2 class="section-title" style="margin-bottom: 0.75rem;">Submit a General Application</h2>
+          <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">
+            Send us your professional details, GitHub profile, and a summary of what technical challenges you are passionate about.
+          </p>
+
+          <form class="form-grid" data-inquiry-form>
+            <input type="hidden" name="inquiry_type" value="Careers / General Application" />
+
+            <div class="form-group">
+              <label class="form-label" for="careers-name">Full Name <span class="required">*</span></label>
+              <input type="text" id="careers-name" name="name" class="form-input" required placeholder="Your full name" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="careers-email">Email Address <span class="required">*</span></label>
+              <input type="email" id="careers-email" name="email" class="form-input" required placeholder="name@domain.com" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="careers-role">Primary Technical Discipline</label>
+              <select id="careers-role" name="role" class="form-select">
+                <option value="Backend & Distributed Systems">Backend & Distributed Systems</option>
+                <option value="Frontend & Web Applications">Frontend & Web Applications</option>
+                <option value="Systems & Cloud Infrastructure">Systems & Cloud Infrastructure</option>
+                <option value="Product & Systems Design">Product & Systems Design</option>
+                <option value="Other Technical Role">Other Technical Role</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="careers-portfolio">Portfolio / GitHub / LinkedIn <span class="required">*</span></label>
+              <input type="url" id="careers-portfolio" name="portfolio" class="form-input" required placeholder="https://github.com/yourhandle or profile URL" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="careers-message">Summary of Experience & Interest <span class="required">*</span></label>
+              <textarea id="careers-message" name="message" class="form-textarea" required placeholder="Briefly describe your core technical expertise, recent projects, and what you are looking to build next."></textarea>
+              <span class="form-note">
+                Resume handling note: Applications are delivered to our hiring team. We do not store unsolicited resumes in public cloud buckets.
+              </span>
+            </div>
+
+            <div class="form-alert"></div>
+
+            <div>
+              <button type="submit" class="btn btn-primary">Transmit Application</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/zugado_logo_dark.png" alt="Zugado Technologies" class="brand-logo-img" style="height: 24px;" />
+          <p>
+            Building digital products and exploring emerging technology through disciplined engineering and focused experimentation.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/company/" class="footer-link">About & Approach</a></li>
+            <li><a href="/careers/" class="footer-link">Careers</a></li>
+            <li><a href="/contact/" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Products & Labs</h4>
+          <ul class="footer-links">
+            <li><a href="/products/" class="footer-link">Products Index</a></li>
+            <li><a href="/products/zugado/" class="footer-link">Zugado Flagship</a></li>
+            <li><a href="/labs/" class="footer-link">Zugado Labs</a></li>
+            <li><a href="/labs/mind-bolt/" class="footer-link">Mind Bolt</a></li>
+            <li><a href="/labs/contribute/" class="footer-link">Contributors</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Corporate & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="/privacy/" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/terms/" class="footer-link">Terms of Use</a></li>
+            <li><a href="mailto:hello@zugadotechnologies.com" class="footer-link">hello@zugadotechnologies.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-statutory">
+          © 2026 Zugado Technologies Private Limited. All rights reserved.<br />
+          Registered Indian Private Limited Company. Corporate identity and statutory particulars available upon formal enquiry.
+        </div>
+        <div class="footer-legal-links">
+          <a href="/privacy/" class="footer-link">Privacy</a>
+          <a href="/terms/" class="footer-link">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

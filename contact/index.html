@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Zugado Technologies</title>
+  <meta name="description" content="Initiate a business, technology, partnership, or general inquiry with Zugado Technologies." />
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <link rel="stylesheet" href="/src/styles/components.css" />
+</head>
+<body class="site-wrapper">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="/" class="brand-link" aria-label="Zugado Technologies Home">
+        <img src="/assets/zugado_logo_dark.png" alt="Zugado Technologies" class="brand-logo-img" />
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/company/" class="nav-link">Company</a>
+        <a href="/products/" class="nav-link">Products</a>
+        <a href="/labs/" class="nav-link">Zugado Labs</a>
+        <a href="/careers/" class="nav-link">Careers</a>
+        <a href="/contact/" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="/contact/" class="btn btn-primary btn-sm">Discuss a project</a>
+        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <nav class="mobile-nav-links">
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/company/" class="mobile-nav-link">Company</a>
+      <a href="/products/" class="mobile-nav-link">Products</a>
+      <a href="/labs/" class="mobile-nav-link">Zugado Labs</a>
+      <a href="/careers/" class="mobile-nav-link">Careers</a>
+      <a href="/contact/" class="mobile-nav-link active">Contact</a>
+    </nav>
+    <a href="/contact/" class="btn btn-primary" style="margin-top: 1rem;">Discuss a project</a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="site-main" id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="section section-hero">
+      <div class="container container-narrow">
+        <div class="badge badge-primary" style="margin-bottom: 1.5rem;">Corporate Correspondence</div>
+        <h1 class="page-title">Initiate an inquiry.</h1>
+        <p class="lead-text">
+          We welcome serious business inquiries, technology discussions, strategic partnership conversations, and talent communications.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Content & Form -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2" style="gap: 4rem; align-items: flex-start;">
+          
+          <!-- Channels & Particulars -->
+          <div>
+            <div class="mono-tag text-muted" style="margin-bottom: 0.75rem;">Direct Channels</div>
+            <h2 class="section-title">Reaching Zugado Technologies</h2>
+            <p style="color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+              All incoming communications are handled directly by our internal team. We review every thoughtful inquiry and prioritize clear, substantive technical discussions.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2.5rem;">
+              <div class="card" style="padding: 1.5rem;">
+                <div style="font-size: 0.8125rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; margin-bottom: 0.25rem;">Corporate Email</div>
+                <a href="mailto:hello@zugadotechnologies.com" style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary); word-break: break-all;">
+                  hello@zugadotechnologies.com
+                </a>
+              </div>
+
+              <div class="card" style="padding: 1.5rem;">
+                <div style="font-size: 0.8125rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; margin-bottom: 0.25rem;">Entity Status</div>
+                <div style="font-size: 0.9375rem; color: var(--color-text); font-weight: 600;">
+                  Zugado Technologies Private Limited
+                </div>
+                <div style="font-size: 0.8125rem; color: var(--color-text-muted); margin-top: 0.25rem;">
+                  Registered Indian Private Limited Company. Corporate particulars provided upon formal request.
+                </div>
+              </div>
+            </div>
+
+            <div class="notice-box">
+              <strong>Response Time Protocol:</strong> We strive to acknowledge legitimate business and technical inquiries within a reasonable timeframe. We do not provide automated or marketing follow-ups.
+            </div>
+          </div>
+
+          <!-- Structured Inquiry Form -->
+          <div>
+            <div class="card" style="padding: clamp(1.75rem, 3vw, 2.5rem); border-radius: var(--radius-lg);">
+              <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;">Submit an Inquiry</h3>
+
+              <form class="form-grid" data-inquiry-form style="max-width: 100%;">
+                <div class="form-group">
+                  <label class="form-label" for="contact-type">Inquiry Classification <span class="required">*</span></label>
+                  <select id="contact-type" name="inquiry_type" class="form-select" required>
+                    <option value="Business & Technology Engagement">Business & Technology Engagement</option>
+                    <option value="Zugado Flagship Product Inquiry">Zugado Flagship Product Inquiry</option>
+                    <option value="Zugado Labs Collaboration">Zugado Labs Collaboration</option>
+                    <option value="Careers & Talent">Careers & Talent</option>
+                    <option value="General Corporate Inquiry">General Corporate Inquiry</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contact-name">Full Name <span class="required">*</span></label>
+                  <input type="text" id="contact-name" name="name" class="form-input" required placeholder="Your full name" />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contact-email">Corporate or Personal Email <span class="required">*</span></label>
+                  <input type="email" id="contact-email" name="email" class="form-input" required placeholder="name@organization.com" />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contact-message">Message Details <span class="required">*</span></label>
+                  <textarea id="contact-message" name="message" class="form-textarea" required placeholder="Please outline the nature of your inquiry, organization background, or technical requirements."></textarea>
+                </div>
+
+                <div class="form-alert"></div>
+
+                <div>
+                  <button type="submit" class="btn btn-primary" style="width: 100%;">Transmit Inquiry</button>
+                  <div class="form-note" style="margin-top: 0.75rem; text-align: center;">
+                    Submissions are routed directly to our inbox without third-party tracking scripts.
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/zugado_logo_dark.png" alt="Zugado Technologies" class="brand-logo-img" style="height: 24px;" />
+          <p>
+            Building digital products and exploring emerging technology through disciplined engineering and focused experimentation.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/company/" class="footer-link">About & Approach</a></li>
+            <li><a href="/careers/" class="footer-link">Careers</a></li>
+            <li><a href="/contact/" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Products & Labs</h4>
+          <ul class="footer-links">
+            <li><a href="/products/" class="footer-link">Products Index</a></li>
+            <li><a href="/products/zugado/" class="footer-link">Zugado Flagship</a></li>
+            <li><a href="/labs/" class="footer-link">Zugado Labs</a></li>
+            <li><a href="/labs/mind-bolt/" class="footer-link">Mind Bolt</a></li>
+            <li><a href="/labs/contribute/" class="footer-link">Contributors</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Corporate & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="/privacy/" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/terms/" class="footer-link">Terms of Use</a></li>
+            <li><a href="mailto:hello@zugadotechnologies.com" class="footer-link">hello@zugadotechnologies.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-statutory">
+          © 2026 Zugado Technologies Private Limited. All rights reserved.<br />
+          Registered Indian Private Limited Company. Corporate identity and statutory particulars available upon formal enquiry.
+        </div>
+        <div class="footer-legal-links">
+          <a href="/privacy/" class="footer-link">Privacy</a>
+          <a href="/terms/" class="footer-link">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

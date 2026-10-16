@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Independent Contributors — Zugado Labs</title>
+  <meta name="description" content="Expression of interest for independent creators and specialized researchers wishing to collaborate with Zugado Labs." />
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <link rel="stylesheet" href="/src/styles/components.css" />
+  <link rel="stylesheet" href="/src/styles/labs.css" />
+</head>
+<body class="site-wrapper theme-labs">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="/" class="brand-link" aria-label="Zugado Technologies Home">
+        <img src="/assets/zugado_logo_white.png" alt="Zugado Technologies" class="brand-logo-img" />
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/company/" class="nav-link">Company</a>
+        <a href="/products/" class="nav-link">Products</a>
+        <a href="/labs/" class="nav-link active">Zugado Labs</a>
+        <a href="/careers/" class="nav-link">Careers</a>
+        <a href="/contact/" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="/contact/" class="btn btn-secondary btn-sm" style="color: #ffffff; border-color: #334155;">General Contact</a>
+        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <nav class="mobile-nav-links">
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/company/" class="mobile-nav-link">Company</a>
+      <a href="/products/" class="mobile-nav-link">Products</a>
+      <a href="/labs/" class="mobile-nav-link active">Zugado Labs</a>
+      <a href="/careers/" class="mobile-nav-link">Careers</a>
+      <a href="/contact/" class="mobile-nav-link">Contact</a>
+    </nav>
+    <a href="/labs/contribute/" class="btn btn-primary" style="margin-top: 1rem; background-color: #38bdf8; color: #090d16;">Contribute as an IC</a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="site-main" id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="labs-hero">
+      <div class="container container-narrow">
+        <div class="badge labs-badge" style="margin-bottom: 1.5rem;">
+          <span class="badge-dot" style="background-color: #38bdf8;"></span>
+          <span>Labs Collaboration</span>
+        </div>
+        <h1 class="page-title" style="color: #ffffff;">Independent Contributor Expression of Interest</h1>
+        <p class="lead-text" style="color: #94a3b8;">
+          Zugado Labs engages with select independent engineers, domain researchers, and creators interested in prototyping or exploring specific technology domains.
+        </p>
+      </div>
+    </section>
+
+    <!-- Form & Terms Section -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="container container-narrow">
+        
+        <!-- Mandatory Legal & Relationship Notice -->
+        <div class="notice-box" style="background-color: #0f1422; border-color: #1e293b; color: #94a3b8; margin-bottom: 3rem;">
+          <strong style="color: #ffffff;">Important Notice Regarding Collaborations:</strong><br />
+          Submitting this form represents an initial expression of interest and does not constitute an offer of employment, partnership, legal association, or promise of engagement or compensation. Any formal collaboration requires a mutually agreed and signed written agreement defining project scope, confidentiality, pre-existing IP, newly created intellectual property, and governing terms. Please do not submit confidential ideas, proprietary code, or unpatented inventions through this form.
+        </div>
+
+        <!-- Expression of Interest Form -->
+        <form class="form-grid" data-inquiry-form>
+          <input type="hidden" name="inquiry_type" value="Independent Contributor EOI" />
+
+          <div class="form-group">
+            <label class="form-label" for="ic-name" style="color: #f8fafc;">Full Name <span class="required">*</span></label>
+            <input type="text" id="ic-name" name="name" class="form-input" required placeholder="Your full name" style="background: #090d16; border-color: #1e293b; color: #f8fafc;" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="ic-email" style="color: #f8fafc;">Email Address <span class="required">*</span></label>
+            <input type="email" id="ic-email" name="email" class="form-input" required placeholder="name@domain.com" style="background: #090d16; border-color: #1e293b; color: #f8fafc;" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="ic-portfolio" style="color: #f8fafc;">Portfolio, GitHub, or Website <span class="required">*</span></label>
+            <input type="url" id="ic-portfolio" name="portfolio" class="form-input" required placeholder="https://github.com/username or portfolio link" style="background: #090d16; border-color: #1e293b; color: #f8fafc;" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="ic-area" style="color: #f8fafc;">Primary Area of Interest</label>
+            <select id="ic-area" name="area_of_interest" class="form-select" style="background: #090d16; border-color: #1e293b; color: #f8fafc;">
+              <option value="Systems & Distributed Infrastructure">Systems & Distributed Infrastructure</option>
+              <option value="Modern Web & Interface Engineering">Modern Web & Interface Engineering</option>
+              <option value="Algorithmic Research & Simulation">Algorithmic Research & Simulation</option>
+              <option value="Open Source Tooling">Open Source Tooling</option>
+              <option value="Other Technical Domain">Other Technical Domain</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="ic-note" style="color: #f8fafc;">Brief Introduction & Background <span class="required">*</span></label>
+            <textarea id="ic-note" name="note" class="form-textarea" required placeholder="Tell us briefly about your technical background and what problems you enjoy solving (no confidential information)." style="background: #090d16; border-color: #1e293b; color: #f8fafc;"></textarea>
+            <span class="form-note" style="color: #64748b;">Submissions are reviewed directly by the Zugado Labs team.</span>
+          </div>
+
+          <div class="form-alert"></div>
+
+          <div>
+            <button type="submit" class="btn" style="background-color: #38bdf8; color: #090d16; font-weight: 700;">Submit Expression of Interest</button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/zugado_logo_white.png" alt="Zugado Technologies" class="brand-logo-img" style="height: 24px;" />
+          <p style="color: #94a3b8;">
+            Building digital products and exploring emerging technology through disciplined engineering and focused experimentation.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 style="color: #ffffff;">Company</h4>
+          <ul class="footer-links">
+            <li><a href="/company/" class="footer-link">About & Approach</a></li>
+            <li><a href="/careers/" class="footer-link">Careers</a></li>
+            <li><a href="/contact/" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 style="color: #ffffff;">Products & Labs</h4>
+          <ul class="footer-links">
+            <li><a href="/products/" class="footer-link">Products Index</a></li>
+            <li><a href="/products/zugado/" class="footer-link">Zugado Flagship</a></li>
+            <li><a href="/labs/" class="footer-link">Zugado Labs</a></li>
+            <li><a href="/labs/mind-bolt/" class="footer-link">Mind Bolt</a></li>
+            <li><a href="/labs/contribute/" class="footer-link">Contributors</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 style="color: #ffffff;">Corporate & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="/privacy/" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/terms/" class="footer-link">Terms of Use</a></li>
+            <li><a href="mailto:hello@zugadotechnologies.com" class="footer-link">hello@zugadotechnologies.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom" style="border-top-color: #1e293b;">
+        <div class="footer-statutory" style="color: #64748b;">
+          © 2026 Zugado Technologies Private Limited. All rights reserved.<br />
+          Registered Indian Private Limited Company. Corporate identity and statutory particulars available upon formal enquiry.
+        </div>
+        <div class="footer-legal-links">
+          <a href="/privacy/" class="footer-link">Privacy</a>
+          <a href="/terms/" class="footer-link">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

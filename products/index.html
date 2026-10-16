@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — Zugado Technologies</title>
+  <meta name="description" content="Commercial software products developed by Zugado Technologies, including our flagship platform Zugado." />
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <link rel="stylesheet" href="/src/styles/components.css" />
+</head>
+<body class="site-wrapper">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="/" class="brand-link" aria-label="Zugado Technologies Home">
+        <img src="/assets/zugado_logo_dark.png" alt="Zugado Technologies" class="brand-logo-img" />
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/company/" class="nav-link">Company</a>
+        <a href="/products/" class="nav-link active">Products</a>
+        <a href="/labs/" class="nav-link">Zugado Labs</a>
+        <a href="/careers/" class="nav-link">Careers</a>
+        <a href="/contact/" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="/contact/" class="btn btn-primary btn-sm">Discuss a project</a>
+        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <nav class="mobile-nav-links">
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/company/" class="mobile-nav-link">Company</a>
+      <a href="/products/" class="mobile-nav-link active">Products</a>
+      <a href="/labs/" class="mobile-nav-link">Zugado Labs</a>
+      <a href="/careers/" class="mobile-nav-link">Careers</a>
+      <a href="/contact/" class="mobile-nav-link">Contact</a>
+    </nav>
+    <a href="/contact/" class="btn btn-primary" style="margin-top: 1rem;">Discuss a project</a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="site-main" id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="section section-hero">
+      <div class="container">
+        <div style="max-width: 820px;">
+          <div class="badge badge-primary" style="margin-bottom: 1.5rem;">Product Portfolio</div>
+          <h1 class="page-title">Purpose-built software platforms.</h1>
+          <p class="lead-text">
+            Zugado Technologies focuses its commercial efforts on deep, problem-centric platforms. We prioritize building robust single systems rather than expanding an artificial catalog of minor utilities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-1" style="max-width: 900px; margin: 0 auto;">
+          <div class="card" style="padding: clamp(2rem, 4vw, 3.5rem); border-radius: var(--radius-lg);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+              <div>
+                <div class="badge" style="margin-bottom: 0.75rem;">Flagship Commercial Product</div>
+                <h2 style="font-size: 2rem; font-weight: 800; letter-spacing: -0.02em;">Zugado</h2>
+              </div>
+              <span class="badge badge-primary">
+                <span class="badge-dot"></span>
+                <span>In Active Development</span>
+              </span>
+            </div>
+
+            <p style="font-size: 1.0625rem; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+              A comprehensive hyperlocal services technology platform designed to bring modern software coordination, real-time dispatch capabilities, and verified service interactions to regional markets. Built with an emphasis on low-latency infrastructure and high operational predictability.
+            </p>
+
+            <div style="background-color: var(--color-bg-subtle); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 2rem;">
+              <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">
+                PRODUCT SPECIFICATIONS
+              </div>
+              <div class="grid grid-3" style="gap: 1.25rem;">
+                <div>
+                  <div style="font-size: 0.8125rem; color: var(--color-text-muted);">Category</div>
+                  <div style="font-weight: 600; font-size: 0.9375rem;">Hyperlocal Systems</div>
+                </div>
+                <div>
+                  <div style="font-size: 0.8125rem; color: var(--color-text-muted);">Current Phase</div>
+                  <div style="font-weight: 600; font-size: 0.9375rem;">Internal Beta / Dev</div>
+                </div>
+                <div>
+                  <div style="font-size: 0.8125rem; color: var(--color-text-muted);">Target Environment</div>
+                  <div style="font-weight: 600; font-size: 0.9375rem;">Cross-Platform Web & Mobile</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+              <a href="/products/zugado/" class="btn btn-primary">View Zugado product details</a>
+              <a href="/contact/" class="btn btn-secondary">Inquire regarding beta</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Labs Reference Box -->
+        <div class="container-narrow" style="margin-top: 4rem;">
+          <div class="notice-box" style="text-align: center;">
+            Looking for our experimental software, open tools, or research prototypes? <br />
+            Explore our research division: <a href="/labs/" class="link-arrow" style="margin-left: 0.5rem;">Zugado Labs →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/zugado_logo_dark.png" alt="Zugado Technologies" class="brand-logo-img" style="height: 24px;" />
+          <p>
+            Building digital products and exploring emerging technology through disciplined engineering and focused experimentation.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/company/" class="footer-link">About & Approach</a></li>
+            <li><a href="/careers/" class="footer-link">Careers</a></li>
+            <li><a href="/contact/" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Products & Labs</h4>
+          <ul class="footer-links">
+            <li><a href="/products/" class="footer-link">Products Index</a></li>
+            <li><a href="/products/zugado/" class="footer-link">Zugado Flagship</a></li>
+            <li><a href="/labs/" class="footer-link">Zugado Labs</a></li>
+            <li><a href="/labs/mind-bolt/" class="footer-link">Mind Bolt</a></li>
+            <li><a href="/labs/contribute/" class="footer-link">Contributors</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Corporate & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="/privacy/" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/terms/" class="footer-link">Terms of Use</a></li>
+            <li><a href="mailto:hello@zugadotechnologies.com" class="footer-link">hello@zugadotechnologies.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-statutory">
+          © 2026 Zugado Technologies Private Limited. All rights reserved.<br />
+          Registered Indian Private Limited Company. Corporate identity and statutory particulars available upon formal enquiry.
+        </div>
+        <div class="footer-legal-links">
+          <a href="/privacy/" class="footer-link">Privacy</a>
+          <a href="/terms/" class="footer-link">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>
