@@ -11,7 +11,7 @@ export default defineConfig({
         products: resolve(__dirname, 'products/index.html'),
         zugado: resolve(__dirname, 'products/zugado/index.html'),
         labs: resolve(__dirname, 'labs/index.html'),
-        mindBolt: resolve(__dirname, 'labs/mind-bolt/index.html'),
+        mindVault: resolve(__dirname, 'labs/mind-vault/index.html'),
         contribute: resolve(__dirname, 'labs/contribute/index.html'),
         careers: resolve(__dirname, 'careers/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),

@@ -24,6 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   transition: background-color var(--transition-normal), color var(--transition-normal);
+  overflow-x: hidden;
 }
 
 img, svg, picture {
@@ -44,6 +45,7 @@ a {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
 }
 
 .site-main {
@@ -64,41 +66,104 @@ a {
 }
 
 /* ==========================================================================
+   Stripe-Inspired Iridescent Mesh Hero Background & Animations
+   ========================================================================== */
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0 6rem;
+}
+
+.hero-mesh-gradient {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 75vw;
+  height: 850px;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.22) 0%, transparent 55%),
+    radial-gradient(circle at 70% 60%, rgba(244, 63, 94, 0.16) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(56, 189, 248, 0.2) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.15) 0%, transparent 45%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+  animation: meshDrift 16s ease-in-out infinite alternate;
+  transform-origin: center center;
+}
+
+@keyframes meshDrift {
+  0% {
+    transform: rotate(0deg) scale(1) translate(0, 0);
+  }
+  50% {
+    transform: rotate(4deg) scale(1.06) translate(-20px, 15px);
+  }
+  100% {
+    transform: rotate(-3deg) scale(1.02) translate(15px, -10px);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* ==========================================================================
    Typography
    ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.15;
   color: var(--color-text);
   letter-spacing: -0.025em;
 }
 
 .display-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.6rem, 5.5vw, 4.25rem);
   font-weight: 800;
   letter-spacing: -0.035em;
-  line-height: 1.1;
-  margin-bottom: 1.25rem;
+  line-height: 1.08;
+  margin-bottom: 1.5rem;
 }
 
 .page-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 3.25rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .section-title {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.025em;
 }
 
 .lead-text {
   font-size: clamp(1.125rem, 2vw, 1.25rem);
   color: var(--color-text-secondary);
-  line-height: 1.6;
-  max-width: 680px;
+  line-height: 1.65;
 }
 
 .text-muted {
@@ -108,8 +173,9 @@ h1, h2, h3, h4, h5, h6 {
 .mono-tag {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 /* ==========================================================================
@@ -119,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.35rem 0.85rem;
+  padding: 0.4rem 0.95rem;
   font-size: 0.8125rem;
   font-weight: 600;
   border-radius: var(--radius-full);
@@ -127,6 +193,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-secondary);
   border: 1px solid var(--color-border);
   letter-spacing: 0.02em;
+  transition: all var(--transition-fast);
 }
 
 .badge-primary {
@@ -136,10 +203,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .badge-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background-color: currentColor;
+  box-shadow: 0 0 8px currentColor;
 }
 
 /* ==========================================================================
@@ -149,12 +217,12 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.625rem;
   font-family: var(--font-sans);
   font-size: 0.9375rem;
   font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.65rem;
+  border-radius: var(--radius-full);
   border: 1px solid transparent;
   cursor: pointer;
   text-align: center;
@@ -166,26 +234,32 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-primary);
   color: #ffffff;
   border-color: var(--color-primary);
+  box-shadow: 0 4px 14px rgba(30, 64, 175, 0.25);
 }
 
 .btn-primary:hover {
   background-color: var(--color-primary-hover);
   border-color: var(--color-primary-hover);
+  box-shadow: 0 6px 20px rgba(30, 64, 175, 0.35);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
-  background-color: var(--color-bg-card);
+  background-color: rgba(255, 255, 255, 0.9);
   color: var(--color-text);
   border-color: var(--color-border);
+  backdrop-filter: blur(8px);
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-bg-subtle);
+  background-color: #ffffff;
   border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
 }
 
 .btn-sm {
-  padding: 0.5rem 1rem;
+  padding: 0.55rem 1.15rem;
   font-size: 0.875rem;
 }
 
@@ -209,32 +283,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .link-arrow:hover svg {
-  transform: translateX(2px);
+  transform: translateX(3px);
 }
 
 /* ==========================================================================
    Section Layouts
    ========================================================================== */
 .section {
-  padding: 5rem 0;
+  padding: 5.5rem 0;
+  position: relative;
 }
 
 .section-hero {
-  padding: 6rem 0 4rem;
+  padding: 6.5rem 0 5rem;
   border-bottom: 1px solid var(--color-border-subtle);
+  position: relative;
+  overflow: hidden;
 }
 
 .section-header {
   margin-bottom: 3.5rem;
-}
-
-.section-header.text-center {
-  text-align: center;
-}
-
-.section-header.text-center .lead-text {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .grid {
@@ -250,19 +318,66 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(1, 1fr);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 992px) {
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Callout / Disclaimer Box */
+/* Visual Media Frames */
+.media-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  background-color: var(--color-bg-card);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.media-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 50px -10px rgba(15, 23, 42, 0.2);
+}
+
+.media-frame img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.floating-pill {
+  position: absolute;
+  padding: 0.6rem 1.1rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius-full);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text);
+  z-index: 3;
+}
+
+.floating-pill-dark {
+  background: rgba(15, 23, 42, 0.88);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
 .notice-box {
   padding: 1.25rem 1.5rem;
   border-radius: var(--radius-md);
@@ -270,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--color-border);
   font-size: 0.9375rem;
   color: var(--color-text-secondary);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .notice-box strong {

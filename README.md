@@ -7,11 +7,11 @@ Official corporate website for **Zugado Technologies Private Limited**, built wi
 ## Architecture & Principles
 
 - **Framework-free & Static-First**: Built with Vite + Vanilla JS + Semantic HTML + CSS. No React, Vue, or heavy client-side frameworks.
-- **Enterprise Credibility**: Clean typography, generous spacing, and deliberate layout inspired by Stripe's clarity while maintaining distinct corporate identity.
+- **Enterprise Credibility**: Stripe-inspired clarity, iridescent mesh gradients, fluid animations, and high-fidelity product imagery.
 - **Strict Brand & Entity Separation**:
   - **Zugado Technologies**: Corporate parent entity (Indian Private Limited Company).
   - **Zugado**: Flagship hyperlocal-services product (in active development).
-  - **Zugado Labs**: Experimental innovation studio (dark studio theme) featuring public project **Mind Bolt** and confidential stealth prototypes.
+  - **Zugado Labs**: Experimental innovation studio (dark studio theme) featuring public project **MindVault** and confidential stealth prototypes.
 - **Static Multi-Page Routing**: Real static HTML entry points (`/company/index.html`, etc.) allowing direct page load and refresh on GitHub Pages without server-side rewrites.
 - **AWS Migration Ready**: Clean root-relative paths and pure static output in `dist/` ready for future AWS S3 + CloudFront hosting.
 
@@ -24,14 +24,14 @@ Zugado Technologies/
 ├── .github/workflows/
 │   └── deploy.yml              # GitHub Actions Vite build & GitHub Pages deploy
 ├── public/
-│   ├── assets/                 # Brand assets & logos
+│   ├── assets/                 # Brand assets, color-matched logos & visuals
 │   ├── CNAME                   # www.zugadotechnologies.com
 │   ├── favicon.png             # Site favicon
 │   └── robots.txt              # Search engine directives
 ├── src/
 │   ├── styles/
 │   │   ├── tokens.css          # Design tokens & color system
-│   │   ├── global.css          # Reset, typography, containers, buttons
+│   │   ├── global.css          # Reset, animations, containers, buttons
 │   │   ├── components.css      # Header, drawer, footer, cards, forms
 │   │   └── labs.css            # Zugado Labs dark studio theme
 │   └── scripts/
@@ -44,7 +44,7 @@ Zugado Technologies/
 │   └── zugado/index.html       # Zugado flagship product
 ├── labs/
 │   ├── index.html              # Zugado Labs studio
-│   ├── mind-bolt/index.html    # Mind Bolt documentation (placeholders)
+│   ├── mind-vault/index.html   # MindVault documentation
 │   └── contribute/index.html   # Independent Contributor EOI
 ├── careers/index.html          # Careers & talent submission
 ├── contact/index.html          # Business & general inquiries
@@ -120,8 +120,8 @@ The static build is 100% portable to an AWS serverless architecture:
 
 ## Launch Checklist & Required Human Actions
 
-- [ ] **Corporate Particulars**: Verify exact registered entity name, CIN, and registered office address from Ministry of Corporate Affairs (MCA) records before publication.
+- [ ] **Corporate Particulars**: Verify exact registered entity name, CIN, and registered office address from MCA records before publication.
 - [ ] **Legal Review**: Have the company's legal counsel review the draft templates in `/privacy/` and `/terms/`.
-- [ ] **Mind Bolt Documentation**: Supply approved technical documentation, description, screenshots, and repository link for `/labs/mind-bolt/`.
-- [ ] **Form Backend Integration**: Currently, forms use accessible client dispatch with clear fallback instructions. Connect an external form provider (such as Formspree, AWS SES API, or a dedicated serverless function) when backend processing is desired.
+- [ ] **MindVault Documentation**: Supply approved technical documentation, description, screenshots, and repository link for `/labs/mind-vault/`.
+- [ ] **Form Backend Integration**: Connect an external form provider (Formspree, AWS SES API, or a dedicated serverless function) when backend processing is desired.
 - [ ] **DNS & HTTPS**: Verify custom domain records and enforce HTTPS in GitHub Pages settings.

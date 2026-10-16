@@ -23,7 +23,7 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="/" class="brand-link" aria-label="Zugado Technologies Home">
-        <img src="/assets/zugado_logo_dark.png" alt="Zugado Technologies" class="brand-logo-img" />
+        <img src="/assets/zugado_logo_theme.png" alt="Zugado Technologies" class="brand-logo-img" />
       </a>
 
       <nav class="nav-desktop" aria-label="Main Navigation">
@@ -83,10 +83,11 @@
       </div>
     </section>
 
-    <!-- Overview & Technical Focus -->
+    <!-- Overview & High-Res Visual Section -->
     <section class="section">
       <div class="container">
-        <div class="grid grid-2" style="gap: 4rem; align-items: flex-start;">
+        
+        <div class="grid grid-2" style="gap: 4rem; align-items: center; margin-bottom: 5rem;">
           <div>
             <div class="mono-tag text-muted" style="margin-bottom: 0.75rem;">Platform Purpose</div>
             <h2 class="section-title">Addressing hyperlocal operational challenges</h2>
@@ -102,36 +103,46 @@
             </div>
           </div>
 
-          <!-- Abstract Architectural Panel -->
-          <div style="background-color: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 2.5rem;">
-            <h3 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: -0.01em;">
-              Engineering Design Principles
-            </h3>
+          <div class="media-frame" style="border-radius: var(--radius-lg);">
+            <img src="/assets/zugado_platform_ui.jpg" alt="Zugado Telemetry and Dispatch Interface Mockup" />
+          </div>
+        </div>
 
+        <!-- Urban Transit & Infrastructure Section -->
+        <div class="grid grid-2" style="gap: 4rem; align-items: center; margin-bottom: 4rem;">
+          <div class="media-frame" style="border-radius: var(--radius-lg);">
+            <img src="/assets/hyperlocal_urban_grid.jpg" alt="Hyperlocal Transit Infrastructure Mapping" />
+          </div>
+
+          <div>
+            <div class="mono-tag text-muted" style="margin-bottom: 0.75rem;">Engineering Principles</div>
+            <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1.25rem;">Spatial & Temporal Efficiency</h3>
+            
             <div style="display: flex; flex-direction: column; gap: 1.5rem;">
               <div>
-                <div style="font-weight: 600; font-size: 0.9375rem; margin-bottom: 0.25rem;">Spatial & Temporal Efficiency</div>
-                <p style="font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.5;">
-                  Optimized for low latency in geographically constrained environments.
+                <h4 style="font-size: 1.0625rem; font-weight: 700; margin-bottom: 0.25rem;">Low-Latency Clustering</h4>
+                <p style="font-size: 0.9375rem; color: var(--color-text-secondary); line-height: 1.6;">
+                  Routing algorithms crafted to process high-concurrency dispatch requests in local partitions without cross-regional bottlenecks.
                 </p>
               </div>
 
-              <div style="border-top: 1px solid var(--color-border); padding-top: 1.5rem;">
-                <div style="font-weight: 600; font-size: 0.9375rem; margin-bottom: 0.25rem;">Verification & Trust</div>
-                <p style="font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.5;">
-                  Strict integrity guarantees designed into participant interaction protocols.
+              <div style="border-top: 1px solid var(--color-border); padding-top: 1.25rem;">
+                <h4 style="font-size: 1.0625rem; font-weight: 700; margin-bottom: 0.25rem;">Verification & Trust</h4>
+                <p style="font-size: 0.9375rem; color: var(--color-text-secondary); line-height: 1.6;">
+                  Strict integrity guarantees designed into participant interaction protocols to ensure reliability for service providers and end consumers.
                 </p>
               </div>
 
-              <div style="border-top: 1px solid var(--color-border); padding-top: 1.5rem;">
-                <div style="font-weight: 600; font-size: 0.9375rem; margin-bottom: 0.25rem;">Architectural Portability</div>
-                <p style="font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.5;">
-                  Cloud-native resilience allowing elastic scaling across distinct localized clusters.
+              <div style="border-top: 1px solid var(--color-border); padding-top: 1.25rem;">
+                <h4 style="font-size: 1.0625rem; font-weight: 700; margin-bottom: 0.25rem;">Architectural Portability</h4>
+                <p style="font-size: 0.9375rem; color: var(--color-text-secondary); line-height: 1.6;">
+                  Cloud-native resilience allowing elastic scaling across distinct localized metropolitan clusters.
                 </p>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -153,7 +164,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/assets/zugado_logo_dark.png" alt="Zugado Technologies" class="brand-logo-img" style="height: 24px;" />
+          <img src="/assets/zugado_logo_theme.png" alt="Zugado Technologies" class="brand-logo-img" style="height: 28px;" />
           <p>
             Building digital products and exploring emerging technology through disciplined engineering and focused experimentation.
           </p>
@@ -174,7 +185,7 @@
             <li><a href="/products/" class="footer-link">Products Index</a></li>
             <li><a href="/products/zugado/" class="footer-link">Zugado Flagship</a></li>
             <li><a href="/labs/" class="footer-link">Zugado Labs</a></li>
-            <li><a href="/labs/mind-bolt/" class="footer-link">Mind Bolt</a></li>
+            <li><a href="/labs/mind-vault/" class="footer-link">MindVault</a></li>
             <li><a href="/labs/contribute/" class="footer-link">Contributors</a></li>
           </ul>
         </div>

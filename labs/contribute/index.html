@@ -24,7 +24,7 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="/" class="brand-link" aria-label="Zugado Technologies Home">
-        <img src="/assets/zugado_logo_white.png" alt="Zugado Technologies" class="brand-logo-img" />
+        <img src="/assets/zugado_logo_labs.png" alt="Zugado Technologies" class="brand-logo-img" />
       </a>
 
       <nav class="nav-desktop" aria-label="Main Navigation">
@@ -37,8 +37,8 @@
       </nav>
 
       <div class="header-actions">
-        <a href="/contact/" class="btn btn-secondary btn-sm" style="color: #ffffff; border-color: #334155;">General Contact</a>
-        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <a href="/contact/" class="btn btn-secondary btn-sm" style="color: #ffffff; border-color: #334155; background: #0d111a;">General Contact</a>
+        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false" style="border-color: #334155; color: #f8fafc;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -50,16 +50,16 @@
   </header>
 
   <!-- Mobile Drawer -->
-  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation" style="background-color: #07090e; border-top-color: #1e293b;">
     <nav class="mobile-nav-links">
-      <a href="/" class="mobile-nav-link">Home</a>
-      <a href="/company/" class="mobile-nav-link">Company</a>
-      <a href="/products/" class="mobile-nav-link">Products</a>
-      <a href="/labs/" class="mobile-nav-link active">Zugado Labs</a>
-      <a href="/careers/" class="mobile-nav-link">Careers</a>
-      <a href="/contact/" class="mobile-nav-link">Contact</a>
+      <a href="/" class="mobile-nav-link" style="color: #f8fafc; border-color: #1e293b;">Home</a>
+      <a href="/company/" class="mobile-nav-link" style="color: #f8fafc; border-color: #1e293b;">Company</a>
+      <a href="/products/" class="mobile-nav-link" style="color: #f8fafc; border-color: #1e293b;">Products</a>
+      <a href="/labs/" class="mobile-nav-link active" style="color: #38bdf8; border-color: #1e293b;">Zugado Labs</a>
+      <a href="/careers/" class="mobile-nav-link" style="color: #f8fafc; border-color: #1e293b;">Careers</a>
+      <a href="/contact/" class="mobile-nav-link" style="color: #f8fafc; border-color: #1e293b;">Contact</a>
     </nav>
-    <a href="/labs/contribute/" class="btn btn-primary" style="margin-top: 1rem; background-color: #38bdf8; color: #090d16;">Contribute as an IC</a>
+    <a href="/labs/contribute/" class="btn btn-primary" style="margin-top: 1rem; background-color: #38bdf8; color: #07090e;">Contribute as an IC</a>
   </div>
 
   <!-- Main Content -->
@@ -84,7 +84,7 @@
       <div class="container container-narrow">
         
         <!-- Mandatory Legal & Relationship Notice -->
-        <div class="notice-box" style="background-color: #0f1422; border-color: #1e293b; color: #94a3b8; margin-bottom: 3rem;">
+        <div class="notice-box" style="background-color: #0d111a; border-color: #1e293b; color: #94a3b8; margin-bottom: 3rem;">
           <strong style="color: #ffffff;">Important Notice Regarding Collaborations:</strong><br />
           Submitting this form represents an initial expression of interest and does not constitute an offer of employment, partnership, legal association, or promise of engagement or compensation. Any formal collaboration requires a mutually agreed and signed written agreement defining project scope, confidentiality, pre-existing IP, newly created intellectual property, and governing terms. Please do not submit confidential ideas, proprietary code, or unpatented inventions through this form.
         </div>
@@ -95,22 +95,22 @@
 
           <div class="form-group">
             <label class="form-label" for="ic-name" style="color: #f8fafc;">Full Name <span class="required">*</span></label>
-            <input type="text" id="ic-name" name="name" class="form-input" required placeholder="Your full name" style="background: #090d16; border-color: #1e293b; color: #f8fafc;" />
+            <input type="text" id="ic-name" name="name" class="form-input" required placeholder="Your full name" style="background: #0d111a; border-color: #1e293b; color: #f8fafc;" />
           </div>
 
           <div class="form-group">
             <label class="form-label" for="ic-email" style="color: #f8fafc;">Email Address <span class="required">*</span></label>
-            <input type="email" id="ic-email" name="email" class="form-input" required placeholder="name@domain.com" style="background: #090d16; border-color: #1e293b; color: #f8fafc;" />
+            <input type="email" id="ic-email" name="email" class="form-input" required placeholder="name@domain.com" style="background: #0d111a; border-color: #1e293b; color: #f8fafc;" />
           </div>
 
           <div class="form-group">
             <label class="form-label" for="ic-portfolio" style="color: #f8fafc;">Portfolio, GitHub, or Website <span class="required">*</span></label>
-            <input type="url" id="ic-portfolio" name="portfolio" class="form-input" required placeholder="https://github.com/username or portfolio link" style="background: #090d16; border-color: #1e293b; color: #f8fafc;" />
+            <input type="url" id="ic-portfolio" name="portfolio" class="form-input" required placeholder="https://github.com/username or portfolio link" style="background: #0d111a; border-color: #1e293b; color: #f8fafc;" />
           </div>
 
           <div class="form-group">
             <label class="form-label" for="ic-area" style="color: #f8fafc;">Primary Area of Interest</label>
-            <select id="ic-area" name="area_of_interest" class="form-select" style="background: #090d16; border-color: #1e293b; color: #f8fafc;">
+            <select id="ic-area" name="area_of_interest" class="form-select" style="background: #0d111a; border-color: #1e293b; color: #f8fafc;">
               <option value="Systems & Distributed Infrastructure">Systems & Distributed Infrastructure</option>
               <option value="Modern Web & Interface Engineering">Modern Web & Interface Engineering</option>
               <option value="Algorithmic Research & Simulation">Algorithmic Research & Simulation</option>
@@ -121,14 +121,14 @@
 
           <div class="form-group">
             <label class="form-label" for="ic-note" style="color: #f8fafc;">Brief Introduction & Background <span class="required">*</span></label>
-            <textarea id="ic-note" name="note" class="form-textarea" required placeholder="Tell us briefly about your technical background and what problems you enjoy solving (no confidential information)." style="background: #090d16; border-color: #1e293b; color: #f8fafc;"></textarea>
+            <textarea id="ic-note" name="note" class="form-textarea" required placeholder="Tell us briefly about your technical background and what problems you enjoy solving (no confidential information)." style="background: #0d111a; border-color: #1e293b; color: #f8fafc;"></textarea>
             <span class="form-note" style="color: #64748b;">Submissions are reviewed directly by the Zugado Labs team.</span>
           </div>
 
           <div class="form-alert"></div>
 
           <div>
-            <button type="submit" class="btn" style="background-color: #38bdf8; color: #090d16; font-weight: 700;">Submit Expression of Interest</button>
+            <button type="submit" class="btn" style="background-color: #38bdf8; color: #07090e; font-weight: 700;">Submit Expression of Interest</button>
           </div>
         </form>
 
@@ -142,7 +142,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/assets/zugado_logo_white.png" alt="Zugado Technologies" class="brand-logo-img" style="height: 24px;" />
+          <img src="/assets/zugado_logo_labs.png" alt="Zugado Technologies" class="brand-logo-img" style="height: 28px;" />
           <p style="color: #94a3b8;">
             Building digital products and exploring emerging technology through disciplined engineering and focused experimentation.
           </p>
@@ -163,13 +163,13 @@
             <li><a href="/products/" class="footer-link">Products Index</a></li>
             <li><a href="/products/zugado/" class="footer-link">Zugado Flagship</a></li>
             <li><a href="/labs/" class="footer-link">Zugado Labs</a></li>
-            <li><a href="/labs/mind-bolt/" class="footer-link">Mind Bolt</a></li>
+            <li><a href="/labs/mind-vault/" class="footer-link">MindVault</a></li>
             <li><a href="/labs/contribute/" class="footer-link">Contributors</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4 style="color: #ffffff;">Corporate & Legal</h4>
+          <h4>Corporate & Legal</h4>
           <ul class="footer-links">
             <li><a href="/privacy/" class="footer-link">Privacy Policy</a></li>
             <li><a href="/terms/" class="footer-link">Terms of Use</a></li>

@@ -20,11 +20,11 @@
 </head>
 <body class="site-wrapper theme-labs">
 
-  <!-- Header (Labs Studio Variant) -->
+  <!-- Header (Labs Studio Variant with Color-Matched Cyan Logo) -->
   <header class="site-header">
     <div class="container header-container">
       <a href="/" class="brand-link" aria-label="Zugado Technologies Home">
-        <img src="/assets/zugado_logo_white.png" alt="Zugado Technologies" class="brand-logo-img" />
+        <img src="/assets/zugado_logo_labs.png" alt="Zugado Technologies" class="brand-logo-img" />
       </a>
 
       <nav class="nav-desktop" aria-label="Main Navigation">
@@ -37,8 +37,8 @@
       </nav>
 
       <div class="header-actions">
-        <a href="/labs/contribute/" class="btn btn-primary btn-sm" style="background-color: #38bdf8; color: #090d16; font-weight: 700;">Contribute</a>
-        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <a href="/labs/contribute/" class="btn btn-primary btn-sm" style="background-color: #38bdf8; color: #07090e; font-weight: 700; box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);">Contribute</a>
+        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false" style="border-color: #334155; color: #f8fafc;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -50,16 +50,16 @@
   </header>
 
   <!-- Mobile Drawer -->
-  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation" style="background-color: #07090e; border-top-color: #1e293b;">
     <nav class="mobile-nav-links">
-      <a href="/" class="mobile-nav-link">Home</a>
-      <a href="/company/" class="mobile-nav-link">Company</a>
-      <a href="/products/" class="mobile-nav-link">Products</a>
-      <a href="/labs/" class="mobile-nav-link active">Zugado Labs</a>
-      <a href="/careers/" class="mobile-nav-link">Careers</a>
-      <a href="/contact/" class="mobile-nav-link">Contact</a>
+      <a href="/" class="mobile-nav-link" style="color: #f8fafc; border-color: #1e293b;">Home</a>
+      <a href="/company/" class="mobile-nav-link" style="color: #f8fafc; border-color: #1e293b;">Company</a>
+      <a href="/products/" class="mobile-nav-link" style="color: #f8fafc; border-color: #1e293b;">Products</a>
+      <a href="/labs/" class="mobile-nav-link active" style="color: #38bdf8; border-color: #1e293b;">Zugado Labs</a>
+      <a href="/careers/" class="mobile-nav-link" style="color: #f8fafc; border-color: #1e293b;">Careers</a>
+      <a href="/contact/" class="mobile-nav-link" style="color: #f8fafc; border-color: #1e293b;">Contact</a>
     </nav>
-    <a href="/labs/contribute/" class="btn btn-primary" style="margin-top: 1rem; background-color: #38bdf8; color: #090d16;">Contribute as an IC</a>
+    <a href="/labs/contribute/" class="btn btn-primary" style="margin-top: 1rem; background-color: #38bdf8; color: #07090e;">Contribute as an IC</a>
   </div>
 
   <!-- Main Content -->
@@ -94,22 +94,23 @@
           </p>
         </div>
 
-        <div class="grid grid-2" style="margin-bottom: 5rem;">
-          <!-- Mind Bolt Card -->
+        <div class="grid grid-2" style="margin-bottom: 5.5rem;">
+          <!-- MindVault Card -->
           <div class="labs-card">
-            <div class="labs-card-media" style="background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.2), transparent 70%);">
-              <span class="stealth-watermark" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">PUBLIC LABS PROJECT</span>
+            <div class="labs-card-media" style="height: 260px;">
+              <img src="/assets/mindvault_labs_visual.jpg" alt="MindVault Public Labs Project" />
+              <span class="stealth-watermark" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4); top: 16px; left: 16px;">PUBLIC LABS INITIATIVE</span>
             </div>
             <div class="labs-card-body">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                <h3 style="font-size: 1.375rem; font-weight: 700; color: #ffffff;">Mind Bolt</h3>
-                <span class="badge" style="background: rgba(56, 189, 248, 0.1); color: #38bdf8; border-color: rgba(56, 189, 248, 0.25);">Public Project</span>
+                <h3 style="font-size: 1.5rem; font-weight: 700; color: #ffffff;">MindVault</h3>
+                <span class="badge" style="background: rgba(56, 189, 248, 0.12); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">Public Project</span>
               </div>
-              <p style="color: #94a3b8; font-size: 0.9375rem; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
-                An open experimental project incubated within Zugado Labs. Comprehensive specifications, technical capabilities, and public documentation will be released following approved review.
+              <p style="color: #94a3b8; font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.75rem; flex-grow: 1;">
+                An open experimental project incubated within Zugado Labs exploring cognitive security, modular memory structures, and cryptographic state preservation. Comprehensive specifications will be released following approved review.
               </p>
-              <a href="/labs/mind-bolt/" class="link-arrow" style="color: #38bdf8;">
-                View project documentation
+              <a href="/labs/mind-vault/" class="link-arrow" style="color: #38bdf8;">
+                View MindVault documentation
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </a>
             </div>
@@ -185,12 +186,12 @@
         </div>
 
         <!-- Independent Contributor Strip -->
-        <div style="margin-top: 4rem; padding: 3rem 2rem; background: #0f1422; border: 1px solid #1e293b; border-radius: var(--radius-lg); text-align: center;">
-          <h2 style="font-size: 1.75rem; font-weight: 700; color: #ffffff; margin-bottom: 0.75rem;">Interested in collaborating with Labs?</h2>
-          <p style="color: #94a3b8; max-width: 600px; margin: 0 auto 1.75rem; line-height: 1.6;">
+        <div style="margin-top: 4.5rem; padding: 3.5rem 2rem; background: #0d111a; border: 1px solid #1e293b; border-radius: var(--radius-lg); text-align: center;">
+          <h2 style="font-size: 1.85rem; font-weight: 700; color: #ffffff; margin-bottom: 0.75rem;">Interested in collaborating with Labs?</h2>
+          <p style="color: #94a3b8; max-width: 620px; margin: 0 auto 2rem; line-height: 1.65;">
             We collaborate with talented independent creators, researchers, and specialized developers under structured engagement agreements.
           </p>
-          <a href="/labs/contribute/" class="btn" style="background-color: #38bdf8; color: #090d16; font-weight: 700;">Submit an expression of interest</a>
+          <a href="/labs/contribute/" class="btn" style="background-color: #38bdf8; color: #07090e; font-weight: 700;">Submit an expression of interest</a>
         </div>
 
       </div>
@@ -198,12 +199,12 @@
 
   </main>
 
-  <!-- Footer (Labs Continuity) -->
+  <!-- Footer (Labs Studio Variant) -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/assets/zugado_logo_white.png" alt="Zugado Technologies" class="brand-logo-img" style="height: 24px;" />
+          <img src="/assets/zugado_logo_labs.png" alt="Zugado Technologies" class="brand-logo-img" style="height: 28px;" />
           <p style="color: #94a3b8;">
             Building digital products and exploring emerging technology through disciplined engineering and focused experimentation.
           </p>
@@ -224,7 +225,7 @@
             <li><a href="/products/" class="footer-link">Products Index</a></li>
             <li><a href="/products/zugado/" class="footer-link">Zugado Flagship</a></li>
             <li><a href="/labs/" class="footer-link">Zugado Labs</a></li>
-            <li><a href="/labs/mind-bolt/" class="footer-link">Mind Bolt</a></li>
+            <li><a href="/labs/mind-vault/" class="footer-link">MindVault</a></li>
             <li><a href="/labs/contribute/" class="footer-link">Contributors</a></li>
           </ul>
         </div>
