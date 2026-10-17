@@ -119,49 +119,7 @@ body.theme-labs .site-header {
   height: 22px;
 }
 
-/* Mobile Drawer */
-.mobile-drawer {
-  position: fixed;
-  top: 4.75rem;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--color-bg);
-  padding: 2.5rem 1.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-  z-index: 99;
-  border-top: 1px solid var(--color-border);
-  transform: translateY(-100%);
-  opacity: 0;
-  visibility: hidden;
-  transition: transform var(--transition-normal), opacity var(--transition-normal), visibility var(--transition-normal);
-}
-
-.mobile-drawer.open {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
-}
-
-.mobile-nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.mobile-nav-link {
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: var(--color-text);
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--color-border-subtle);
-}
-
-.mobile-nav-link.active {
-  color: var(--color-primary);
-}
+/* Mobile Drawer styles are handled by orbix.css */
 
 /* ==========================================================================
    Cards & Surfaces

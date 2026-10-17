@@ -60,31 +60,27 @@
 }
 
 .orbix-dock-brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
+  justify-content: center;
   text-decoration: none;
   color: #ffffff;
+  padding: 0.2rem;
+  border-radius: var(--orbix-radius-pill);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.orbix-dock-brand:hover {
+  transform: scale(1.08);
+  opacity: 0.92;
 }
 
 .orbix-dock-logo {
-  height: 20px;
+  height: 24px;
   width: auto;
-  filter: brightness(0) invert(1);
-}
-
-.orbix-dock-brand-name {
-  font-weight: 800;
-  font-size: 0.95rem;
-  letter-spacing: -0.03em;
-  color: #ffffff;
-  white-space: nowrap;
-}
-
-.orbix-dock-brand-name span {
-  font-weight: 400;
-  font-style: italic;
-  color: #a1a1aa;
+  object-fit: contain;
+  display: block;
 }
 
 .orbix-dock-nav {
@@ -1272,34 +1268,372 @@
 }
 
 /* ==========================================================================
-   Responsive & Accessibility
+   Mobile Navigation Drawer (Orbix Dark Glassmorphism Sheet)
    ========================================================================== */
-@media (max-width: 640px) {
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: rgba(9, 9, 11, 0.96);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem 2.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-16px) scale(0.98);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.3s ease;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-drawer.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-drawer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.mobile-drawer-brand-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.mobile-drawer-close {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--orbix-radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.mobile-drawer-close:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  transform: rotate(90deg);
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.25rem 0;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #a1a1aa;
+  text-decoration: none;
+  padding: 0.75rem 0.85rem;
+  border-radius: 12px;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.mobile-nav-num {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #71717a;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateX(4px);
+}
+
+.mobile-nav-link.active .mobile-nav-num {
+  color: #38bdf8;
+}
+
+.mobile-drawer-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-drawer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.75rem;
+  color: #71717a;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Comprehensive Responsive Overhaul (<960px, <768px, <640px, <480px)
+   ========================================================================== */
+section,
+.orbix-hero-section,
+.orbix-manifesto-container,
+.orbix-stack-section,
+.orbix-process-section,
+.orbix-faq-section,
+.product-hero,
+.company-hero,
+.careers-hero,
+.labs-hero,
+.contact-hero {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (max-width: 959px) {
+  .orbix-dock-nav {
+    display: none !important;
+  }
+  .orbix-dock-toggle {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 768px) {
   .orbix-body {
-    padding-top: 4.5rem;
+    padding-top: 4.75rem;
   }
-  .orbix-top-dock {
-    width: calc(100% - 20px);
-    top: 10px;
-    padding: 0.45rem 0.5rem 0.45rem 1rem;
-  }
-  .orbix-hero-section {
-    padding: 2.5rem 1.25rem 2.5rem;
-  }
-  .orbix-poster-card {
-    padding: 2.75rem 1.75rem;
-  }
-  .orbix-process-card {
-    padding: 2.5rem 1.5rem;
+
+  /* Stacked cards flow naturally on mobile screens to prevent clipping */
+  .orbix-card-scroll-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
   .orbix-stacked-card {
-    padding: 2.25rem 1.5rem;
+    position: relative !important;
+    top: 0 !important;
+    margin-bottom: 0 !important;
+    width: 100% !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
   }
-  .product-spotlight-card {
-    padding: 2rem 1.5rem;
+
+  /* Manifesto interactive pills positioned below text to avoid text obstruction */
+  .orbix-manifesto-container {
+    padding: 3rem 1.25rem 2.5rem;
   }
+  .orbix-manifesto-para {
+    font-size: clamp(1.25rem, 5vw, 1.85rem) !important;
+    line-height: 1.45 !important;
+  }
+  .orbix-pill-canvas {
+    position: relative !important;
+    inset: auto !important;
+    height: auto !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.6rem !important;
+    margin-top: 2rem !important;
+  }
+  .orbix-drag-pill {
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    font-size: 0.78rem !important;
+    padding: 0.45rem 0.95rem !important;
+  }
+
+  /* Grids collapse cleanly on tablet/mobile */
+  .orbix-process-grid,
+  .product-layout-grid,
+  .company-principles-grid,
+  .company-lifecycle-grid,
+  .careers-values-grid,
+  .labs-stealth-grid,
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .orbix-stats-bento {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .orbix-top-dock {
+    width: calc(100% - 24px) !important;
+    top: 10px !important;
+    padding: 0.35rem 0.5rem 0.35rem 0.75rem !important;
+  }
+
+  /* Hide progress reading and divider on narrow screens */
+  .orbix-dock-reading,
+  .orbix-dock-divider {
+    display: none !important;
+  }
+
+  .orbix-dock-right {
+    gap: 0.5rem !important;
+  }
+
+  .orbix-dock-cta {
+    padding: 0.4rem 0.85rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  .orbix-dock-logo {
+    height: 22px !important;
+  }
+
+  /* Hero Typography & CTA Wrapping */
+  .orbix-hero-section {
+    padding: 2.25rem 1rem 2rem !important;
+  }
+
+  .orbix-pill-badge {
+    font-size: 0.6875rem !important;
+    padding: 0.35rem 0.75rem !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  .orbix-hero-title,
+  .product-hero-title,
+  .company-hero-title,
+  .careers-hero-title,
+  .labs-hero-title,
+  .contact-hero-title {
+    font-size: clamp(1.85rem, 8vw, 2.65rem) !important;
+    letter-spacing: -0.03em !important;
+    margin: 1.25rem 0 1rem !important;
+    line-height: 1.15 !important;
+    word-break: break-word !important;
+  }
+
+  .orbix-hero-lead {
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .orbix-hero-actions,
+  .product-hero-cta {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+  }
+
+  .orbix-hero-actions > *,
+  .product-hero-cta > * {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .orbix-social-proof {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    padding: 0.75rem 1rem !important;
+    text-align: center !important;
+  }
+
+  /* Tab switcher horizontal smooth scroll bar */
+  .orbix-tab-nav {
+    display: flex !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+    padding: 0.35rem !important;
+    border-radius: var(--orbix-radius-pill) !important;
+  }
+  .orbix-tab-nav::-webkit-scrollbar {
+    display: none !important;
+  }
+  .orbix-tab-btn {
+    flex-shrink: 0 !important;
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  /* Bento Stats 1-column on mobile */
+  .orbix-stats-bento {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .orbix-bento-card {
+    padding: 1.5rem 1.25rem !important;
+  }
+
+  .orbix-poster-card,
+  .orbix-process-card,
+  .orbix-stacked-card,
+  .product-spotlight-card,
   .dark-metric-section {
-    padding: 3rem 1.75rem;
+    padding: 2rem 1.25rem !important;
+    border-radius: 20px !important;
+  }
+
+  /* Footer Layout */
+  .footer-cols {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .orbix-hero-title,
+  .product-hero-title,
+  .company-hero-title,
+  .careers-hero-title,
+  .labs-hero-title,
+  .contact-hero-title {
+    font-size: 1.75rem !important;
+  }
+
+  .orbix-hero-section {
+    padding: 1.75rem 0.75rem 1.75rem !important;
+  }
+
+  .orbix-dock-cta span {
+    font-size: 0.75rem !important;
   }
 }
 

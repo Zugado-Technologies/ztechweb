@@ -44,6 +44,23 @@ function initOrbixDock() {
       dockMenuBtn.setAttribute('aria-expanded', String(isOpen));
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
+
+    const closeBtn = drawer.querySelector('.mobile-drawer-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        drawer.classList.remove('open');
+        dockMenuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    }
+
+    drawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.remove('open');
+        dockMenuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
   }
 }
 

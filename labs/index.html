@@ -96,8 +96,7 @@
   <!-- 00. Floating Top Full Navbar (Orbix Signature Floating Dock) -->
   <header class="orbix-top-dock" aria-label="Main Navigation Bar">
     <a href="/" class="orbix-dock-brand" aria-label="Zugado Technologies Home">
-      <img src="/assets/favicon.png" alt="Zugado" class="orbix-dock-logo" />
-      <span class="orbix-dock-brand-name">Zugado <span>Technologies</span></span>
+      <img src="/assets/favicon_light.png" alt="Zugado" class="orbix-dock-logo" />
     </a>
 
     <nav class="orbix-dock-nav" aria-label="Site Pages">
@@ -124,15 +123,54 @@
 
   <!-- Mobile Drawer -->
   <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="/" class="mobile-drawer-brand">
+        <img src="/assets/favicon_light.png" alt="Zugado" class="orbix-dock-logo" />
+        <span class="mobile-drawer-brand-name">Zugado Technologies</span>
+      </a>
+      <button class="mobile-drawer-close" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
     <nav class="mobile-nav-links">
-      <a href="/" class="mobile-nav-link">Home</a>
-      <a href="/company/" class="mobile-nav-link">Company</a>
-      <a href="/products/" class="mobile-nav-link">Products</a>
-      <a href="/labs/" class="mobile-nav-link active">Zugado Labs</a>
-      <a href="/careers/" class="mobile-nav-link">Careers</a>
-      <a href="/contact/" class="mobile-nav-link">Contact</a>
+      <a href="/" class="mobile-nav-link">
+        <span class="mobile-nav-num">/01</span>
+        <span>Home</span>
+      </a>
+      <a href="/company/" class="mobile-nav-link">
+        <span class="mobile-nav-num">/02</span>
+        <span>Company</span>
+      </a>
+      <a href="/products/" class="mobile-nav-link">
+        <span class="mobile-nav-num">/03</span>
+        <span>Products</span>
+      </a>
+      <a href="/labs/" class="mobile-nav-link active">
+        <span class="mobile-nav-num">/04</span>
+        <span>Zugado Labs</span>
+      </a>
+      <a href="/careers/" class="mobile-nav-link">
+        <span class="mobile-nav-num">/05</span>
+        <span>Careers</span>
+      </a>
+      <a href="/contact/" class="mobile-nav-link">
+        <span class="mobile-nav-num">/06</span>
+        <span>Contact</span>
+      </a>
     </nav>
-    <a href="/contact/" class="orbix-btn-pill-dark" style="margin-top: 1.5rem; width: 100%;">Discuss a project</a>
+    <div class="mobile-drawer-footer">
+      <a href="/contact/" class="orbix-btn-pill-dark" style="width: 100%; justify-content: center; padding: 0.85rem 1.5rem;">
+        <span>Discuss a project</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+      <div class="mobile-drawer-meta">
+        <span>Zugado Technologies Private Limited</span>
+        <span>Multi-Layered Applied Research</span>
+      </div>
+    </div>
   </div>
 
   <!-- Main Content -->
