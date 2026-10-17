@@ -3,22 +3,22 @@
 
 Write-Host "Updating /beta from branch v3..." -ForegroundColor Cyan
 
-$currentBranch = (git rev-parse --abbrev-ref HEAD).Trim()
-if ($currentBranch -ne "main") {
-    Write-Warning "Switching to main branch..."
-    git checkout main
-}
-
-# Checkout v3 temporarily to run the beta build
+# Checkout v3 and build with /beta/ base into a temporary directory
 git checkout v3
-npm run build:beta
+npx vite build --base=/beta/ --outDir=temp-beta
 
-# Switch back to main
+# Switch back to main branch
 git checkout main
+
+# Replace beta directory with newly built version
+if (Test-Path "beta") {
+    Remove-Item -Recurse -Force "beta" -ErrorAction SilentlyContinue
+}
+Move-Item "temp-beta" "beta"
 
 # Remove redundant CNAME in beta folder if generated
 if (Test-Path "beta\CNAME") {
-    Remove-Item "beta\CNAME" -Force
+    Remove-Item "beta\CNAME" -Force -ErrorAction SilentlyContinue
 }
 
 Write-Host "Successfully updated /beta on main from v3!" -ForegroundColor Green

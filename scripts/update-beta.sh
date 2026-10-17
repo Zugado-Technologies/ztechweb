@@ -7,8 +7,11 @@ set -e
 echo "Updating /beta from branch v3..."
 
 git checkout v3
-npm run build:beta
+npx vite build --base=/beta/ --outDir=temp-beta
 git checkout main
+
+rm -rf beta
+mv temp-beta beta
 
 if [ -f "beta/CNAME" ]; then
   rm -f "beta/CNAME"
