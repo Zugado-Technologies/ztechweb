@@ -1,8 +1,34 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
+function htmlBasePlugin() {
+  let base = '/';
+  return {
+    name: 'html-base-plugin',
+    configResolved(config) {
+      base = config.base || '/';
+    },
+    transformIndexHtml(html) {
+      if (base === '/' || base === './') return html;
+      const cleanBase = base.replace(/\/$/, '');
+      return html
+        .replace(/href="\/([^"]*)"/g, (match, path) => {
+          if (path.startsWith('http') || path.startsWith('//') || path.startsWith('#') || path.startsWith('mailto:') || path.startsWith('tel:')) return match;
+          if (path.startsWith(cleanBase.replace(/^\//, ''))) return match;
+          return `href="${cleanBase}/${path}"`;
+        })
+        .replace(/src="\/([^"]*)"/g, (match, path) => {
+          if (path.startsWith('http') || path.startsWith('//')) return match;
+          if (path.startsWith(cleanBase.replace(/^\//, ''))) return match;
+          return `src="${cleanBase}/${path}"`;
+        });
+    }
+  };
+}
+
 export default defineConfig({
   base: '/',
+  plugins: [htmlBasePlugin()],
   build: {
     rollupOptions: {
       input: {
