@@ -1,5 +1,9 @@
 import { initNavigation } from './navigation.js';
 import { initForms } from './forms.js';
+import { initBetaAuth } from './beta-auth.js';
+
+// Protect immediately before DOMContentLoaded to prevent any content flash
+initBetaAuth();
 
 function initScrollReveal() {
   const elements = document.querySelectorAll('.reveal-on-scroll');
