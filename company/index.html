@@ -3,9 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Company — Zugado Technologies</title>
-  <meta name="description" content="About Zugado Technologies: our philosophy, engineering approach, and technology principles as a registered Indian Private Limited Company." />
+  <title>About Company — Zugado Technologies</title>
+  <meta name="description" content="About Zugado Technologies: our engineering philosophy, foundational approach, and corporate structure as an Indian Private Limited Company." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://zugadotechnologies.com/company/" />
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
+
+  <!-- OpenGraph & Twitter Cards (AIO Search Optimization) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Company — Zugado Technologies" />
+  <meta property="og:description" content="A disciplined engineering and technology company building resilient software systems." />
+  <meta property="og:url" content="https://zugadotechnologies.com/company/" />
+  <meta property="og:image" content="/assets/zugado_logo_theme.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Company — Zugado Technologies" />
+  <meta name="twitter:description" content="About Zugado Technologies: engineering philosophy and corporate particulars." />
+
+  <!-- Structured Data JSON-LD for Search Engines & AI Crawlers (AIO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://zugadotechnologies.com/company/#aboutpage",
+        "name": "About Zugado Technologies",
+        "description": "Comprehensive corporate overview, engineering principles, and governance of Zugado Technologies Private Limited.",
+        "isPartOf": { "@id": "https://zugadotechnologies.com/#website" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://zugadotechnologies.com/#organization",
+        "name": "Zugado Technologies",
+        "legalName": "Zugado Technologies Private Limited",
+        "url": "https://zugadotechnologies.com/",
+        "foundingLocation": {
+          "@type": "Country",
+          "name": "India"
+        },
+        "description": "Registered Indian technology company engineering deterministic distributed systems and applied research."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://zugadotechnologies.com/company/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://zugadotechnologies.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Company",
+            "item": "https://zugadotechnologies.com/company/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://zugadotechnologies.com/company/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the corporate structure of Zugado Technologies?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Zugado Technologies Private Limited is a registered Indian corporate entity. It oversees core platform development, commercial product initiatives, and the Zugado Labs research division."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the core engineering principles of Zugado?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We operate under first-principles engineering: avoiding synthetic bloat, guaranteeing deterministic execution cycles, and building resilient systems for real metropolitan scale."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,35 +96,36 @@
   <link rel="stylesheet" href="/src/styles/tokens.css" />
   <link rel="stylesheet" href="/src/styles/global.css" />
   <link rel="stylesheet" href="/src/styles/components.css" />
+  <link rel="stylesheet" href="/src/styles/orbix.css" />
 </head>
-<body class="site-wrapper">
+<body class="site-wrapper orbix-body">
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-container">
-      <a href="/" class="brand-link" aria-label="Zugado Technologies Home">
-        <img src="/assets/zugado_logo_theme.png" alt="Zugado Technologies" class="brand-logo-img" />
-      </a>
+  <!-- 00. Floating Top Full Navbar (Orbix Signature Floating Dock) -->
+  <header class="orbix-top-dock" aria-label="Main Navigation Bar">
+    <a href="/" class="orbix-dock-brand" aria-label="Zugado Technologies Home">
+      <img src="/assets/favicon.png" alt="Zugado" class="orbix-dock-logo" />
+      <span class="orbix-dock-brand-name">Zugado <span>Technologies</span></span>
+    </a>
 
-      <nav class="nav-desktop" aria-label="Main Navigation">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/company/" class="nav-link active">Company</a>
-        <a href="/products/" class="nav-link">Products</a>
-        <a href="/labs/" class="nav-link">Zugado Labs</a>
-        <a href="/careers/" class="nav-link">Careers</a>
-        <a href="/contact/" class="nav-link">Contact</a>
-      </nav>
+    <nav class="orbix-dock-nav" aria-label="Site Pages">
+      <a href="/" class="orbix-dock-link">Home</a>
+      <a href="/company/" class="orbix-dock-link active">Company</a>
+      <a href="/products/" class="orbix-dock-link">Products</a>
+      <a href="/labs/" class="orbix-dock-link">Zugado Labs</a>
+      <a href="/careers/" class="orbix-dock-link">Careers</a>
+      <a href="/contact/" class="orbix-dock-link">Contact</a>
+    </nav>
 
-      <div class="header-actions">
-        <a href="/contact/" class="btn btn-primary btn-sm">Discuss a project</a>
-        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
+    <div class="orbix-dock-right">
+      <div class="orbix-dock-reading" title="Page Scroll Progress">0%</div>
+      <div class="orbix-dock-divider"></div>
+      <a href="/contact/" class="orbix-dock-cta">Discuss a project</a>
+      <button class="orbix-dock-toggle" aria-label="Toggle navigation drawer" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="3" y1="8" x2="21" y2="8"></line>
+          <line x1="3" y1="16" x2="21" y2="16"></line>
+        </svg>
+      </button>
     </div>
   </header>
 
@@ -58,171 +139,221 @@
       <a href="/careers/" class="mobile-nav-link">Careers</a>
       <a href="/contact/" class="mobile-nav-link">Contact</a>
     </nav>
-    <a href="/contact/" class="btn btn-primary" style="margin-top: 1rem;">Discuss a project</a>
+    <a href="/contact/" class="orbix-btn-pill-dark" style="margin-top: 1.5rem; width: 100%;">Discuss a project</a>
   </div>
 
   <!-- Main Content -->
   <main class="site-main" id="main-content">
     
-    <!-- Hero Section -->
-    <section class="section section-hero">
-      <div class="container">
-        <div style="max-width: 860px;" class="reveal-on-scroll">
-          <div class="eyebrow-tag">Corporate Profile</div>
-          <h1 class="page-title">Engineering digital systems with deliberate focus.</h1>
-          <p class="lead-text" style="max-width: 720px;">
-            Zugado Technologies is a registered Indian Private Limited Company dedicated to creating modern digital products, robust software architectures, and exploratory technology through Zugado Labs.
+    <!-- 01. Hero Section (Adapted from Orbix PDF 3) -->
+    <section class="orbix-hero-section reveal-on-scroll">
+      
+      <div class="orbix-pill-badge">
+        <span class="orbix-status-pulse"></span>
+        <span>CORPORATE IDENTITY &bull; INDIAN PRIVATE LIMITED COMPANY</span>
+      </div>
+
+      <h1 class="orbix-hero-title">
+        A Disciplined Engineering &amp; Technology Company
+      </h1>
+
+      <p class="orbix-hero-subtitle">
+        We build resilient digital platforms and explore emerging computational paradigms through deterministic software engineering. Grounded in mathematical precision, long-term stewardship, and structured innovation.
+      </p>
+
+      <div class="orbix-hero-actions">
+        <a href="/contact/" class="orbix-btn-pill-dark">
+          Discuss a Collaboration
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 15px; height: 15px;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- 02. High-Impact Dark Poster Banner (Adapted from Orbix PDF 3 Page 1 "Every interaction") -->
+    <section class="container" style="max-width: 1240px; margin: 3.5rem auto 5rem; padding: 0 1.5rem;">
+      <div class="orbix-poster-card reveal-on-scroll" style="text-align: center; padding: 6rem 2.5rem;">
+        <span class="orbix-poster-eyebrow">OUR CORE DOCTRINE</span>
+        <h2 style="font-size: clamp(2.25rem, 5vw, 4rem); font-weight: 900; letter-spacing: -0.04em; color: #ffffff; max-width: 900px; margin: 0 auto 1.5rem; line-height: 1.1;">
+          Every interaction should be predictable, bounded, and resilient.
+        </h2>
+        <p style="font-size: 1.15rem; color: #94a3b8; max-width: 650px; margin: 0 auto; line-height: 1.65;">
+          We reject fragile dependencies and speculative bloat. Our systems run deterministic execution cycles designed to withstand real-world operational stress.
+        </p>
+      </div>
+    </section>
+
+    <!-- 03. Engineering Lifecycle Timeline (Adapted from Orbix PDF 3 Page 2: Week 01 - Week 04) -->
+    <section class="container" style="max-width: 1240px; margin: 5rem auto; padding: 0 1.5rem;">
+      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal-on-scroll">
+        <div class="orbix-subhead-pill">Engineering Lifecycle</div>
+        <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; color: var(--orbix-dark);">
+          Efficient Architecture, Rigorous Launch
+        </h2>
+        <p style="color: var(--orbix-text-sub); font-size: 1.05rem; max-width: 600px; margin: 0.5rem auto 0;">
+          How we take foundational technical concepts from mathematical proofs to hardened deployment.
+        </p>
+      </div>
+
+      <div class="about-lifecycle-grid">
+        
+        <div class="about-step-card reveal-on-scroll">
+          <div class="about-step-week">WEEK 01</div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">Problem Modeling</h3>
+          <p style="font-size: 0.925rem; color: var(--orbix-text-sub); line-height: 1.6; margin: 0;">
+            Rigorous mathematical analysis of system constraints, concurrency patterns, and spatial boundaries.
+          </p>
+        </div>
+
+        <div class="about-step-card reveal-on-scroll delay-1">
+          <div class="about-step-week">WEEK 02</div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">Schema Validation</h3>
+          <p style="font-size: 0.925rem; color: var(--orbix-text-sub); line-height: 1.6; margin: 0;">
+            Formal specification of state machines, idempotent schemas, and geohash partitioning rules.
+          </p>
+        </div>
+
+        <div class="about-step-card reveal-on-scroll delay-2">
+          <div class="about-step-week">WEEK 03</div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">In-Memory Core</h3>
+          <p style="font-size: 0.925rem; color: var(--orbix-text-sub); line-height: 1.6; margin: 0;">
+            Implementation of compiled WebAssembly and low-level routines operating under strict 15ms latency bounds.
+          </p>
+        </div>
+
+        <div class="about-step-card reveal-on-scroll delay-3">
+          <div class="about-step-week">WEEK 04</div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">Cluster Simulation</h3>
+          <p style="font-size: 0.925rem; color: var(--orbix-text-sub); line-height: 1.6; margin: 0;">
+            Stress testing against network partitions, packet jitter, and edge node dropouts to ensure resilience.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 04. Our Story Section (Adapted from Orbix PDF 3 Page 2 Bottom) -->
+    <section class="container" style="max-width: 1240px; margin: 6rem auto; padding: 0 1.5rem;">
+      <div style="background: #ffffff; border: 1px solid var(--orbix-border); border-radius: 28px; padding: 4rem 3.5rem; box-shadow: var(--orbix-shadow-soft); display: grid; grid-template-columns: 1fr; gap: 3rem;" class="reveal-on-scroll">
+        <div>
+          <div class="orbix-subhead-pill">Our Founding Purpose</div>
+          <h2 style="font-size: clamp(2rem, 3.8vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; color: var(--orbix-dark); margin-bottom: 1.25rem;">
+            We Founded Zugado Technologies To Build Better Systems
+          </h2>
+          <p style="color: var(--orbix-text-sub); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            Zugado Technologies Private Limited was formed with a clear technical conviction: that modern digital infrastructure had grown overly fragile, dependent on fragile abstractions and speculative promises.
+          </p>
+          <p style="color: var(--orbix-text-sub); font-size: 1.05rem; line-height: 1.7; margin: 0;">
+            By establishing clear separation between our corporate stewardship, commercial platforms, and exploratory Labs division, we ensure that every initiative operates with uncompromising architectural focus and transparent legal ownership.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Company Philosophy & Values with Architecture Image -->
-    <section class="section">
-      <div class="container">
-        <div class="grid grid-2" style="gap: 5rem; align-items: center; margin-bottom: 6rem;">
-          <div class="reveal-on-scroll">
-            <div class="eyebrow-tag">Philosophy & Approach</div>
-            <h2 class="section-title">Built on durability, not hype</h2>
-            <p style="color: var(--color-text-secondary); line-height: 1.75; font-size: 1.05rem; margin-bottom: 1.75rem;">
-              We approach software creation through first-principles engineering. In an environment often dominated by transient trends and inflated metrics, Zugado Technologies prioritizes operational resilience, code quality, and maintainable product architectures.
-            </p>
-            <p style="color: var(--color-text-secondary); line-height: 1.75; font-size: 1.05rem;">
-              Our organization is structured to operate with clarity and discretion. We measure progress by functional milestones, clean abstractions, and steady long-term execution rather than premature announcements.
-            </p>
-          </div>
+    <!-- 05. 4 Core Principles (Adapted from Orbix PDF 3 Page 5) -->
+    <section class="container" style="max-width: 1240px; margin: 6rem auto; padding: 0 1.5rem;">
+      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal-on-scroll">
+        <div class="orbix-subhead-pill">Foundational Principles</div>
+        <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; color: var(--orbix-dark);">
+          Why Zugado Technologies?
+        </h2>
+      </div>
 
-          <div class="media-frame reveal-on-scroll delay-2" style="border-radius: var(--radius-lg); overflow: hidden;">
-            <img src="/assets/hero_tech.jpg" alt="Zugado Technologies Engineering Architecture" />
-          </div>
+      <div class="product-features-grid">
+        <div class="product-feature-card reveal-on-scroll">
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">Engineering &amp; Architecture Together</h3>
+          <p style="color: var(--orbix-text-sub); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+            We handle both theoretical modeling and low-level systems engineering so software behaves with mathematical consistency.
+          </p>
         </div>
 
-        <div class="grid grid-3">
-          <div class="card reveal-on-scroll delay-1">
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #0a2540;">01. Architectural Rigor</h3>
-            <p style="font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.7;">
-              Every system is planned for maintainability, security, and portability across modern cloud infrastructures.
-            </p>
-          </div>
-          <div class="card reveal-on-scroll delay-2">
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #0a2540;">02. Disciplined Experimentation</h3>
-            <p style="font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.7;">
-              Through Zugado Labs, we isolate experimental risks into structured prototypes before committing commercial resources.
-            </p>
-          </div>
-          <div class="card reveal-on-scroll delay-3">
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #0a2540;">03. Corporate Integrity</h3>
-            <p style="font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.7;">
-              We communicate transparently, honor written agreements, and protect the confidentiality of our proprietary research.
-            </p>
-          </div>
+        <div class="product-feature-card reveal-on-scroll delay-1">
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">Built for Real Metropolitan Scale</h3>
+          <p style="color: var(--orbix-text-sub); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+            Our systems are specifically architected to handle dense geographic coordination and harsh telecommunications constraints.
+          </p>
+        </div>
+
+        <div class="product-feature-card reveal-on-scroll delay-2">
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">Execution Without Bloat</h3>
+          <p style="color: var(--orbix-text-sub); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+            Our codebases remain clean, audited, and lightweight. We do not introduce speculative dependencies or unnecessary frameworks.
+          </p>
+        </div>
+
+        <div class="product-feature-card reveal-on-scroll delay-3">
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">Long-Term Infrastructure</h3>
+          <p style="color: var(--orbix-text-sub); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+            We focus on software that creates durable economic and operational value for decades rather than following transient trends.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Technical Focus Areas -->
-    <section class="section" style="background-color: var(--color-bg-secondary); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
-      <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <div class="eyebrow-tag">Capabilities & Focus</div>
-          <h2 class="section-title">Core Competencies</h2>
-          <p class="lead-text">
-            Key domains where we focus our internal engineering resources and technical investigations.
-          </p>
-        </div>
-
-        <div class="grid grid-3">
-          <div class="card reveal-on-scroll delay-1">
-            <h3 class="card-title">Distributed Platforms</h3>
-            <p class="card-desc">
-              Designing modular backends, robust data synchronization layers, and resilient APIs capable of serving high-concurrency hyperlocal networks.
-            </p>
-          </div>
-
-          <div class="card reveal-on-scroll delay-2">
-            <h3 class="card-title">Modern Web Interfaces</h3>
-            <p class="card-desc">
-              Crafting fast, accessible, lightweight web applications built with semantic HTML, modern CSS, and performant vanilla runtimes.
-            </p>
-          </div>
-
-          <div class="card reveal-on-scroll delay-3">
-            <h3 class="card-title">Applied Research & Prototyping</h3>
-            <p class="card-desc">
-              Rapid sandbox exploration of emerging tools, developer frameworks, and algorithmic prototypes within Zugado Labs.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- External Engagement Invitation -->
-    <section class="section">
-      <div class="container container-narrow">
-        <div class="reveal-on-scroll" style="background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: clamp(2.5rem, 5vw, 4.5rem); text-align: center; box-shadow: var(--shadow-sm);">
-          <div class="badge badge-primary" style="margin-bottom: 1.5rem;">
-            <span>Collaboration & Inquiries</span>
-          </div>
-          <h2 class="section-title" style="margin-bottom: 1.25rem;">Selected Technology Engagements</h2>
-          <p style="color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 2.25rem; font-size: 1.05rem;">
-            While our primary focus is developing proprietary platforms and Labs research, we are open to discussing selected technology inquiries, advisory technical dialogues, and strategic partnerships with aligned organizations.
-          </p>
-          <a href="/contact/" class="btn btn-primary">Initiate a dialogue</a>
-        </div>
+    <!-- Next Steps CTA -->
+    <section style="padding: 5rem 1.5rem 7rem; text-align: center; max-width: 780px; margin: 0 auto;" class="reveal-on-scroll">
+      <div class="orbix-subhead-pill">Next Steps</div>
+      <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; color: var(--orbix-dark);">
+        Ready to start a conversation?
+      </h2>
+      <p style="font-size: 1.1rem; color: var(--orbix-text-sub); line-height: 1.6; margin-bottom: 2.25rem;">
+        Whether you represent an organization seeking technology dialogue or are interested in our architecture, we welcome direct correspondence.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/contact/" class="orbix-btn-pill-dark">Initiate an inquiry</a>
+        <a href="/careers/" class="orbix-btn-pill-light">Explore careers</a>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
+  <!-- Statutory Corporate Footer -->
+  <footer class="site-footer" style="background-color: #ffffff; border-top: 1px solid var(--orbix-border); padding: 5rem 0 3rem;">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="/assets/zugado_logo_theme.png" alt="Zugado Technologies" class="brand-logo-img" style="height: 30px;" />
-          <p>
+          <p style="color: var(--orbix-text-sub); font-size: 0.9375rem; line-height: 1.6; margin-top: 1rem;">
             Building digital products and exploring emerging technology through disciplined engineering and focused experimentation.
           </p>
         </div>
 
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4 style="color: var(--orbix-dark); font-weight: 700;">Company</h4>
           <ul class="footer-links">
-            <li><a href="/company/" class="footer-link">About & Approach</a></li>
+            <li><a href="/company/" class="footer-link">About &amp; Approach</a></li>
             <li><a href="/careers/" class="footer-link">Careers</a></li>
             <li><a href="/contact/" class="footer-link">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Products & Labs</h4>
+          <h4 style="color: var(--orbix-dark); font-weight: 700;">Products &amp; Labs</h4>
           <ul class="footer-links">
             <li><a href="/products/" class="footer-link">Products Index</a></li>
-            <li><a href="/products/zugado/" class="footer-link">Zugado Flagship</a></li>
             <li><a href="/labs/" class="footer-link">Zugado Labs</a></li>
-            <li><a href="/labs/mind-vault/" class="footer-link">MindVault</a></li>
-            <li><a href="/labs/contribute/" class="footer-link">Contributors</a></li>
+            <li><a href="/labs/contribute/" class="footer-link">Contribute</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Corporate & Legal</h4>
+          <h4 style="color: var(--orbix-dark); font-weight: 700;">Corporate &amp; Legal</h4>
           <ul class="footer-links">
             <li><a href="/privacy/" class="footer-link">Privacy Policy</a></li>
             <li><a href="/terms/" class="footer-link">Terms of Use</a></li>
-            <li><a href="mailto:hello@zugadotechnologies.com" class="footer-link">hello@zugadotechnologies.com</a></li>
+            <li><span class="footer-link" style="opacity: 0.6; cursor: default;">CIN: Upon formal enquiry</span></li>
           </ul>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div class="footer-statutory">
-          © 2026 Zugado Technologies Private Limited. All rights reserved.<br />
+      <div class="footer-bottom" style="border-top: 1px solid var(--orbix-border); margin-top: 3.5rem; padding-top: 2rem;">
+        <div class="footer-statutory" style="color: var(--orbix-text-muted); font-size: 0.8125rem; line-height: 1.6;">
+          &copy; 2026 Zugado Technologies Private Limited. All rights reserved.<br />
           Registered Indian Private Limited Company. Corporate identity and statutory particulars available upon formal enquiry.
         </div>
         <div class="footer-legal-links">
-          <a href="/privacy/" class="footer-link">Privacy</a>
-          <a href="/terms/" class="footer-link">Terms</a>
+          <a href="/privacy/" class="footer-legal-link">Privacy</a>
+          <a href="/terms/" class="footer-legal-link">Terms</a>
         </div>
       </div>
     </div>

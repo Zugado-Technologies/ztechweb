@@ -26,7 +26,7 @@ export function initNavigation() {
 
   // Active navigation link highlighting based on current pathname
   const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
-  const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+  const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link, .orbix-nav-link, .orbix-dock-link');
 
   allNavLinks.forEach((link) => {
     const href = link.getAttribute('href');

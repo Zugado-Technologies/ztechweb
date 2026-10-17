@@ -1,0 +1,1315 @@
+/* ==========================================================================
+   Orbix Studio Inspired Design Language (Zugado Technologies v3)
+   Clean, typographic-first, airy, structural, modern corporate aesthetic
+   ========================================================================== */
+
+:root {
+  --orbix-bg: #f8fafc;
+  --orbix-bg-white: #ffffff;
+  --orbix-dark: #000000;
+  --orbix-text-main: #09090b;
+  --orbix-text-sub: #52525b;
+  --orbix-text-muted: #71717a;
+  --orbix-border: rgba(0, 0, 0, 0.08);
+  --orbix-border-subtle: rgba(0, 0, 0, 0.04);
+  --orbix-pill-bg: rgba(255, 255, 255, 0.85);
+  --orbix-shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --orbix-shadow-hover: 0 20px 40px -12px rgba(0, 0, 0, 0.09);
+  --orbix-radius-pill: 9999px;
+  --orbix-radius-card: 24px;
+}
+
+/* Base Body Atmospheric Gradient (Clean Soft Sky Mist like Orbix) */
+.orbix-body {
+  background-color: var(--orbix-bg);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(224, 237, 250, 0.65) 0%, rgba(248, 250, 252, 0.95) 45%, #f8fafc 100%);
+  color: var(--orbix-text-main);
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  padding-top: 5rem;
+}
+
+/* ==========================================================================
+   00. Signature Floating Top Full Navbar (Replacing Bottom Dock)
+   ========================================================================== */
+.orbix-top-dock {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: calc(100% - 32px);
+  max-width: 1240px;
+  background-color: rgba(9, 9, 11, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: var(--orbix-radius-pill);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  padding: 0.45rem 0.65rem 0.45rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.orbix-top-dock:hover {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.orbix-dock-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.orbix-dock-logo {
+  height: 20px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.orbix-dock-brand-name {
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.orbix-dock-brand-name span {
+  font-weight: 400;
+  font-style: italic;
+  color: #a1a1aa;
+}
+
+.orbix-dock-nav {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+@media (min-width: 960px) {
+  .orbix-dock-nav {
+    display: flex;
+  }
+}
+
+.orbix-dock-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #d4d4d8;
+  text-decoration: none;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--orbix-radius-pill);
+  transition: color 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.orbix-dock-link:hover,
+.orbix-dock-link.active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.orbix-dock-right {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.orbix-dock-divider {
+  width: 1px;
+  height: 18px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.orbix-dock-reading {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #a1a1aa;
+  font-family: var(--font-mono, monospace);
+  min-width: 38px;
+  text-align: center;
+}
+
+.orbix-dock-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #ffffff;
+  color: #000000 !important;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--orbix-radius-pill);
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.orbix-dock-cta:hover {
+  transform: translateY(-1px);
+  background-color: #f4f4f5;
+}
+
+.orbix-dock-toggle {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--orbix-radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.orbix-dock-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (min-width: 960px) {
+  .orbix-dock-toggle {
+    display: none;
+  }
+}
+
+/* Button & Pill Components */
+.orbix-btn-pill-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  background-color: var(--orbix-dark);
+  color: #ffffff !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--orbix-radius-pill);
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.orbix-btn-pill-dark:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  background-color: #1a1a1a;
+}
+
+.orbix-btn-pill-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  background-color: #ffffff;
+  color: var(--orbix-text-main) !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--orbix-radius-pill);
+  text-decoration: none;
+  border: 1px solid var(--orbix-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.orbix-btn-pill-light:hover {
+  transform: translateY(-1px);
+  border-color: rgba(0, 0, 0, 0.18);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Pill Badges */
+.orbix-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 1.15rem;
+  background-color: var(--orbix-pill-bg);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: var(--orbix-radius-pill);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--orbix-text-sub);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.75rem;
+  backdrop-filter: blur(10px);
+}
+
+.orbix-status-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+/* Subhead Pill */
+.orbix-subhead-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orbix-text-muted);
+  background-color: rgba(0, 0, 0, 0.04);
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--orbix-radius-pill);
+  margin-bottom: 1.25rem;
+}
+
+/* Hero Section */
+.orbix-hero-section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 3.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.orbix-hero-title {
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--orbix-dark);
+  margin-bottom: 1.75rem;
+}
+
+.orbix-hero-subtitle {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--orbix-text-sub);
+  max-width: 740px;
+  margin: 0 auto 2.25rem;
+  font-weight: 400;
+}
+
+.orbix-trust-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 1.1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--orbix-border);
+  border-radius: var(--orbix-radius-pill);
+  margin-bottom: 2.5rem;
+  font-size: 0.8125rem;
+  color: var(--orbix-text-sub);
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.orbix-stars {
+  color: #10b981;
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+}
+
+.orbix-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   01. Marquee Ticker (Infinite Clean Tech Standards Strip)
+   ========================================================================== */
+.orbix-marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--orbix-border-subtle);
+  border-bottom: 1px solid var(--orbix-border-subtle);
+  background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+}
+
+.orbix-marquee-track {
+  display: flex;
+  gap: 3rem;
+  width: max-content;
+  animation: orbix-marquee-scroll 32s linear infinite;
+}
+
+.orbix-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes orbix-marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.orbix-marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--orbix-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.orbix-marquee-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+}
+
+/* ==========================================================================
+   02. Floating Canvas / Interactive Telemetry Cards (Orbix Orbit)
+   ========================================================================== */
+.orbix-orbit-section {
+  max-width: 1240px;
+  margin: 3.5rem auto 4rem;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.orbix-orbit-center {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.orbix-orbit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .orbix-orbit-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.orbix-float-card {
+  background: #ffffff;
+  border: 1px solid var(--orbix-border);
+  border-radius: var(--orbix-radius-card);
+  padding: 1.75rem;
+  box-shadow: var(--orbix-shadow-soft);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.orbix-float-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--orbix-shadow-hover);
+  border-color: rgba(0, 0, 0, 0.14);
+}
+
+.orbix-chip-metric {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--orbix-dark);
+  line-height: 1;
+  margin: 0.5rem 0 0.25rem;
+}
+
+/* ==========================================================================
+   03. Full-Width High-Impact Cinematic Poster
+   ========================================================================== */
+.orbix-poster-banner {
+  max-width: 1240px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+}
+
+.orbix-poster-card {
+  background: radial-gradient(circle at 80% 20%, #1e1b4b 0%, #09090b 70%);
+  border-radius: 28px;
+  padding: 4.5rem 3.5rem;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.orbix-poster-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.orbix-poster-eyebrow {
+  display: inline-block;
+  font-size: 0.775rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  margin-bottom: 1.25rem;
+}
+
+.orbix-poster-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.orbix-poster-desc {
+  font-size: 1.15rem;
+  color: #94a3b8;
+  max-width: 580px;
+  line-height: 1.6;
+  margin-bottom: 2.25rem;
+}
+
+/* ==========================================================================
+   04. Scrollytelling Manifesto Section (Orbix Signature Character Reveal)
+   ========================================================================== */
+.orbix-manifesto-section {
+  max-width: 1120px;
+  margin: 7rem auto;
+  padding: 3rem 1.5rem;
+  position: relative;
+  text-align: center;
+}
+
+.orbix-manifesto-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orbix-text-muted);
+  margin-bottom: 1.75rem;
+}
+
+.orbix-manifesto-para {
+  font-size: clamp(1.75rem, 3.8vw, 3rem);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -0.03em;
+  color: var(--orbix-text-main);
+  position: relative;
+  user-select: none;
+}
+
+.orbix-char {
+  display: inline;
+  transition: color 0.25s ease, opacity 0.25s ease;
+  will-change: color, opacity;
+}
+
+.orbix-char.ghost {
+  color: rgba(9, 9, 11, 0.14);
+}
+
+.orbix-char.active {
+  color: #000000;
+}
+
+/* Draggable Floating Elastic Badges */
+.orbix-drag-pill {
+  position: absolute;
+  padding: 0.45rem 1rem;
+  border-radius: var(--orbix-radius-pill);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 10;
+}
+
+.orbix-drag-pill:active {
+  cursor: grabbing;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+}
+
+.orbix-drag-pill-orange {
+  background-color: #ff5722;
+  color: #ffffff;
+  top: 10%;
+  right: 4%;
+  transform: rotate(5deg);
+}
+
+.orbix-drag-pill-blue {
+  background-color: #2563eb;
+  color: #ffffff;
+  bottom: 8%;
+  left: 6%;
+  transform: rotate(-4deg);
+}
+
+.orbix-drag-pill-cyan {
+  background-color: #06b6d4;
+  color: #000000;
+  top: 75%;
+  right: 12%;
+  transform: rotate(3deg);
+}
+
+/* ==========================================================================
+   05. Interactive Tabbed Process Switcher (3 Core Pillars)
+   ========================================================================== */
+.orbix-process-section {
+  max-width: 1240px;
+  margin: 6rem auto;
+  padding: 0 1.5rem;
+}
+
+.orbix-process-card {
+  background: linear-gradient(135deg, rgba(243, 232, 255, 0.6) 0%, rgba(254, 243, 199, 0.4) 50%, rgba(224, 231, 255, 0.6) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  padding: 3.5rem 3rem;
+  box-shadow: var(--orbix-shadow-soft);
+}
+
+.orbix-tabs-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.4rem;
+  border-radius: var(--orbix-radius-pill);
+  border: 1px solid var(--orbix-border);
+  max-width: max-content;
+  margin: 0 auto 3rem;
+  backdrop-filter: blur(12px);
+  flex-wrap: wrap;
+}
+
+.orbix-tab-btn {
+  background: transparent;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--orbix-radius-pill);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--orbix-text-sub);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+.orbix-tab-btn:hover {
+  color: var(--orbix-dark);
+}
+
+.orbix-tab-btn.active {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.orbix-tab-panel {
+  display: none;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  animation: orbix-fade-in 0.4s ease forwards;
+}
+
+.orbix-tab-panel.active {
+  display: grid;
+}
+
+@media (min-width: 900px) {
+  .orbix-tab-panel {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@keyframes orbix-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   06. Stacked Sticky Cards (/01, /02, /03, /04)
+   ========================================================================== */
+.orbix-stack-section {
+  max-width: 1240px;
+  margin: 6rem auto;
+  padding: 0 1.5rem;
+}
+
+.orbix-stack-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.orbix-stacked-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.orbix-stacked-card {
+  position: sticky;
+  top: 90px;
+  border-radius: 28px;
+  padding: 3.5rem;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.12);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .orbix-stacked-card {
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+  }
+}
+
+.orbix-stack-01 {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  top: 90px;
+}
+
+.orbix-stack-02 {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  top: 115px;
+}
+
+.orbix-stack-03 {
+  background: linear-gradient(135deg, #0f172a 0%, #000000 100%);
+  border: 1px solid #334155;
+  top: 140px;
+}
+
+.orbix-stack-04 {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  top: 165px;
+}
+
+.orbix-stack-num {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1;
+  opacity: 0.35;
+  font-family: var(--font-mono, monospace);
+  margin-bottom: 1rem;
+}
+
+.orbix-stack-title {
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.orbix-stack-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   07. Bento Grid Stats Strip
+   ========================================================================== */
+.orbix-bento-section {
+  max-width: 1240px;
+  margin: 6rem auto;
+  padding: 0 1.5rem;
+}
+
+.orbix-bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 800px) {
+  .orbix-bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.orbix-bento-card {
+  background-color: #ffffff;
+  border: 1px solid var(--orbix-border);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: var(--orbix-shadow-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.orbix-bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--orbix-shadow-hover);
+}
+
+.orbix-bento-card-dark {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #222222;
+}
+
+/* ==========================================================================
+   08. Interactive FAQ Accordion System
+   ========================================================================== */
+.orbix-faq-section {
+  max-width: 1240px;
+  margin: 7rem auto;
+  padding: 0 1.5rem;
+}
+
+.orbix-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+}
+
+@media (min-width: 900px) {
+  .orbix-faq-grid {
+    grid-template-columns: 1fr 1.4fr;
+  }
+}
+
+.orbix-faq-item {
+  border-bottom: 1px solid var(--orbix-border);
+  padding: 1.5rem 0;
+}
+
+.orbix-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--orbix-dark);
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  gap: 1.5rem;
+  font-family: inherit;
+}
+
+.orbix-faq-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--orbix-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background-color 0.2s ease;
+}
+
+.orbix-faq-item.open .orbix-faq-icon {
+  transform: rotate(45deg);
+  background-color: var(--orbix-dark);
+  color: #ffffff;
+  border-color: var(--orbix-dark);
+}
+
+.orbix-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+  opacity: 0;
+  color: var(--orbix-text-sub);
+  font-size: 0.975rem;
+  line-height: 1.65;
+}
+
+.orbix-faq-item.open .orbix-faq-answer {
+  max-height: 300px;
+  opacity: 1;
+  padding-top: 1rem;
+}
+
+/* ==========================================================================
+   09. Technical Architecture Terminal
+   ========================================================================== */
+.orbix-terminal-card {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.orbix-terminal-top {
+  background-color: #161b22;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #30363d;
+}
+
+.orbix-terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.orbix-terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.orbix-terminal-code {
+  padding: 1.5rem 1.75rem;
+  margin: 0;
+  font-family: 'JetBrains Mono', 'Space Grotesk', monospace;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #c9d1d9;
+  overflow-x: auto;
+}
+
+/* ==========================================================================
+   10. LABS MULTI-LAYER STYLING (Active, Case Studies, Stealth Layers)
+   ========================================================================== */
+.labs-layer-section {
+  max-width: 1240px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+}
+
+.labs-layer-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--orbix-border);
+  padding-bottom: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.labs-layer-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--orbix-dark);
+}
+
+.labs-layer-tag {
+  font-size: 0.775rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0284c7;
+  background-color: #e0f2fe;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--orbix-radius-pill);
+}
+
+/* Layer 1: Active Product Prototypes Grid */
+.labs-active-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 850px) {
+  .labs-active-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.labs-card {
+  background: #ffffff;
+  border: 1px solid var(--orbix-border);
+  border-radius: var(--orbix-radius-card);
+  padding: 2.5rem;
+  box-shadow: var(--orbix-shadow-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.labs-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--orbix-shadow-hover);
+}
+
+/* Layer 2: Case Studies Grid */
+.labs-case-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 900px) {
+  .labs-case-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.labs-case-card {
+  background: #ffffff;
+  border: 1px solid var(--orbix-border);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--orbix-shadow-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Layer 3: Confidential Stealth Layer (Blurred & Redacted Cards) */
+.labs-stealth-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 850px) {
+  .labs-stealth-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.labs-stealth-card {
+  background: #09090b;
+  border: 1px solid #27272a;
+  border-radius: var(--orbix-radius-card);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.labs-blurred-layer {
+  filter: blur(8px);
+  opacity: 0.35;
+  user-select: none;
+  pointer-events: none;
+}
+
+.labs-confidential-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(9,9,11,0.85) 100%);
+  z-index: 5;
+}
+
+.labs-redacted-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--orbix-radius-pill);
+  margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   11. CAREERS PAGE STYLING (Adapted from Orbix PDF 2)
+   ========================================================================== */
+.careers-values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 3.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .careers-values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.careers-value-card {
+  background: #ffffff;
+  border: 1px solid var(--orbix-border);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--orbix-shadow-soft);
+  transition: transform 0.25s ease;
+}
+
+.careers-value-card:hover {
+  transform: translateY(-3px);
+}
+
+.careers-value-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  background: #f4f4f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orbix-dark);
+}
+
+.careers-positions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+.careers-position-row {
+  background: #ffffff;
+  border: 1px solid var(--orbix-border);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.careers-position-row:hover {
+  border-color: rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.careers-pos-num {
+  font-family: var(--font-mono, monospace);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--orbix-text-muted);
+}
+
+.careers-pos-badge {
+  font-size: 0.775rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #71717a;
+  background-color: #f4f4f5;
+  border: 1px solid var(--orbix-border);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--orbix-radius-pill);
+}
+
+/* ==========================================================================
+   12. ABOUT (COMPANY) PAGE STYLING (Adapted from Orbix PDF 3)
+   ========================================================================== */
+.about-lifecycle-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 3.5rem 0;
+}
+
+@media (min-width: 900px) {
+  .about-lifecycle-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.about-step-card {
+  background: #ffffff;
+  border: 1px solid var(--orbix-border);
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
+  box-shadow: var(--orbix-shadow-soft);
+  position: relative;
+}
+
+.about-step-week {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   13. PRODUCTS PAGE STYLING (Single Flagship Without Disclosed Name)
+   ========================================================================== */
+.product-spotlight-card {
+  background: #ffffff;
+  border: 1px solid var(--orbix-border);
+  border-radius: 28px;
+  padding: 3.5rem;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+@media (min-width: 960px) {
+  .product-spotlight-card {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+  }
+}
+
+.product-features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin: 3.5rem 0;
+}
+
+@media (min-width: 900px) {
+  .product-features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product-feature-card {
+  background: #ffffff;
+  border: 1px solid var(--orbix-border);
+  border-radius: 22px;
+  padding: 2.25rem 2rem;
+  box-shadow: var(--orbix-shadow-soft);
+  transition: transform 0.3s ease;
+}
+
+.product-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--orbix-shadow-hover);
+}
+
+/* Dark Why Us Metric Strip */
+.dark-metric-section {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 28px;
+  padding: 4.5rem 3.5rem;
+  margin: 6rem 0;
+}
+
+.dark-metric-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 800px) {
+  .dark-metric-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.dark-metric-item {
+  border-left: 1px solid #27272a;
+  padding-left: 1.75rem;
+}
+
+.dark-metric-val {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.dark-metric-label {
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Responsive & Accessibility
+   ========================================================================== */
+@media (max-width: 640px) {
+  .orbix-body {
+    padding-top: 4.5rem;
+  }
+  .orbix-top-dock {
+    width: calc(100% - 20px);
+    top: 10px;
+    padding: 0.45rem 0.5rem 0.45rem 1rem;
+  }
+  .orbix-hero-section {
+    padding: 2.5rem 1.25rem 2.5rem;
+  }
+  .orbix-poster-card {
+    padding: 2.75rem 1.75rem;
+  }
+  .orbix-process-card {
+    padding: 2.5rem 1.5rem;
+  }
+  .orbix-stacked-card {
+    padding: 2.25rem 1.5rem;
+  }
+  .product-spotlight-card {
+    padding: 2rem 1.5rem;
+  }
+  .dark-metric-section {
+    padding: 3rem 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbix-marquee-track {
+    animation: none;
+  }
+  .orbix-float-card,
+  .orbix-drag-pill,
+  .orbix-top-dock {
+    transition: none !important;
+  }
+}

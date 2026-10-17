@@ -3,9 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products — Zugado Technologies</title>
-  <meta name="description" content="Commercial software products developed by Zugado Technologies, including our flagship platform Zugado." />
+  <title>Products &amp; Architecture — Zugado Technologies</title>
+  <meta name="description" content="Explore Zugado Technologies' flagship spatial coordination platform. Deterministic routing, sub-15ms dispatch SLA, and zero-spill cluster partitioning." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://zugadotechnologies.com/products/" />
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
+
+  <!-- OpenGraph & Twitter Cards (AIO Search Optimization) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Products &amp; Architecture — Zugado Technologies" />
+  <meta property="og:description" content="Deterministic spatial coordination platform for high-density metropolitan services. Sub-15ms dispatch SLA." />
+  <meta property="og:url" content="https://zugadotechnologies.com/products/" />
+  <meta property="og:image" content="/assets/zugado_logo_theme.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Products &amp; Architecture — Zugado Technologies" />
+  <meta name="twitter:description" content="Deterministic spatial coordination platform for high-density metropolitan services." />
+
+  <!-- Structured Data JSON-LD for Search Engines & AI Crawlers (AIO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://zugadotechnologies.com/products/#application",
+        "name": "Enterprise Spatial Coordination Platform",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Linux, Cloud, Distributed Mesh",
+        "description": "Deterministic spatial coordination platform engineered by Zugado Technologies for high-density metropolitan service dispatch and cluster synchronization with sub-15ms SLA.",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/PreOrder",
+          "description": "Currently in Private Beta. Architecture briefings available upon enterprise enquiry."
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Zugado Technologies Private Limited",
+          "url": "https://zugadotechnologies.com/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://zugadotechnologies.com/products/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://zugadotechnologies.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://zugadotechnologies.com/products/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://zugadotechnologies.com/products/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the primary function of this spatial platform?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The platform synchronizes localized demand and fulfillment across metropolitan zones with mathematically guaranteed sub-15ms dispatch latency and zero cross-zone spill."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is zero-spill spatial partitioning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Zero-spill partitioning confines computation and operational routing strictly within defined geographic boundaries, eliminating cascading latency and zone overflow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the current availability status?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The platform is currently operating in Private Beta with commercial rollouts conducted under non-disclosure agreements."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,35 +103,36 @@
   <link rel="stylesheet" href="/src/styles/tokens.css" />
   <link rel="stylesheet" href="/src/styles/global.css" />
   <link rel="stylesheet" href="/src/styles/components.css" />
+  <link rel="stylesheet" href="/src/styles/orbix.css" />
 </head>
-<body class="site-wrapper">
+<body class="site-wrapper orbix-body">
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-container">
-      <a href="/" class="brand-link" aria-label="Zugado Technologies Home">
-        <img src="/assets/zugado_logo_theme.png" alt="Zugado Technologies" class="brand-logo-img" />
-      </a>
+  <!-- 00. Floating Top Full Navbar (Orbix Signature Floating Dock) -->
+  <header class="orbix-top-dock" aria-label="Main Navigation Bar">
+    <a href="/" class="orbix-dock-brand" aria-label="Zugado Technologies Home">
+      <img src="/assets/favicon.png" alt="Zugado" class="orbix-dock-logo" />
+      <span class="orbix-dock-brand-name">Zugado <span>Technologies</span></span>
+    </a>
 
-      <nav class="nav-desktop" aria-label="Main Navigation">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/company/" class="nav-link">Company</a>
-        <a href="/products/" class="nav-link active">Products</a>
-        <a href="/labs/" class="nav-link">Zugado Labs</a>
-        <a href="/careers/" class="nav-link">Careers</a>
-        <a href="/contact/" class="nav-link">Contact</a>
-      </nav>
+    <nav class="orbix-dock-nav" aria-label="Site Pages">
+      <a href="/" class="orbix-dock-link">Home</a>
+      <a href="/company/" class="orbix-dock-link">Company</a>
+      <a href="/products/" class="orbix-dock-link active">Products</a>
+      <a href="/labs/" class="orbix-dock-link">Zugado Labs</a>
+      <a href="/careers/" class="orbix-dock-link">Careers</a>
+      <a href="/contact/" class="orbix-dock-link">Contact</a>
+    </nav>
 
-      <div class="header-actions">
-        <a href="/contact/" class="btn btn-primary btn-sm">Discuss a project</a>
-        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
+    <div class="orbix-dock-right">
+      <div class="orbix-dock-reading" title="Page Scroll Progress">0%</div>
+      <div class="orbix-dock-divider"></div>
+      <a href="/contact/" class="orbix-dock-cta">Discuss a project</a>
+      <button class="orbix-dock-toggle" aria-label="Toggle navigation drawer" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="3" y1="8" x2="21" y2="8"></line>
+          <line x1="3" y1="16" x2="21" y2="16"></line>
+        </svg>
+      </button>
     </div>
   </header>
 
@@ -58,137 +146,352 @@
       <a href="/careers/" class="mobile-nav-link">Careers</a>
       <a href="/contact/" class="mobile-nav-link">Contact</a>
     </nav>
-    <a href="/contact/" class="btn btn-primary" style="margin-top: 1rem;">Discuss a project</a>
+    <a href="/contact/" class="orbix-btn-pill-dark" style="margin-top: 1.5rem; width: 100%;">Discuss a project</a>
   </div>
 
   <!-- Main Content -->
   <main class="site-main" id="main-content">
     
-    <!-- Hero Section -->
-    <section class="section section-hero">
-      <div class="container">
-        <div style="max-width: 860px;" class="reveal-on-scroll">
-          <div class="eyebrow-tag">Product Portfolio</div>
-          <h1 class="page-title">Purpose-built software platforms.</h1>
-          <p class="lead-text" style="max-width: 720px;">
-            Zugado Technologies focuses its commercial efforts on deep, problem-centric platforms. We prioritize building robust single systems rather than expanding an artificial catalog of minor utilities.
+    <!-- 01. Hero Section (Adapted from Orbix PDF 1) -->
+    <section class="orbix-hero-section reveal-on-scroll">
+      
+      <div class="orbix-pill-badge">
+        <span class="orbix-status-pulse"></span>
+        <span>COMMERCIAL PLATFORM ARCHITECTURE &bull; PRIVATE BETA</span>
+      </div>
+
+      <h1 class="orbix-hero-title">
+        Deterministic Spatial Systems &amp; Platform Architecture
+      </h1>
+
+      <p class="orbix-hero-subtitle">
+        High-density spatial node allocation, sub-15ms dispatch latency, and zero-spill cluster partitioning built for complex metropolitan environments.
+      </p>
+
+      <div class="orbix-hero-actions">
+        <a href="/contact/" class="orbix-btn-pill-dark">
+          Schedule an Architecture Briefing
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 15px; height: 15px;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- Standards Marquee Strip -->
+    <div class="orbix-marquee-wrap" aria-hidden="true">
+      <div class="orbix-marquee-track">
+        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Deterministic Routing</div>
+        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Zero-Spill Partitioning</div>
+        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Sub-15ms Dispatch SLA</div>
+        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Hardware-Signed Trust</div>
+        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Wasm Micro-Cores</div>
+        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Autonomous Mesh Failover</div>
+        <!-- Loop -->
+        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Deterministic Routing</div>
+        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Zero-Spill Partitioning</div>
+        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Sub-15ms Dispatch SLA</div>
+        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Hardware-Signed Trust</div>
+        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Wasm Micro-Cores</div>
+        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Autonomous Mesh Failover</div>
+      </div>
+    </div>
+
+    <!-- 02. Single Spotlight Flagship Product Card (Orbix PDF 1 Feature Pattern) -->
+    <section class="container" style="max-width: 1240px; margin: 4rem auto; padding: 0 1.5rem;">
+      <div class="product-spotlight-card reveal-on-scroll">
+        <div>
+          <div style="font-size: 0.775rem; font-weight: 700; color: #2563eb; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">
+            COMMERCIAL FLAGSHIP PLATFORM // CONFIDENTIAL ROLLOUT
+          </div>
+          <h2 style="font-size: clamp(2rem, 3.8vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; color: var(--orbix-dark); margin-bottom: 1.25rem;">
+            Flagship Coordination Platform
+          </h2>
+          <p style="font-size: 1.05rem; color: var(--orbix-text-sub); line-height: 1.65; margin-bottom: 2rem;">
+            Our primary commercial system addresses foundational urban synchronization friction. By enforcing geometric isolation within localized clusters, it eliminates cross-zone latency and ensures verified, hardware-signed execution.
+          </p>
+
+          <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2.25rem;">
+            <div>
+              <div style="font-size: 1.75rem; font-weight: 800; color: var(--orbix-dark); line-height: 1;">&lt; 15ms</div>
+              <div style="font-size: 0.8125rem; color: var(--orbix-text-muted); margin-top: 0.25rem;">Dispatch SLA</div>
+            </div>
+            <div style="width: 1px; height: 36px; background-color: var(--orbix-border);"></div>
+            <div>
+              <div style="font-size: 1.75rem; font-weight: 800; color: #2563eb; line-height: 1;">Zero</div>
+              <div style="font-size: 0.8125rem; color: var(--orbix-text-muted); margin-top: 0.25rem;">Cross-Zone Spill</div>
+            </div>
+            <div style="width: 1px; height: 36px; background-color: var(--orbix-border);"></div>
+            <div>
+              <div style="font-size: 1.75rem; font-weight: 800; color: #10b981; line-height: 1;">100%</div>
+              <div style="font-size: 0.8125rem; color: var(--orbix-text-muted); margin-top: 0.25rem;">Idempotent State</div>
+            </div>
+          </div>
+
+          <a href="/contact/" class="orbix-btn-pill-dark">Inquire for Private Beta</a>
+        </div>
+
+        <!-- Live Telemetry Card -->
+        <div class="orbix-terminal-card">
+          <div class="orbix-terminal-top">
+            <span style="font-size: 0.75rem; color: #8b949e;">cluster-spatial-node.json &bull; Hardware Verified</span>
+          </div>
+          <pre class="orbix-terminal-code"><code>{
+  <span style="color: #79c0ff;">"architecture"</span>: <span style="color: #a5d6ff;">"Deterministic Spatial Mesh"</span>,
+  <span style="color: #79c0ff;">"cluster_partitioning"</span>: <span style="color: #a5d6ff;">"Zero-Spill Isolation"</span>,
+  <span style="color: #79c0ff;">"sla_target_ms"</span>: <span style="color: #79c0ff;">14</span>,
+  <span style="color: #79c0ff;">"hardware_verification"</span>: <span style="color: #7ee787;">true</span>,
+  <span style="color: #79c0ff;">"state_persistence"</span>: <span style="color: #a5d6ff;">"Cryptographic Ring"</span>,
+  <span style="color: #79c0ff;">"commercial_rollout"</span>: <span style="color: #a5d6ff;">"Active Private Beta"</span>
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. "Why Our Architecture?" Dark Metric Section (Adapted from Orbix PDF 1 Page 2) -->
+    <section class="container" style="max-width: 1240px; margin: 0 auto; padding: 0 1.5rem;">
+      <div class="dark-metric-section reveal-on-scroll">
+        <div style="margin-bottom: 3.5rem;">
+          <span style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #38bdf8;">ARCHITECTURAL RIGOR</span>
+          <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; margin: 0.5rem 0 1rem; color: #ffffff;">
+            Why Our Systems Perform Under Constraint
+          </h2>
+          <p style="color: #94a3b8; font-size: 1.1rem; max-width: 650px;">
+            Engineered from first principles to avoid the fragility, cascading latency, and state drift inherent in traditional distributed dispatch networks.
+          </p>
+        </div>
+
+        <div class="dark-metric-grid">
+          <div class="dark-metric-item">
+            <div class="dark-metric-val">14ms</div>
+            <div class="dark-metric-label">Guaranteed dispatch computation ceiling across high-density clusters.</div>
+          </div>
+          <div class="dark-metric-item">
+            <div class="dark-metric-val">100%</div>
+            <div class="dark-metric-label">Deterministic state reconciliation with mathematically verified idempotency.</div>
+          </div>
+          <div class="dark-metric-item">
+            <div class="dark-metric-val">Zero</div>
+            <div class="dark-metric-label">Cross-boundary operational spill, protecting adjacent geographical zones.</div>
+          </div>
+          <div class="dark-metric-item">
+            <div class="dark-metric-val">99.99%</div>
+            <div class="dark-metric-label">Hardware-verified failover uptime under simulated metropolitan network disruption.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. 6 Architecture Capability Cards (Adapted from Orbix PDF 1 Page 2 Bottom) -->
+    <section class="container" style="max-width: 1240px; margin: 5rem auto; padding: 0 1.5rem;">
+      <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal-on-scroll">
+        <div class="orbix-subhead-pill">Core Engineering Modules</div>
+        <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; color: var(--orbix-dark);">
+          Built For Modern Distributed Scale
+        </h2>
+        <p style="color: var(--orbix-text-sub); font-size: 1.05rem; max-width: 600px; margin: 0.5rem auto 0;">
+          Our platform is structured into modular, fault-tolerant execution layers.
+        </p>
+      </div>
+
+      <div class="product-features-grid">
+        <div class="product-feature-card reveal-on-scroll">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #2563eb; letter-spacing: 0.1em; margin-bottom: 0.75rem;">MODULE 01</div>
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">Spatial Node Partitioning</h3>
+          <p style="color: var(--orbix-text-sub); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+            Hierarchical geohash division isolating network load within self-contained spatial boundaries.
+          </p>
+        </div>
+
+        <div class="product-feature-card reveal-on-scroll delay-1">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #0284c7; letter-spacing: 0.1em; margin-bottom: 0.75rem;">MODULE 02</div>
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">Hardware-Signed Dispatch</h3>
+          <p style="color: var(--orbix-text-sub); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+            Cryptographic signature verification on every dispatch event preventing forged routing requests.
+          </p>
+        </div>
+
+        <div class="product-feature-card reveal-on-scroll delay-2">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #10b981; letter-spacing: 0.1em; margin-bottom: 0.75rem;">MODULE 03</div>
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">Geofenced Isolation</h3>
+          <p style="color: var(--orbix-text-sub); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+            Zero-spill geographic fencing preventing traffic spikes from cascading into neighboring service zones.
+          </p>
+        </div>
+
+        <div class="product-feature-card reveal-on-scroll">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #7c3aed; letter-spacing: 0.1em; margin-bottom: 0.75rem;">MODULE 04</div>
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">Idempotent State Engine</h3>
+          <p style="color: var(--orbix-text-sub); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+            Strict mathematical state machines ensuring operations can be retried safely with zero duplicated orders.
+          </p>
+        </div>
+
+        <div class="product-feature-card reveal-on-scroll delay-1">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #ea580c; letter-spacing: 0.1em; margin-bottom: 0.75rem;">MODULE 05</div>
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">Cluster Failover Resilience</h3>
+          <p style="color: var(--orbix-text-sub); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+            Autonomous mesh routing that gracefully reroutes node telemetry during transient telecommunication drops.
+          </p>
+        </div>
+
+        <div class="product-feature-card reveal-on-scroll delay-2">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #09090b; letter-spacing: 0.1em; margin-bottom: 0.75rem;">MODULE 06</div>
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--orbix-dark); margin-bottom: 0.75rem;">Sub-15ms Routing SLA</h3>
+          <p style="color: var(--orbix-text-sub); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+            Compiled WebAssembly algorithms operating at the network edge for instantaneous spatial calculation.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Product Showcase with Mockup Preview -->
-    <section class="section">
-      <div class="container">
-        <div class="grid grid-1" style="max-width: 1060px; margin: 0 auto;">
-          <div class="card reveal-on-scroll" style="padding: clamp(2.5rem, 5vw, 4rem); border-radius: var(--radius-lg);">
-            
-            <div class="grid grid-2" style="align-items: center; gap: 4rem; margin-bottom: 2.5rem;">
-              <div>
-                <div class="badge" style="margin-bottom: 1rem;">Flagship Commercial Product</div>
-                <h2 style="font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; color: #0a2540;">Zugado</h2>
-                <span class="badge badge-primary" style="margin-bottom: 1.5rem;">
-                  <span class="badge-dot"></span>
-                  <span>In Active Development</span>
-                </span>
-                <p style="font-size: 1.1rem; color: var(--color-text-secondary); line-height: 1.75;">
-                  A comprehensive hyperlocal services technology platform designed to bring modern software coordination, real-time dispatch capabilities, and verified service interactions to regional markets.
-                </p>
-              </div>
+    <!-- 05. 3-Step Lifecycle (Adapted from Orbix PDF 1 Page 3) -->
+    <section class="container" style="max-width: 1080px; margin: 5rem auto; padding: 0 1.5rem;">
+      <div style="text-align: center; margin-bottom: 3rem;" class="reveal-on-scroll">
+        <div class="orbix-subhead-pill">Execution Lifecycle</div>
+        <h2 style="font-size: clamp(2rem, 3.8vw, 2.5rem); font-weight: 800; letter-spacing: -0.03em; color: var(--orbix-dark);">
+          A Clear Process Built for Deterministic Reliability
+        </h2>
+      </div>
 
-              <div class="media-frame" style="border-radius: var(--radius-md);">
-                <img src="/assets/zugado_platform_ui.jpg" alt="Zugado Platform Dashboard Preview" />
-              </div>
-            </div>
-
-            <div style="background-color: var(--color-bg-subtle); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 2rem; margin-bottom: 2.5rem;">
-              <div class="mono-tag" style="color: var(--color-text-muted); margin-bottom: 1.25rem;">
-                PRODUCT SPECIFICATIONS
-              </div>
-              <div class="grid grid-3" style="gap: 1.75rem;">
-                <div>
-                  <div style="font-size: 0.8125rem; color: var(--color-text-muted);">Category</div>
-                  <div style="font-weight: 700; font-size: 1.05rem; color: #0a2540; margin-top: 0.25rem;">Hyperlocal Systems</div>
-                </div>
-                <div>
-                  <div style="font-size: 0.8125rem; color: var(--color-text-muted);">Current Phase</div>
-                  <div style="font-weight: 700; font-size: 1.05rem; color: var(--color-primary); margin-top: 0.25rem;">Internal Beta / Dev</div>
-                </div>
-                <div>
-                  <div style="font-size: 0.8125rem; color: var(--color-text-muted);">Target Environment</div>
-                  <div style="font-weight: 700; font-size: 1.05rem; color: #0a2540; margin-top: 0.25rem;">Cross-Platform Web & Mobile</div>
-                </div>
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-              <a href="/products/zugado/" class="btn btn-primary">View Zugado product details</a>
-              <a href="/contact/" class="btn btn-secondary">Inquire regarding beta</a>
-            </div>
+      <div style="display: flex; flex-direction: column; gap: 2rem;">
+        <div style="background: #ffffff; border: 1px solid var(--orbix-border); border-radius: 20px; padding: 2rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+          <div style="font-size: 0.8125rem; font-weight: 800; color: #2563eb; background: #eff6ff; padding: 0.5rem 1rem; border-radius: var(--orbix-radius-pill);">STEP 01</div>
+          <div style="flex: 1; min-width: 250px;">
+            <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.4rem; color: var(--orbix-dark);">Spatial Ingestion &amp; Geohash Clustering</h4>
+            <p style="font-size: 0.9375rem; color: var(--orbix-text-sub); margin: 0; line-height: 1.6;">Real-time ingestion of geographic coordinates into high-precision, mathematically bounded polygonal cells.</p>
           </div>
         </div>
 
-        <!-- Labs Reference Box -->
-        <div class="container-narrow reveal-on-scroll" style="margin-top: 5rem;">
-          <div class="notice-box" style="text-align: center;">
-            Looking for our experimental software, open tools, or research prototypes? <br />
-            Explore our research division: <a href="/labs/" class="link-arrow" style="margin-left: 0.5rem;">Zugado Labs →</a>
+        <div style="background: #ffffff; border: 1px solid var(--orbix-border); border-radius: 20px; padding: 2rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+          <div style="font-size: 0.8125rem; font-weight: 800; color: #0284c7; background: #f0f9ff; padding: 0.5rem 1rem; border-radius: var(--orbix-radius-pill);">STEP 02</div>
+          <div style="flex: 1; min-width: 250px;">
+            <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.4rem; color: var(--orbix-dark);">Deterministic Dispatch Validation</h4>
+            <p style="font-size: 0.9375rem; color: var(--orbix-text-sub); margin: 0; line-height: 1.6;">In-memory state engine calculates optimal routing parameters with strict sub-15 millisecond execution constraints.</p>
           </div>
         </div>
+
+        <div style="background: #ffffff; border: 1px solid var(--orbix-border); border-radius: 20px; padding: 2rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+          <div style="font-size: 0.8125rem; font-weight: 800; color: #10b981; background: #ecfdf5; padding: 0.5rem 1rem; border-radius: var(--orbix-radius-pill);">STEP 03</div>
+          <div style="flex: 1; min-width: 250px;">
+            <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.4rem; color: var(--orbix-dark);">Hardware-Signed Cluster Execution</h4>
+            <p style="font-size: 0.9375rem; color: var(--orbix-text-sub); margin: 0; line-height: 1.6;">Cryptographically signed dispatch commands dispatched across edge nodes with zero cross-zone spill.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. Architecture FAQ Accordion (Adapted from Orbix PDF 1 Page 7) -->
+    <section class="orbix-faq-section reveal-on-scroll">
+      <div class="orbix-faq-grid">
+        <div>
+          <div class="orbix-subhead-pill">Architecture FAQ</div>
+          <h2 style="font-size: clamp(2rem, 3.5vw, 2.5rem); font-weight: 800; letter-spacing: -0.03em; color: var(--orbix-dark); margin-bottom: 1.25rem;">
+            Got Questions?<br />We've Got Answers.
+          </h2>
+          <p style="color: var(--orbix-text-sub); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2.25rem;">
+            Technical particulars and engagement details regarding our spatial coordination platform.
+          </p>
+          <a href="/contact/" class="orbix-btn-pill-dark">Inquire about Architecture</a>
+        </div>
+
+        <div class="orbix-faq-container">
+          <div class="orbix-faq-item open">
+            <button class="orbix-faq-question" aria-expanded="true">
+              <span>What is the core problem this platform solves?</span>
+              <span class="orbix-faq-icon">+</span>
+            </button>
+            <div class="orbix-faq-answer">
+              Traditional service networks suffer from cascading latency and unpredictable dispatch failures when operating in dense urban areas. Our platform uses bounded spatial clustering to ensure guaranteed sub-15ms execution without geographic spill.
+            </div>
+          </div>
+
+          <div class="orbix-faq-item">
+            <button class="orbix-faq-question" aria-expanded="false">
+              <span>How is zero-spill partitioning enforced?</span>
+              <span class="orbix-faq-icon">+</span>
+            </button>
+            <div class="orbix-faq-answer">
+              Every geographic cluster operates with localized compute boundaries. Demand and fulfillment nodes are cryptographically verified within their respective geofence, isolating volatility from neighboring zones.
+            </div>
+          </div>
+
+          <div class="orbix-faq-item">
+            <button class="orbix-faq-question" aria-expanded="false">
+              <span>Can external platforms integrate with this infrastructure?</span>
+              <span class="orbix-faq-icon">+</span>
+            </button>
+            <div class="orbix-faq-answer">
+              Selected enterprise integrations and architecture evaluations are conducted on an inquiry basis under formal non-disclosure agreements during our private beta period.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Steps CTA -->
+    <section style="padding: 5rem 1.5rem 7rem; text-align: center; max-width: 780px; margin: 0 auto;" class="reveal-on-scroll">
+      <div class="orbix-subhead-pill">Next Steps</div>
+      <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; color: var(--orbix-dark);">
+        Schedule an Architecture Briefing
+      </h2>
+      <p style="font-size: 1.1rem; color: var(--orbix-text-sub); line-height: 1.6; margin-bottom: 2.25rem;">
+        Speak directly with our technical team regarding cluster deployment and integration parameters.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/contact/" class="orbix-btn-pill-dark">Initiate an inquiry</a>
+        <a href="/company/" class="orbix-btn-pill-light">Learn about Zugado</a>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
+  <!-- Statutory Corporate Footer -->
+  <footer class="site-footer" style="background-color: #ffffff; border-top: 1px solid var(--orbix-border); padding: 5rem 0 3rem;">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="/assets/zugado_logo_theme.png" alt="Zugado Technologies" class="brand-logo-img" style="height: 30px;" />
-          <p>
+          <p style="color: var(--orbix-text-sub); font-size: 0.9375rem; line-height: 1.6; margin-top: 1rem;">
             Building digital products and exploring emerging technology through disciplined engineering and focused experimentation.
           </p>
         </div>
 
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4 style="color: var(--orbix-dark); font-weight: 700;">Company</h4>
           <ul class="footer-links">
-            <li><a href="/company/" class="footer-link">About & Approach</a></li>
+            <li><a href="/company/" class="footer-link">About &amp; Approach</a></li>
             <li><a href="/careers/" class="footer-link">Careers</a></li>
             <li><a href="/contact/" class="footer-link">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Products & Labs</h4>
+          <h4 style="color: var(--orbix-dark); font-weight: 700;">Products &amp; Labs</h4>
           <ul class="footer-links">
             <li><a href="/products/" class="footer-link">Products Index</a></li>
-            <li><a href="/products/zugado/" class="footer-link">Zugado Flagship</a></li>
             <li><a href="/labs/" class="footer-link">Zugado Labs</a></li>
-            <li><a href="/labs/mind-vault/" class="footer-link">MindVault</a></li>
-            <li><a href="/labs/contribute/" class="footer-link">Contributors</a></li>
+            <li><a href="/labs/contribute/" class="footer-link">Contribute</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Corporate & Legal</h4>
+          <h4 style="color: var(--orbix-dark); font-weight: 700;">Corporate &amp; Legal</h4>
           <ul class="footer-links">
             <li><a href="/privacy/" class="footer-link">Privacy Policy</a></li>
             <li><a href="/terms/" class="footer-link">Terms of Use</a></li>
-            <li><a href="mailto:hello@zugadotechnologies.com" class="footer-link">hello@zugadotechnologies.com</a></li>
+            <li><span class="footer-link" style="opacity: 0.6; cursor: default;">CIN: Upon formal enquiry</span></li>
           </ul>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div class="footer-statutory">
-          © 2026 Zugado Technologies Private Limited. All rights reserved.<br />
+      <div class="footer-bottom" style="border-top: 1px solid var(--orbix-border); margin-top: 3.5rem; padding-top: 2rem;">
+        <div class="footer-statutory" style="color: var(--orbix-text-muted); font-size: 0.8125rem; line-height: 1.6;">
+          &copy; 2026 Zugado Technologies Private Limited. All rights reserved.<br />
           Registered Indian Private Limited Company. Corporate identity and statutory particulars available upon formal enquiry.
         </div>
         <div class="footer-legal-links">
-          <a href="/privacy/" class="footer-link">Privacy</a>
-          <a href="/terms/" class="footer-link">Terms</a>
+          <a href="/privacy/" class="footer-legal-link">Privacy</a>
+          <a href="/terms/" class="footer-legal-link">Terms</a>
         </div>
       </div>
     </div>
