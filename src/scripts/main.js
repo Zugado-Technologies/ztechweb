@@ -25,18 +25,8 @@ function initScrollReveal() {
 }
 
 function initOrbixDock() {
-  const readingEl = document.querySelector('.orbix-dock-reading');
   const dockMenuBtn = document.querySelector('.orbix-dock-menu-btn, .orbix-dock-toggle');
   const drawer = document.querySelector('.mobile-drawer');
-
-  if (readingEl) {
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 0;
-      readingEl.textContent = `${Math.min(100, Math.max(0, progress))}%`;
-    }, { passive: true });
-  }
 
   if (dockMenuBtn && drawer) {
     dockMenuBtn.addEventListener('click', () => {
