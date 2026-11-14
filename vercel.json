@@ -5,6 +5,17 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.zugadotechnologies.com"
+        }
+      ],
+      "destination": "https://zugadotechnologies.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/admin",
       "destination": "/studio/",
       "permanent": true
