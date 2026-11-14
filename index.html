@@ -18,10 +18,12 @@
   <meta property="og:title" content="Zugado Technologies — Deterministic Distributed Infrastructure" />
   <meta property="og:description" content="Engineering deterministic software platforms and applied research through Zugado Labs. Registered Indian Private Limited Company." />
   <meta property="og:url" content="https://zugadotechnologies.com/" />
-  <meta property="og:image" content="/assets/zugado_logo_theme.png" />
+  <meta property="og:image" content="https://zugadotechnologies.com/assets/zugado_og_banner.png" />
+  <meta property="og:site_name" content="Zugado Technologies" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Zugado Technologies — Deterministic Systems" />
   <meta name="twitter:description" content="Resilient digital platforms, localized spatial coordination, and applied research via Zugado Labs." />
+  <meta name="twitter:image" content="https://zugadotechnologies.com/assets/zugado_og_banner.png" />
 
   <!-- Structured Data JSON-LD for Search Engines & AI Crawlers (AIO) -->
   <script type="application/ld+json">
@@ -57,6 +59,21 @@
         "publisher": { "@id": "https://zugadotechnologies.com/#organization" }
       },
       {
+        "@type": "WebPage",
+        "@id": "https://zugadotechnologies.com/#webpage",
+        "url": "https://zugadotechnologies.com/",
+        "name": "Zugado Technologies — Deterministic Distributed Infrastructure & Systems",
+        "description": "Zugado Technologies Private Limited is a registered Indian technology company developing deterministic distributed infrastructure, spatial coordination systems, and applied research through Zugado Labs.",
+        "isPartOf": { "@id": "https://zugadotechnologies.com/#website" },
+        "about": { "@id": "https://zugadotechnologies.com/#organization" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://zugadotechnologies.com/" }
+          ]
+        }
+      },
+      {
         "@type": "FAQPage",
         "@id": "https://zugadotechnologies.com/#faq",
         "mainEntity": [
@@ -90,10 +107,12 @@
   }
   </script>
 
-  <!-- Fonts -->
+  <!-- Fonts — async to prevent render-blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" /></noscript>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/src/styles/tokens.css" />
