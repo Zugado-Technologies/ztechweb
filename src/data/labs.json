@@ -1,0 +1,63 @@
+[
+  {
+    "id": "project-mindvault",
+    "name": "Project MindVault",
+    "layer": "layer-01-prototypes",
+    "statusBadge": "ALPHA TESTING",
+    "statusTone": "blue",
+    "summary": "An in-memory deterministic state cache designed for sub-10ms transactional convergence across ephemeral edge nodes. Compiles to standalone WebAssembly for zero-dependency execution.",
+    "leadCreatorId": "jitender-singh",
+    "leadCreatorRole": "Principal Research Scientist",
+    "collaborators": ["Zugado Labs Systems Group", "Distributed Systems Working Group"],
+    "ipAgreementNotice": "Intellectual property ownership and licensing terms for Project Ephemera are governed strictly by the applicable written research agreement.",
+    "techStack": ["Rust", "WebAssembly", "CRDTs", "eBPF"],
+    "documentationUrl": "/labs/mindvault/",
+    "featured": true
+  },
+  {
+    "id": "mind-vault",
+    "name": "MindVault Protocol",
+    "layer": "layer-01-prototypes",
+    "statusBadge": "EXPERIMENTAL",
+    "statusTone": "purple",
+    "summary": "Cryptographically partitioned local-first knowledge graph architecture featuring verifiable zero-knowledge access proofs and off-chain indexing.",
+    "leadCreatorId": "ananya-iyer",
+    "leadCreatorRole": "Research Fellow & Cryptographic Architect",
+    "collaborators": ["Zugado Labs Autonomous Systems Lab"],
+    "ipAgreementNotice": "Developed under Zugado Labs Experimental Research Framework. IP rights defined under Project Charter #MV-2026.",
+    "techStack": ["TypeScript", "IndexedDB", "zk-SNARKs", "WebCrypto"],
+    "documentationUrl": "/labs/mind-vault/",
+    "featured": true
+  },
+  {
+    "id": "case-study-sub15ms-routing",
+    "name": "Deterministic Spatial Routing in Metropolitan Zones",
+    "layer": "layer-02-casestudies",
+    "statusBadge": "PUBLISHED BENCHMARK",
+    "statusTone": "cyan",
+    "summary": "Empirical case study evaluating localized cluster partitioning algorithms against traditional geospatial index engines across simulated 1.2M concurrent entity trajectories.",
+    "leadCreatorId": "jitender-singh",
+    "leadCreatorRole": "Lead Systems Architect",
+    "collaborators": ["Rohit Verma", "Traffic Systems Research Group"],
+    "ipAgreementNotice": "Published as open technical research by Zugado Labs under Open Benchmark Attribution License.",
+    "techStack": ["Go", "C++", "Hierarchical Hexagonal Geometry", "Kafka"],
+    "documentationUrl": "#",
+    "featured": false
+  },
+  {
+    "id": "stealth-hyperion",
+    "name": "Protocol Hyperion",
+    "layer": "layer-03-stealth",
+    "statusBadge": "NDA STEALTH",
+    "statusTone": "red",
+    "summary": "Confidential multi-layer spatial orchestration and micro-grid energy balancing protocol operating under closed research validation.",
+    "leadCreatorId": "priya-sharma",
+    "leadCreatorRole": "Director of Applied Research",
+    "collaborators": ["Institutional Research Consortium"],
+    "ipAgreementNotice": "Confidential research conducted under mutual Non-Disclosure Agreement. Ownership retained as stipulated by consortium charter.",
+    "techStack": ["Kernel Bypass", "Low-Latency C", "Discrete Mesh"],
+    "documentationUrl": "#",
+    "featured": false
+  }
+]
+
