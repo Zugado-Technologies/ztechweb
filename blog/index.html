@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Engineering Blog &amp; Technical Publications — Zugado Technologies</title>
-  <meta name="description"
-    content="Technical research, systems architecture papers, and applied engineering publications from the teams at Zugado Technologies and Zugado Labs." />
+  <meta name="description" content="Technical research, systems architecture papers, and applied engineering publications from the teams at Zugado Technologies and Zugado Labs." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href="https://zugadotechnologies.com/blog/" />
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" href="/assets/favicon_light.png" media="(prefers-color-scheme: dark)" />
@@ -14,12 +14,52 @@
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <link rel="apple-touch-icon" href="/assets/favicon.png" />
 
-  <!-- Fonts -->
+  <!-- Open Graph / Twitter Cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Engineering Blog &amp; Technical Publications — Zugado Technologies" />
+  <meta property="og:description" content="Technical research, systems architecture papers, and applied engineering publications from the teams at Zugado Technologies and Zugado Labs." />
+  <meta property="og:url" content="https://zugadotechnologies.com/blog/" />
+  <meta property="og:image" content="https://zugadotechnologies.com/assets/zugado_og_banner.png" />
+  <meta property="og:site_name" content="Zugado Technologies" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Engineering Blog — Zugado Technologies" />
+  <meta name="twitter:description" content="Technical research, systems architecture papers, and applied engineering publications from Zugado Technologies and Zugado Labs." />
+  <meta name="twitter:image" content="https://zugadotechnologies.com/assets/zugado_og_banner.png" />
+
+  <!-- Structured Data: Blog + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://zugadotechnologies.com/blog/#blog",
+        "name": "Zugado Engineering & Research Publications",
+        "description": "Technical research, systems architecture papers, and applied engineering publications from Zugado Technologies and Zugado Labs.",
+        "url": "https://zugadotechnologies.com/blog/",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://zugadotechnologies.com/#organization",
+          "name": "Zugado Technologies"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://zugadotechnologies.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://zugadotechnologies.com/blog/" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts — async to prevent render-blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
-    rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" /></noscript>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/src/styles/tokens.css" />

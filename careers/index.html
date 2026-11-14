@@ -18,7 +18,7 @@
   <meta property="og:title" content="Careers — Zugado Technologies" />
   <meta property="og:description" content="Collaborate, create, and build resilient distributed systems with Zugado Technologies." />
   <meta property="og:url" content="https://zugadotechnologies.com/careers/" />
-  <meta property="og:image" content="/assets/zugado_logo_theme.png" />
+  <meta property="og:image" content="https://zugadotechnologies.com/assets/zugado_og_banner.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Careers — Zugado Technologies" />
   <meta name="twitter:description" content="Join our engineering team building deterministic platforms and applied research." />
@@ -88,10 +88,12 @@
   }
   </script>
 
-  <!-- Fonts -->
+  <!-- Fonts - async to prevent render-blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" /></noscript>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/src/styles/tokens.css" />

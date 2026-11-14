@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /studio/
 
-Sitemap: https://www.zugadotechnologies.com/sitemap.xml
+Sitemap: https://zugadotechnologies.com/sitemap.xml
