@@ -1046,10 +1046,6 @@ html {
     gap: 0.5rem;
   }
 
-  /* Sync Tab Grid */
-  .sync-grid {
-    grid-template-columns: 1fr !important;
-  }
 
   /* Split Editor Mobile */
   .admin-editor-split {
