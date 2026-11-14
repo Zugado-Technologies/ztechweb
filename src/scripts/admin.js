@@ -1,7 +1,6 @@
 /**
  * Zugado Technologies — Admin Portal & Studio Controller
- * Handles Blog CMS, Zugado Labs management, Products platform, Authors directory,
- * and MilesWeb server synchronization.
+ * Handles Blog CMS, Zugado Labs management, Products platform, and Authors directory.
  */
 
 import initialAuthors from '../data/authors.json';
@@ -251,7 +250,6 @@ class AdminStudio {
     this.bindLabsEvents();
     this.bindProductEvents();
     this.bindAuthorEvents();
-    this.bindSyncEvents();
   }
 
   switchTab(tabName) {
@@ -283,9 +281,6 @@ class AdminStudio {
         break;
       case 'authors':
         this.renderAuthorsList();
-        break;
-      case 'sync':
-        this.renderSyncHub();
         break;
     }
   }
@@ -1082,120 +1077,6 @@ class AdminStudio {
     this.populateAuthorSelects();
     this.showToast('Author profile removed', 'info');
     this.renderAuthorsList();
-  }
-
-  // =========================================================================
-  // Module 5: MilesWeb & Sync Hub
-  // =========================================================================
-  bindSyncEvents() {
-    const exportBtn = document.getElementById('btn-export-all-data');
-    const copyJsonBtn = document.getElementById('btn-copy-json');
-    const testApiBtn = document.getElementById('btn-test-api');
-    const resetBtn = document.getElementById('btn-reset-defaults');
-
-    if (exportBtn) {
-      exportBtn.addEventListener('click', () => this.exportAllDataZip());
-    }
-
-    if (copyJsonBtn) {
-      copyJsonBtn.addEventListener('click', () => {
-        const fullPayload = JSON.stringify({
-          authors: this.authors,
-          blogs: this.blogs,
-          labs: this.labs,
-          products: this.products
-        }, null, 2);
-
-        navigator.clipboard.writeText(fullPayload).then(() => {
-          this.showToast('Full JSON bundle copied to clipboard', 'success');
-        });
-      });
-    }
-
-    if (testApiBtn) {
-      testApiBtn.addEventListener('click', () => this.testMilesWebApi());
-    }
-
-    if (resetBtn) {
-      resetBtn.addEventListener('click', () => {
-        if (!confirm('Reset local storage to repository defaults? Unsaved changes will be discarded.')) return;
-        localStorage.removeItem(STORAGE_KEYS.AUTHORS);
-        localStorage.removeItem(STORAGE_KEYS.BLOGS);
-        localStorage.removeItem(STORAGE_KEYS.LABS);
-        localStorage.removeItem(STORAGE_KEYS.PRODUCTS);
-        window.location.reload();
-      });
-    }
-  }
-
-  renderSyncHub() {
-    const blogsCountEl = document.getElementById('stat-blogs-count');
-    const labsCountEl = document.getElementById('stat-labs-count');
-    const productsCountEl = document.getElementById('stat-products-count');
-    const authorsCountEl = document.getElementById('stat-authors-count');
-    const endpointInput = document.getElementById('sync-api-endpoint');
-
-    if (blogsCountEl) blogsCountEl.textContent = this.blogs.length;
-    if (labsCountEl) labsCountEl.textContent = this.labs.length;
-    if (productsCountEl) productsCountEl.textContent = this.products.length;
-    if (authorsCountEl) authorsCountEl.textContent = this.authors.length;
-
-    if (endpointInput) {
-      endpointInput.value = this.apiEndpoint;
-      endpointInput.addEventListener('change', () => {
-        this.apiEndpoint = endpointInput.value.trim();
-        localStorage.setItem(STORAGE_KEYS.API_URL, this.apiEndpoint);
-        this.showToast('API Endpoint updated', 'info');
-      });
-    }
-  }
-
-  async testMilesWebApi() {
-    const statusEl = document.getElementById('api-test-status');
-    if (statusEl) statusEl.textContent = 'Probing MilesWeb endpoint...';
-
-    try {
-      const res = await fetch(`${this.apiEndpoint}/status.php`);
-      if (res.ok) {
-        const data = await res.json();
-        if (statusEl) {
-          statusEl.style.color = '#34d399';
-          statusEl.textContent = `Online: Connected to MilesWeb backend (${data.version || 'v1.0'})`;
-        }
-        this.showToast('Connected to MilesWeb backend', 'success');
-      } else {
-        throw new Error(`HTTP ${res.status}`);
-      }
-    } catch (e) {
-      if (statusEl) {
-        statusEl.style.color = '#fbbf24';
-        statusEl.textContent = 'Local Standalone Mode: Backend endpoint not responding. Using browser storage.';
-      }
-      this.showToast('Standalone Mode active (Local Storage)', 'info');
-    }
-  }
-
-  exportAllDataZip() {
-    const files = [
-      { name: 'authors.json', data: this.authors },
-      { name: 'blogs.json', data: this.blogs },
-      { name: 'labs.json', data: this.labs },
-      { name: 'products.json', data: this.products }
-    ];
-
-    files.forEach(f => {
-      const blob = new Blob([JSON.stringify(f.data, null, 2)], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = f.name;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    });
-
-    this.showToast('JSON dataset files downloaded', 'success');
   }
 
   // =========================================================================
