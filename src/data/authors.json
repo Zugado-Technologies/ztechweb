@@ -1,0 +1,58 @@
+[
+  {
+    "id": "jitender-singh",
+    "name": "Jitender Singh Shekhawat",
+    "title": "Principal Systems Architect & Founder",
+    "division": "Zugado Technologies & Labs",
+    "bio": "Leads architecture for deterministic spatial dispatch, high-concurrency routing grids, and multi-layer experimental systems.",
+    "avatar": "",
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "email": "jitender@zugadotechnologies.com"
+  },
+  {
+    "id": "rohit-verma",
+    "name": "Rohit Verma",
+    "title": "Principal Systems Architect",
+    "division": "Zugado Technologies",
+    "bio": "Specializes in high-concurrency spatial dispatch, deterministic routing pipelines, and zero-spill geometric clustering.",
+    "avatar": "/assets/logo_white.png",
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "email": "rohit.verma@zugadotechnologies.com"
+  },
+  {
+    "id": "priya-sharma",
+    "name": "Priya Sharma",
+    "title": "Lead Research Scientist",
+    "division": "Zugado Labs",
+    "bio": "Directs experimental research into WebAssembly-accelerated state machines, CRDT synchronization, and edge topology convergence.",
+    "avatar": "/assets/zugado_logo_labs.png",
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "email": "priya.sharma@zugadotechnologies.com"
+  },
+  {
+    "id": "vikram-deshmukh",
+    "name": "Vikram Deshmukh",
+    "title": "Staff Distributed Infrastructure Engineer",
+    "division": "Zugado Technologies",
+    "bio": "Focuses on Linux kernel bypass networking, deterministic eBPF observability, and sub-15ms cluster dispatch SLAs.",
+    "avatar": "/assets/logo_white.png",
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "email": "vikram.d@zugadotechnologies.com"
+  },
+  {
+    "id": "ananya-iyer",
+    "name": "Ananya Iyer",
+    "title": "Research Fellow & Cryptographic Architect",
+    "division": "Zugado Labs",
+    "bio": "Investigates multi-agent spatial coordination topologies and micro-zone demand forecasting models.",
+    "avatar": "/assets/zugado_logo_labs.png",
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "email": "ananya.iyer@zugadotechnologies.com"
+  }
+]
+

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "zugado-platform",
+    "name": "Zugado",
+    "tagline": "Flagship Hyperlocal Services Platform",
+    "status": "In Development",
+    "statusTone": "blue",
+    "category": "Flagship Product",
+    "summary": "Zugado is the flagship consumer and provider platform engineered by Zugado Technologies, built for high-density metropolitan spatial coordination, dynamic dispatch, and micro-zone scheduling.",
+    "leadCreatorId": "rohit-verma",
+    "leadCreatorRole": "Head of Platform Architecture",
+    "contributors": ["Vikram Deshmukh", "Zugado Core Platform Team"],
+    "features": [
+      "Sub-15ms spatial routing SLA across high-density city clusters",
+      "Deterministic zero-spill geometric cell partitioning",
+      "Dynamic provider availability synchronization",
+      "Low-overhead real-time telemetry streaming"
+    ],
+    "specifications": {
+      "dispatchSLA": "< 15ms target",
+      "architecture": "Event-driven asynchronous spatial mesh",
+      "availability": "Private Beta (Under Active Development)",
+      "deployment": "Hybrid Cloud / Localized Edge Nodes"
+    },
+    "documentationUrl": "/products/zugado/",
+    "featured": true
+  },
+  {
+    "id": "zugado-spatial-mesh",
+    "name": "Zugado Spatial Mesh Engine",
+    "tagline": "Deterministic Core Infrastructure Engine",
+    "status": "Internal Beta",
+    "statusTone": "emerald",
+    "category": "Core Infrastructure",
+    "summary": "The underlying deterministic spatial engine powering localized fleet and dispatch routing, eliminating cross-zone queue contention through discrete geometric tessellation.",
+    "leadCreatorId": "vikram-deshmukh",
+    "leadCreatorRole": "Staff Distributed Systems Engineer",
+    "contributors": ["Rohit Verma", "Systems Infrastructure Group"],
+    "features": [
+      "Discrete hexagonal spatial indexing",
+      "Memory-mapped atomic ring buffers",
+      "Kernel-bypass network acceleration",
+      "Deterministic failover under localized network partitions"
+    ],
+    "specifications": {
+      "throughput": "100k+ coordinate updates/sec per node",
+      "p99Latency": "4.8ms local zone convergence",
+      "licensing": "Proprietary Core — Zugado Technologies Private Limited"
+    },
+    "documentationUrl": "/products/",
+    "featured": false
+  }
+]
