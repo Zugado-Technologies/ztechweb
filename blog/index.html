@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Blog &amp; Technical Publications — Zugado Technologies</title>
+  <meta name="description"
+    content="Technical research, systems architecture papers, and applied engineering publications from the teams at Zugado Technologies and Zugado Labs." />
+  <link rel="canonical" href="https://zugadotechnologies.com/blog/" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="icon" type="image/png" href="/assets/favicon_light.png" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" type="image/png" href="/assets/favicon.png" media="(prefers-color-scheme: light)" />
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <link rel="stylesheet" href="/src/styles/components.css" />
+  <link rel="stylesheet" href="/src/styles/design-system.css" />
+  <link rel="stylesheet" href="/src/styles/blog.css" />
+</head>
+
+<body class="site-wrapper zg-body">
+
+  <!-- Floating Navigation Dock -->
+  <header class="zg-top-dock">
+    <a href="/" class="zg-dock-brand" aria-label="Zugado Technologies Home">
+      <img src="/assets/logo_white.png" alt="Zugado Technologies" class="zg-dock-logo" />
+    </a>
+
+    <nav class="zg-dock-nav" aria-label="Main Navigation">
+      <a href="/" class="zg-dock-link">Home</a>
+      <a href="/company/" class="zg-dock-link">Company</a>
+      <a href="/products/" class="zg-dock-link">Products</a>
+      <a href="/labs/" class="zg-dock-link">Zugado Labs</a>
+      <a href="/blog/" class="zg-dock-link active">Blog</a>
+      <a href="/careers/" class="zg-dock-link">Careers</a>
+      <a href="/contact/" class="zg-dock-link">Contact</a>
+    </nav>
+
+    <div class="zg-dock-right">
+      <a href="/contact/" class="zg-dock-cta">Discuss a project</a>
+      <button class="zg-dock-toggle" aria-label="Toggle navigation drawer" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="3" y1="8" x2="21" y2="8"></line>
+          <line x1="3" y1="16" x2="21" y2="16"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="/" class="mobile-drawer-brand">
+        <img src="/assets/logo_white.png" alt="Zugado Technologies" class="zg-dock-logo" style="height: 24px;" />
+      </a>
+      <button class="mobile-drawer-close" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="/" class="mobile-nav-link"><span>Home</span></a>
+      <a href="/company/" class="mobile-nav-link"><span>Company</span></a>
+      <a href="/products/" class="mobile-nav-link"><span>Products</span></a>
+      <a href="/labs/" class="mobile-nav-link"><span>Zugado Labs</span></a>
+      <a href="/blog/" class="mobile-nav-link active"><span>Blog</span></a>
+      <a href="/careers/" class="mobile-nav-link"><span>Careers</span></a>
+      <a href="/contact/" class="mobile-nav-link"><span>Contact</span></a>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <main class="site-main" id="main-content">
+
+    <!-- Hero Section -->
+    <section class="zg-hero-section reveal-on-scroll">
+      <div class="zg-pill-badge">
+        <span class="zg-status-pulse"></span>
+        <span>ENGINEERING DISPATCH &bull; TECHNICAL PAPERS</span>
+      </div>
+
+      <h1 class="zg-hero-title">
+        Zugado Engineering &amp; Research Publications
+      </h1>
+
+      <p class="zg-hero-subtitle">
+        Architectural analyses, deterministic spatial coordination benchmarks, and applied research findings from the
+        engineers and scientists at Zugado Technologies and Zugado Labs.
+      </p>
+
+      <!-- Category Filter Pills & Search -->
+      <div style="max-width: 900px; margin: 2rem auto 0; width: 100%;">
+        <div
+          style="display: flex; gap: 1rem; align-items: center; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
+          <input type="text" id="blog-public-search" placeholder="Search publications by keyword, tag, or topic..."
+            style="background: #ffffff; border: 1px solid var(--zg-border); border-radius: 9999px; padding: 0.65rem 1.25rem; font-size: 0.875rem; width: 340px; max-width: 100%; box-shadow: var(--zg-shadow-soft); font-family: inherit;" />
+        </div>
+        <div id="blog-category-filter-bar"
+          style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+          <!-- Populated via blog.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Grid Section -->
+    <section class="container" style="max-width: 1240px; margin: 0 auto; padding: 0 1.5rem 6rem;">
+      <div id="blog-articles-grid" class="blog-grid">
+        <!-- Populated via blog.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       Reader Modal Overlay (Opens full article on card click or #hash)
+       ==================================================================== -->
+  <div id="blog-reader-modal" class="blog-reader-modal" role="dialog" aria-modal="true">
+    <article class="blog-reader-article">
+      <button id="blog-reader-close" class="blog-reader-close" aria-label="Close article reader">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div id="blog-reader-content">
+        <!-- Populated dynamically via blog.js -->
+      </div>
+    </article>
+  </div>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content" style="max-width: 1240px; margin: 0 auto; padding: 3rem 1.5rem 2rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+        <div>
+          <img src="/assets/logo_white.png" alt="Zugado Technologies" style="height: 24px; margin-bottom: 0.5rem;" />
+          <p style="font-size: 0.8125rem; color: #71717a; margin: 0;">Zugado Technologies Private Limited &bull; Applied
+            Spatial &amp; Distributed Systems</p>
+        </div>
+        <div style="display: flex; gap: 1.5rem; font-size: 0.8125rem;">
+          <a href="/privacy/" style="color: #a1a1aa; text-decoration: none;">Privacy Policy</a>
+          <a href="/terms/" style="color: #a1a1aa; text-decoration: none;">Terms of Service</a>
+          <a href="/studio/" style="color: #60a5fa; text-decoration: none; font-weight: 600;">Studio Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/scripts/main.js"></script>
+  <script type="module" src="/src/scripts/blog.js"></script>
+</body>
+
+</html>

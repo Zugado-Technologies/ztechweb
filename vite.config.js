@@ -41,6 +41,8 @@ export default defineConfig({
         contribute: resolve(__dirname, 'labs/contribute/index.html'),
         careers: resolve(__dirname, 'careers/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
+        blog: resolve(__dirname, 'blog/index.html'),
+        studio: resolve(__dirname, 'studio/index.html'),
         privacy: resolve(__dirname, 'privacy/index.html'),
         terms: resolve(__dirname, 'terms/index.html'),
         notFound: resolve(__dirname, '404.html'),

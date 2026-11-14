@@ -92,6 +92,22 @@ export function initBetaAuth() {
     const passInput = document.getElementById('beta-password');
     const card = overlay.querySelector('.beta-auth-card');
 
+    const betaToggleBtn = document.getElementById('beta-toggle-password');
+    const betaPwInput = document.getElementById('beta-password');
+    const betaEye = document.getElementById('beta-pw-eye');
+    const betaEyeOff = document.getElementById('beta-pw-eye-off');
+
+    if (betaToggleBtn && betaPwInput) {
+      betaToggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isPw = betaPwInput.type === 'password';
+        betaPwInput.type = isPw ? 'text' : 'password';
+        if (betaEye) betaEye.style.display = isPw ? 'none' : 'block';
+        if (betaEyeOff) betaEyeOff.style.display = isPw ? 'block' : 'none';
+        betaToggleBtn.title = isPw ? 'Hide password' : 'Show password';
+      });
+    }
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const u = userInput.value.trim();

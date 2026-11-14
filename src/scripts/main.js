@@ -24,8 +24,8 @@ function initScrollReveal() {
   elements.forEach(el => observer.observe(el));
 }
 
-function initOrbixDock() {
-  const dockMenuBtn = document.querySelector('.orbix-dock-menu-btn, .orbix-dock-toggle');
+function initZugadoDock() {
+  const dockMenuBtn = document.querySelector('.zg-dock-menu-btn, .zg-dock-toggle');
   const drawer = document.querySelector('.mobile-drawer');
 
   if (dockMenuBtn && drawer) {
@@ -56,10 +56,10 @@ function initOrbixDock() {
 
 /**
  * Scrollytelling Character-by-Character Text Reveal
- * Inspired by Orbix Studio Manifesto scroll scrub
+ * Zugado Manifesto text scrub
  */
 function initScrollyManifesto() {
-  const manifesto = document.querySelector('.orbix-manifesto-para');
+  const manifesto = document.querySelector('.zg-manifesto-para');
   if (!manifesto) return;
 
   const rawText = manifesto.textContent.trim();
@@ -118,7 +118,7 @@ function initScrollyManifesto() {
  * Draggable Elastic Badges with Spring Snapback
  */
 function initDraggablePills() {
-  const pills = document.querySelectorAll('.orbix-drag-pill');
+  const pills = document.querySelectorAll('.zg-drag-pill');
   if (!pills.length) return;
 
   pills.forEach((pill) => {
@@ -167,8 +167,8 @@ function initDraggablePills() {
  * Process Tab Switcher
  */
 function initProcessTabs() {
-  const tabs = document.querySelectorAll('.orbix-tab-btn');
-  const panels = document.querySelectorAll('.orbix-tab-panel');
+  const tabs = document.querySelectorAll('.zg-tab-btn');
+  const panels = document.querySelectorAll('.zg-tab-panel');
   if (!tabs.length || !panels.length) return;
 
   tabs.forEach((tab) => {
@@ -191,18 +191,18 @@ function initProcessTabs() {
  * Accessible FAQ Accordion
  */
 function initFaqAccordion() {
-  const questions = document.querySelectorAll('.orbix-faq-question');
+  const questions = document.querySelectorAll('.zg-faq-question');
   if (!questions.length) return;
 
   questions.forEach((q) => {
     q.addEventListener('click', () => {
-      const item = q.closest('.orbix-faq-item');
+      const item = q.closest('.zg-faq-item');
       const isOpen = item.classList.contains('open');
 
       // Close other items
-      document.querySelectorAll('.orbix-faq-item').forEach(i => {
+      document.querySelectorAll('.zg-faq-item').forEach(i => {
         i.classList.remove('open');
-        const btn = i.querySelector('.orbix-faq-question');
+        const btn = i.querySelector('.zg-faq-question');
         if (btn) btn.setAttribute('aria-expanded', 'false');
       });
 
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initForms();
   initScrollReveal();
-  initOrbixDock();
+  initZugadoDock();
   initScrollyManifesto();
   initDraggablePills();
   initProcessTabs();

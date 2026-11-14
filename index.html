@@ -99,28 +99,29 @@
   <link rel="stylesheet" href="/src/styles/tokens.css" />
   <link rel="stylesheet" href="/src/styles/global.css" />
   <link rel="stylesheet" href="/src/styles/components.css" />
-  <link rel="stylesheet" href="/src/styles/orbix.css" />
+  <link rel="stylesheet" href="/src/styles/design-system.css" />
 </head>
-<body class="site-wrapper orbix-body">
+<body class="site-wrapper zg-body">
 
-  <!-- 00. Floating Top Full Navbar (Orbix Signature Floating Dock) -->
-  <header class="orbix-top-dock" aria-label="Main Navigation Bar">
-    <a href="/" class="orbix-dock-brand" aria-label="Zugado Technologies Home">
-      <img src="/assets/logo_white.png" alt="Zugado Technologies" class="orbix-dock-logo" />
+  <!-- 00. Floating Top Full Navbar (Zugado Floating Navigation Dock) -->
+  <header class="zg-top-dock" aria-label="Main Navigation Bar">
+    <a href="/" class="zg-dock-brand" aria-label="Zugado Technologies Home">
+      <img src="/assets/logo_white.png" alt="Zugado Technologies" class="zg-dock-logo" />
     </a>
 
-    <nav class="orbix-dock-nav" aria-label="Site Pages">
-      <a href="/" class="orbix-dock-link active">Home</a>
-      <a href="/company/" class="orbix-dock-link">Company</a>
-      <a href="/products/" class="orbix-dock-link">Products</a>
-      <a href="/labs/" class="orbix-dock-link">Zugado Labs</a>
-      <a href="/careers/" class="orbix-dock-link">Careers</a>
-      <a href="/contact/" class="orbix-dock-link">Contact</a>
+    <nav class="zg-dock-nav" aria-label="Site Pages">
+      <a href="/" class="zg-dock-link active">Home</a>
+      <a href="/company/" class="zg-dock-link">Company</a>
+      <a href="/products/" class="zg-dock-link">Products</a>
+      <a href="/labs/" class="zg-dock-link">Zugado Labs</a>
+      <a href="/blog/" class="zg-dock-link">Blog</a>
+      <a href="/careers/" class="zg-dock-link">Careers</a>
+      <a href="/contact/" class="zg-dock-link">Contact</a>
     </nav>
 
-    <div class="orbix-dock-right">
-      <a href="/contact/" class="orbix-dock-cta">Discuss a project</a>
-      <button class="orbix-dock-toggle" aria-label="Toggle navigation drawer" aria-expanded="false">
+    <div class="zg-dock-right">
+      <a href="/contact/" class="zg-dock-cta">Discuss a project</a>
+      <button class="zg-dock-toggle" aria-label="Toggle navigation drawer" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <line x1="3" y1="8" x2="21" y2="8"></line>
           <line x1="3" y1="16" x2="21" y2="16"></line>
@@ -133,7 +134,7 @@
   <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
     <div class="mobile-drawer-header">
       <a href="/" class="mobile-drawer-brand">
-        <img src="/assets/logo_white.png" alt="Zugado Technologies" class="orbix-dock-logo" style="height: 24px;" />
+        <img src="/assets/logo_white.png" alt="Zugado Technologies" class="zg-dock-logo" style="height: 24px;" />
       </a>
       <button class="mobile-drawer-close" aria-label="Close navigation menu">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -159,6 +160,10 @@
         <span class="mobile-nav-num">/04</span>
         <span>Zugado Labs</span>
       </a>
+      <a href="/blog/" class="mobile-nav-link">
+        <span class="mobile-nav-num">/05</span>
+        <span>Blog</span>
+      </a>
       <a href="/careers/" class="mobile-nav-link">
         <span class="mobile-nav-num">/05</span>
         <span>Careers</span>
@@ -169,7 +174,7 @@
       </a>
     </nav>
     <div class="mobile-drawer-footer">
-      <a href="/contact/" class="orbix-btn-pill-dark" style="width: 100%; justify-content: center; padding: 0.85rem 1.5rem;">
+      <a href="/contact/" class="zg-btn-pill-dark" style="width: 100%; justify-content: center; padding: 0.85rem 1.5rem;">
         <span>Discuss a project</span>
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </a>
@@ -183,38 +188,38 @@
   <!-- Main Content -->
   <main class="site-main" id="main-content">
     
-    <!-- 01. Hero Section (Orbix Clean Typographic Authority) -->
-    <section class="orbix-hero-section reveal-on-scroll">
+    <!-- 01. Hero Section (Zugado Clean Typographic Authority) -->
+    <section class="zg-hero-section reveal-on-scroll">
       
       <!-- Top Pill Tag -->
-      <div class="orbix-pill-badge">
-        <span class="orbix-status-pulse"></span>
+      <div class="zg-pill-badge">
+        <span class="zg-status-pulse"></span>
         <span>INDIAN PRIVATE LIMITED COMPANY &bull; DISTRIBUTED SYSTEMS</span>
       </div>
 
       <!-- Main Title -->
-      <h1 class="orbix-hero-title">
+      <h1 class="zg-hero-title">
         Deterministic Systems &amp; Infrastructure For Modern Services
       </h1>
 
       <!-- Subtitle -->
-      <p class="orbix-hero-subtitle">
+      <p class="zg-hero-subtitle">
         Zugado Technologies engineers resilient digital platforms and explores next-generation computing paradigms through Zugado Labs. Built with disciplined engineering, localized coordination, and long-term vision.
       </p>
 
       <!-- Trust Metrics Strip -->
-      <div class="orbix-trust-strip">
-        <span class="orbix-stars">★★★★★</span>
+      <div class="zg-trust-strip">
+        <span class="zg-stars">★★★★★</span>
         <span>First-Principles Architecture &bull; 3 Core Pillars &bull; Private Beta Development</span>
       </div>
 
       <!-- Hero Actions -->
-      <div class="orbix-hero-actions">
-        <a href="/contact/" class="orbix-btn-pill-dark">
+      <div class="zg-hero-actions">
+        <a href="/contact/" class="zg-btn-pill-dark">
           Discuss a project
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 15px; height: 15px;"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </a>
-        <a href="/products/" class="orbix-btn-pill-light">
+        <a href="/products/" class="zg-btn-pill-light">
           Explore architecture
         </a>
       </div>
@@ -222,61 +227,61 @@
     </section>
 
     <!-- 02. Infinite Standards Marquee Strip -->
-    <div class="orbix-marquee-wrap" aria-hidden="true">
-      <div class="orbix-marquee-track">
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Deterministic Routing</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Wasm Execution</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Zero-Spill Partitioning</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Hardware-Signed Trust</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Sub-15ms Dispatch SLA</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>PostgreSQL Spatial Engine</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Cryptographic State Isolation</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Distributed Spatial Mesh</div>
+    <div class="zg-marquee-wrap" aria-hidden="true">
+      <div class="zg-marquee-track">
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Deterministic Routing</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Wasm Execution</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Zero-Spill Partitioning</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Hardware-Signed Trust</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Sub-15ms Dispatch SLA</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>PostgreSQL Spatial Engine</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Cryptographic State Isolation</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Distributed Spatial Mesh</div>
         <!-- Duplicate for continuous infinite scroll loop -->
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Deterministic Routing</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Wasm Execution</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Zero-Spill Partitioning</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Hardware-Signed Trust</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Sub-15ms Dispatch SLA</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>PostgreSQL Spatial Engine</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Cryptographic State Isolation</div>
-        <div class="orbix-marquee-item"><span class="orbix-marquee-dot"></span>Distributed Spatial Mesh</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Deterministic Routing</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Wasm Execution</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Zero-Spill Partitioning</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Hardware-Signed Trust</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Sub-15ms Dispatch SLA</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>PostgreSQL Spatial Engine</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Cryptographic State Isolation</div>
+        <div class="zg-marquee-item"><span class="zg-marquee-dot"></span>Distributed Spatial Mesh</div>
       </div>
     </div>
 
     <!-- 03. Floating Canvas Orbit Section -->
-    <section class="orbix-orbit-section reveal-on-scroll">
-      <div class="orbix-orbit-center">
-        <div class="orbix-subhead-pill">High-Concurrency Coordination</div>
-        <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; color: var(--orbix-dark);">
+    <section class="zg-orbit-section reveal-on-scroll">
+      <div class="zg-orbit-center">
+        <div class="zg-subhead-pill">High-Concurrency Coordination</div>
+        <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; color: var(--zg-dark);">
           Engineered For Dense Metropolitan Realities
         </h2>
-        <p style="font-size: 1.1rem; color: var(--orbix-text-sub); line-height: 1.6; margin-bottom: 2rem;">
+        <p style="font-size: 1.1rem; color: var(--zg-text-sub); line-height: 1.6; margin-bottom: 2rem;">
           Eliminating cascading failures, cross-zone latency amplification, and state drift across physical service ecosystems.
         </p>
       </div>
 
-      <div class="orbix-orbit-grid">
-        <div class="orbix-float-card">
+      <div class="zg-orbit-grid">
+        <div class="zg-float-card">
           <div style="font-size: 0.775rem; font-weight: 700; color: #10b981; letter-spacing: 0.08em; text-transform: uppercase;">Node Response</div>
-          <div class="orbix-chip-metric">14ms</div>
-          <p style="font-size: 0.925rem; color: var(--orbix-text-sub); line-height: 1.5; margin: 0;">
+          <div class="zg-chip-metric">14ms</div>
+          <p style="font-size: 0.925rem; color: var(--zg-text-sub); line-height: 1.5; margin: 0;">
             Deterministic dispatch calculation within dense geohash clusters.
           </p>
         </div>
 
-        <div class="orbix-float-card">
+        <div class="zg-float-card">
           <div style="font-size: 0.775rem; font-weight: 700; color: #2563eb; letter-spacing: 0.08em; text-transform: uppercase;">Partitioning</div>
-          <div class="orbix-chip-metric">Zero-Spill</div>
-          <p style="font-size: 0.925rem; color: var(--orbix-text-sub); line-height: 1.5; margin: 0;">
+          <div class="zg-chip-metric">Zero-Spill</div>
+          <p style="font-size: 0.925rem; color: var(--zg-text-sub); line-height: 1.5; margin: 0;">
             Geofenced physical boundaries that isolate operational volatility.
           </p>
         </div>
 
-        <div class="orbix-float-card">
+        <div class="zg-float-card">
           <div style="font-size: 0.775rem; font-weight: 700; color: #7c3aed; letter-spacing: 0.08em; text-transform: uppercase;">State Integrity</div>
-          <div class="orbix-chip-metric">100%</div>
-          <p style="font-size: 0.925rem; color: var(--orbix-text-sub); line-height: 1.5; margin: 0;">
+          <div class="zg-chip-metric">100%</div>
+          <p style="font-size: 0.925rem; color: var(--zg-text-sub); line-height: 1.5; margin: 0;">
             Hardware-verified state reconciliation with zero synthetic bloat.
           </p>
         </div>
@@ -284,20 +289,20 @@
     </section>
 
     <!-- 04. Full-Width High-Impact Cinematic Poster Card -->
-    <section class="orbix-poster-banner reveal-on-scroll">
-      <div class="orbix-poster-card">
-        <span class="orbix-poster-eyebrow">INFRASTRUCTURE ENGINE // V3.0</span>
-        <h2 class="orbix-poster-title">
+    <section class="zg-poster-banner reveal-on-scroll">
+      <div class="zg-poster-card">
+        <span class="zg-poster-eyebrow">INFRASTRUCTURE ENGINE // V3.0</span>
+        <h2 class="zg-poster-title">
           DETERMINISTIC SYSTEMS FOR DISTRIBUTED SERVICES
         </h2>
-        <p class="orbix-poster-desc">
+        <p class="zg-poster-desc">
           We build platforms that treat spatial proximity as a first-class engineering primitive. From millisecond local dispatch to cryptographic persistence, our architecture is engineered for uninterrupted operation.
         </p>
         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-          <a href="/products/" class="orbix-btn-pill-dark" style="background-color: #38bdf8; color: #000000 !important; font-weight: 700;">
+          <a href="/products/" class="zg-btn-pill-dark" style="background-color: #38bdf8; color: #000000 !important; font-weight: 700;">
             Explore flagship platform
           </a>
-          <a href="/company/" class="orbix-btn-pill-light" style="background-color: transparent; color: #ffffff !important; border-color: rgba(255, 255, 255, 0.2);">
+          <a href="/company/" class="zg-btn-pill-light" style="background-color: transparent; color: #ffffff !important; border-color: rgba(255, 255, 255, 0.2);">
             Read architectural whitepaper
           </a>
         </div>
@@ -305,53 +310,53 @@
     </section>
 
     <!-- 05. Scrollytelling Manifesto Section with Draggable Elastic Badges -->
-    <section class="orbix-manifesto-section reveal-on-scroll">
-      <span class="orbix-manifesto-badge">OUR ENGINEERING MANIFESTO</span>
+    <section class="zg-manifesto-section reveal-on-scroll">
+      <span class="zg-manifesto-badge">OUR ENGINEERING MANIFESTO</span>
 
       <!-- Draggable Badges with Elastic Snapback Physics -->
-      <div class="orbix-drag-pill orbix-drag-pill-orange" title="Click and drag me!">
+      <div class="zg-drag-pill zg-drag-pill-orange" title="Click and drag me!">
         Zero Speculative Bloat
       </div>
-      <div class="orbix-drag-pill orbix-drag-pill-blue" title="Click and drag me!">
+      <div class="zg-drag-pill zg-drag-pill-blue" title="Click and drag me!">
         Hardware-Verified Trust
       </div>
-      <div class="orbix-drag-pill orbix-drag-pill-cyan" title="Click and drag me!">
+      <div class="zg-drag-pill zg-drag-pill-cyan" title="Click and drag me!">
         Deterministic Execution
       </div>
 
       <!-- Scrollytelling Text Paragraph -->
-      <p class="orbix-manifesto-para">
+      <p class="zg-manifesto-para">
         As an engineering-first technology company, we go beyond synthetic digital interfaces. We design and construct deterministic systems that solve real operational friction, eliminate spatial latency, and create durable long-term infrastructure for communities and enterprise partners.
       </p>
 
-      <div style="margin-top: 2.5rem; font-size: 0.875rem; color: var(--orbix-text-muted);">
+      <div style="margin-top: 2.5rem; font-size: 0.875rem; color: var(--zg-text-muted);">
         Interactive canvas &bull; Scroll to illuminate philosophy &bull; Drag tags to interact
       </div>
     </section>
 
     <!-- 06. Stacked Sticky Cards (/01, /02, /03, /04) -->
-    <section class="orbix-stack-section">
-      <div class="orbix-stack-header reveal-on-scroll">
-        <div class="orbix-subhead-pill">Architectural Verticals</div>
-        <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; color: var(--orbix-dark); margin-bottom: 0.75rem;">
+    <section class="zg-stack-section">
+      <div class="zg-stack-header reveal-on-scroll">
+        <div class="zg-subhead-pill">Architectural Verticals</div>
+        <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; color: var(--zg-dark); margin-bottom: 0.75rem;">
           Specialized Engineering Pillars
         </h2>
-        <p style="font-size: 1.05rem; color: var(--orbix-text-sub); max-width: 600px; margin: 0 auto;">
+        <p style="font-size: 1.05rem; color: var(--zg-text-sub); max-width: 600px; margin: 0 auto;">
           Distinct divisions operating under shared architectural discipline.
         </p>
       </div>
 
-      <div class="orbix-stacked-cards-list">
+      <div class="zg-stacked-cards-list">
         
         <!-- Stack Card 01: Core Platform Systems -->
-        <article class="orbix-stacked-card orbix-stack-01">
+        <article class="zg-stacked-card zg-stack-01">
           <div>
-            <div class="orbix-stack-num">/01</div>
-            <h3 class="orbix-stack-title">Core Platform Systems</h3>
-            <p class="orbix-stack-desc">
+            <div class="zg-stack-num">/01</div>
+            <h3 class="zg-stack-title">Core Platform Systems</h3>
+            <p class="zg-stack-desc">
               Foundational software engineering grounded in resilient architecture, low-latency execution loops, and deterministic guarantees under heavy local load.
             </p>
-            <a href="/company/" class="orbix-btn-pill-dark" style="background-color: #ffffff; color: #000000 !important; font-weight: 700;">
+            <a href="/company/" class="zg-btn-pill-dark" style="background-color: #ffffff; color: #000000 !important; font-weight: 700;">
               Company overview
             </a>
           </div>
@@ -365,14 +370,14 @@
         </article>
 
         <!-- Stack Card 02: Commercial Flagship Platform -->
-        <article class="orbix-stacked-card orbix-stack-02">
+        <article class="zg-stacked-card zg-stack-02">
           <div>
-            <div class="orbix-stack-num">/02</div>
-            <h3 class="orbix-stack-title">Commercial Flagship Platform</h3>
-            <p class="orbix-stack-desc">
+            <div class="zg-stack-num">/02</div>
+            <h3 class="zg-stack-title">Commercial Flagship Platform</h3>
+            <p class="zg-stack-desc">
               Our flagship commercial initiative in spatial coordination, engineered to synchronize service fulfillment with mathematical certainty and zero spatial spill.
             </p>
-            <a href="/products/" class="orbix-btn-pill-dark" style="background-color: #ffffff; color: #000000 !important; font-weight: 700;">
+            <a href="/products/" class="zg-btn-pill-dark" style="background-color: #ffffff; color: #000000 !important; font-weight: 700;">
               Platform architecture
             </a>
           </div>
@@ -386,15 +391,15 @@
         </article>
 
         <!-- Stack Card 03: Zugado Labs (Pitch-Black OLED) -->
-        <article class="orbix-stacked-card orbix-stack-03">
+        <article class="zg-stacked-card zg-stack-03">
           <div>
-            <div class="orbix-stack-num" style="color: #00f0ff; opacity: 0.5;">/03</div>
-            <h3 class="orbix-stack-title">Zugado Labs &amp; Applied Research</h3>
-            <p class="orbix-stack-desc" style="color: #a1a1aa;">
+            <div class="zg-stack-num" style="color: #00f0ff; opacity: 0.5;">/03</div>
+            <h3 class="zg-stack-title">Zugado Labs &amp; Applied Research</h3>
+            <p class="zg-stack-desc" style="color: #a1a1aa;">
               Our dedicated technical experimentation studio exploring multi-layer computing models, cryptographic state persistence, and experimental prototypes.
             </p>
             <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-              <a href="/labs/" class="orbix-btn-pill-dark" style="background-color: #00f0ff; color: #000000 !important; font-weight: 700; box-shadow: 0 4px 20px rgba(0, 240, 255, 0.35);">
+              <a href="/labs/" class="zg-btn-pill-dark" style="background-color: #00f0ff; color: #000000 !important; font-weight: 700; box-shadow: 0 4px 20px rgba(0, 240, 255, 0.35);">
                 Enter Zugado Labs
               </a>
             </div>
@@ -409,14 +414,14 @@
         </article>
 
         <!-- Stack Card 04: Spatial Mesh Infrastructure -->
-        <article class="orbix-stacked-card orbix-stack-04">
+        <article class="zg-stacked-card zg-stack-04">
           <div>
-            <div class="orbix-stack-num">/04</div>
-            <h3 class="orbix-stack-title">Spatial Mesh Infrastructure</h3>
-            <p class="orbix-stack-desc">
+            <div class="zg-stack-num">/04</div>
+            <h3 class="zg-stack-title">Spatial Mesh Infrastructure</h3>
+            <p class="zg-stack-desc">
               High-density spatial node partitioning that confines localized demand to geographic clusters, eliminating cross-zone latency amplification.
             </p>
-            <a href="/products/" class="orbix-btn-pill-dark" style="background-color: #ffffff; color: #000000 !important; font-weight: 700;">
+            <a href="/products/" class="zg-btn-pill-dark" style="background-color: #ffffff; color: #000000 !important; font-weight: 700;">
               Infrastructure specs
             </a>
           </div>
@@ -433,51 +438,51 @@
     </section>
 
     <!-- 07. Interactive 3-Pillar Tabbed Process Switcher -->
-    <section class="orbix-process-section reveal-on-scroll">
-      <div class="orbix-process-card">
+    <section class="zg-process-section reveal-on-scroll">
+      <div class="zg-process-card">
         
         <div style="text-align: center; margin-bottom: 2rem;">
-          <div class="orbix-subhead-pill">Organizational Structure</div>
-          <h2 style="font-size: clamp(2rem, 3.8vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; color: var(--orbix-dark); margin-bottom: 0.5rem;">
+          <div class="zg-subhead-pill">Organizational Structure</div>
+          <h2 style="font-size: clamp(2rem, 3.8vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; color: var(--zg-dark); margin-bottom: 0.5rem;">
             Three Distinct Entities, One Architectural Standard
           </h2>
-          <p style="color: var(--orbix-text-sub); font-size: 1.05rem;">
+          <p style="color: var(--zg-text-sub); font-size: 1.05rem;">
             Select a division to inspect mandate, governance, and technology focus.
           </p>
         </div>
 
         <!-- Pill Tabs Switcher -->
-        <div class="orbix-tabs-bar" role="tablist">
-          <button class="orbix-tab-btn active" data-target="tab-company" role="tab" aria-selected="true">
+        <div class="zg-tabs-bar" role="tablist">
+          <button class="zg-tab-btn active" data-target="tab-company" role="tab" aria-selected="true">
             Zugado Technologies (Company)
           </button>
-          <button class="orbix-tab-btn" data-target="tab-product" role="tab" aria-selected="false">
+          <button class="zg-tab-btn" data-target="tab-product" role="tab" aria-selected="false">
             Flagship Product Platform
           </button>
-          <button class="orbix-tab-btn" data-target="tab-labs" role="tab" aria-selected="false">
+          <button class="zg-tab-btn" data-target="tab-labs" role="tab" aria-selected="false">
             Zugado Labs (Experimental)
           </button>
         </div>
 
         <!-- Panel 1: Company -->
-        <div class="orbix-tab-panel active" id="tab-company" role="tabpanel">
+        <div class="zg-tab-panel active" id="tab-company" role="tabpanel">
           <div>
             <div style="font-size: 0.8125rem; font-weight: 700; color: #2563eb; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;">
               CORPORATE PARENT // GOVERNANCE
             </div>
-            <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: var(--orbix-dark);">
+            <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: var(--zg-dark);">
               Zugado Technologies Private Limited
             </h3>
-            <p style="color: var(--orbix-text-sub); line-height: 1.65; margin-bottom: 1.5rem;">
+            <p style="color: var(--zg-text-sub); line-height: 1.65; margin-bottom: 1.5rem;">
               Registered Indian corporate entity responsible for overarching engineering governance, strategic technology incubation, and commercial product operations.
             </p>
-            <a href="/company/" class="orbix-btn-pill-dark">About the company</a>
+            <a href="/company/" class="zg-btn-pill-dark">About the company</a>
           </div>
-          <div class="orbix-terminal-card">
-            <div class="orbix-terminal-top">
+          <div class="zg-terminal-card">
+            <div class="zg-terminal-top">
               <span style="font-size: 0.75rem; color: #8b949e;">entity-spec.json</span>
             </div>
-            <pre class="orbix-terminal-code"><code>{
+            <pre class="zg-terminal-code"><code>{
   <span style="color: #79c0ff;">"entity_name"</span>: <span style="color: #a5d6ff;">"Zugado Technologies Pvt Ltd"</span>,
   <span style="color: #79c0ff;">"jurisdiction"</span>: <span style="color: #a5d6ff;">"India"</span>,
   <span style="color: #79c0ff;">"engineering_model"</span>: <span style="color: #a5d6ff;">"Deterministic First-Principles"</span>,
@@ -487,24 +492,24 @@
         </div>
 
         <!-- Panel 2: Flagship Product -->
-        <div class="orbix-tab-panel" id="tab-product" role="tabpanel">
+        <div class="zg-tab-panel" id="tab-product" role="tabpanel">
           <div>
             <div style="font-size: 0.8125rem; font-weight: 700; color: #0284c7; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;">
               COMMERCIAL FLAGSHIP // URBAN COORDINATION
             </div>
-            <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: var(--orbix-dark);">
+            <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: var(--zg-dark);">
               Flagship Coordination Platform
             </h3>
-            <p style="color: var(--orbix-text-sub); line-height: 1.65; margin-bottom: 1.5rem;">
+            <p style="color: var(--zg-text-sub); line-height: 1.65; margin-bottom: 1.5rem;">
               Direct coordination platform eliminating physical intermediaries and solving critical operational friction across local service delivery.
             </p>
-            <a href="/products/" class="orbix-btn-pill-dark">Explore platform</a>
+            <a href="/products/" class="zg-btn-pill-dark">Explore platform</a>
           </div>
-          <div class="orbix-terminal-card">
-            <div class="orbix-terminal-top">
+          <div class="zg-terminal-card">
+            <div class="zg-terminal-top">
               <span style="font-size: 0.75rem; color: #8b949e;">product-dispatch.json</span>
             </div>
-            <pre class="orbix-terminal-code"><code>{
+            <pre class="zg-terminal-code"><code>{
   <span style="color: #79c0ff;">"product_initiative"</span>: <span style="color: #a5d6ff;">"Flagship Engine"</span>,
   <span style="color: #79c0ff;">"target_domain"</span>: <span style="color: #a5d6ff;">"Spatial Services"</span>,
   <span style="color: #79c0ff;">"routing_model"</span>: <span style="color: #a5d6ff;">"Zero-Spill Cluster Mesh"</span>,
@@ -514,24 +519,24 @@
         </div>
 
         <!-- Panel 3: Labs -->
-        <div class="orbix-tab-panel" id="tab-labs" role="tabpanel">
+        <div class="zg-tab-panel" id="tab-labs" role="tabpanel">
           <div>
             <div style="font-size: 0.8125rem; font-weight: 700; color: #00f0ff; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;">
               EXPERIMENTAL R&amp;D // APPLIED RESEARCH
             </div>
-            <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: var(--orbix-dark);">
+            <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: var(--zg-dark);">
               Zugado Labs
             </h3>
-            <p style="color: var(--orbix-text-sub); line-height: 1.65; margin-bottom: 1.5rem;">
+            <p style="color: var(--zg-text-sub); line-height: 1.65; margin-bottom: 1.5rem;">
               Our exploratory research division investigating multi-layer computing models, cryptographic verification, and sovereign data systems.
             </p>
-            <a href="/labs/" class="orbix-btn-pill-dark" style="background-color: #000000; color: #00f0ff !important;">Enter Labs</a>
+            <a href="/labs/" class="zg-btn-pill-dark" style="background-color: #000000; color: #00f0ff !important;">Enter Labs</a>
           </div>
-          <div class="orbix-terminal-card" style="border-color: #00f0ff44;">
-            <div class="orbix-terminal-top">
+          <div class="zg-terminal-card" style="border-color: #00f0ff44;">
+            <div class="zg-terminal-top">
               <span style="font-size: 0.75rem; color: #00f0ff;">labs-core.json</span>
             </div>
-            <pre class="orbix-terminal-code"><code>{
+            <pre class="zg-terminal-code"><code>{
   <span style="color: #79c0ff;">"initiative_layers"</span>: [
     <span style="color: #a5d6ff;">"Active Prototypes"</span>,
     <span style="color: #a5d6ff;">"Applied Research Case Studies"</span>,
@@ -547,16 +552,16 @@
 
     <!-- 08. Live Telemetry Architecture Terminal Card -->
     <section style="max-width: 1080px; margin: 4rem auto; padding: 0 1.5rem;" class="reveal-on-scroll">
-      <div class="orbix-terminal-card">
-        <div class="orbix-terminal-top">
-          <div class="orbix-terminal-dots">
-            <span class="orbix-terminal-dot" style="background-color: #ff5f56;"></span>
-            <span class="orbix-terminal-dot" style="background-color: #ffbd2e;"></span>
-            <span class="orbix-terminal-dot" style="background-color: #27c93f;"></span>
+      <div class="zg-terminal-card">
+        <div class="zg-terminal-top">
+          <div class="zg-terminal-dots">
+            <span class="zg-terminal-dot" style="background-color: #ff5f56;"></span>
+            <span class="zg-terminal-dot" style="background-color: #ffbd2e;"></span>
+            <span class="zg-terminal-dot" style="background-color: #27c93f;"></span>
           </div>
           <span style="font-size: 0.75rem; color: #8b949e; letter-spacing: 0.05em;">cluster-dispatch-telemetry.json &bull; 14ms SLA</span>
         </div>
-        <pre class="orbix-terminal-code"><code><span style="color: #8b949e;">// Zugado Deterministic Local Routing Engine</span>
+        <pre class="zg-terminal-code"><code><span style="color: #8b949e;">// Zugado Deterministic Local Routing Engine</span>
 <span style="color: #ff7b72;">POST</span> <span style="color: #a5d6ff;">/v1/dispatch/clusters/route</span>
 {
   <span style="color: #79c0ff;">"cluster_id"</span>: <span style="color: #a5d6ff;">"hyd-central-04"</span>,
@@ -570,33 +575,33 @@
     </section>
 
     <!-- 09. Bento Stats Strip -->
-    <section class="orbix-bento-section reveal-on-scroll">
-      <div class="orbix-bento-grid">
-        <div class="orbix-bento-card">
-          <div style="font-size: 0.75rem; font-weight: 700; color: var(--orbix-text-muted); letter-spacing: 0.1em; text-transform: uppercase;">
+    <section class="zg-bento-section reveal-on-scroll">
+      <div class="zg-bento-grid">
+        <div class="zg-bento-card">
+          <div style="font-size: 0.75rem; font-weight: 700; color: var(--zg-text-muted); letter-spacing: 0.1em; text-transform: uppercase;">
             LATENCY GUARANTEE
           </div>
-          <div style="font-size: 3rem; font-weight: 900; letter-spacing: -0.04em; color: var(--orbix-dark); margin: 1rem 0;">
+          <div style="font-size: 3rem; font-weight: 900; letter-spacing: -0.04em; color: var(--zg-dark); margin: 1rem 0;">
             14ms
           </div>
-          <p style="font-size: 0.9375rem; color: var(--orbix-text-sub); line-height: 1.5; margin: 0;">
+          <p style="font-size: 0.9375rem; color: var(--zg-text-sub); line-height: 1.5; margin: 0;">
             Peak dispatch computation time bound across dense urban nodes.
           </p>
         </div>
 
-        <div class="orbix-bento-card">
-          <div style="font-size: 0.75rem; font-weight: 700; color: var(--orbix-text-muted); letter-spacing: 0.1em; text-transform: uppercase;">
+        <div class="zg-bento-card">
+          <div style="font-size: 0.75rem; font-weight: 700; color: var(--zg-text-muted); letter-spacing: 0.1em; text-transform: uppercase;">
             STATE MACHINE
           </div>
           <div style="font-size: 3rem; font-weight: 900; letter-spacing: -0.04em; color: #2563eb; margin: 1rem 0;">
             100%
           </div>
-          <p style="font-size: 0.9375rem; color: var(--orbix-text-sub); line-height: 1.5; margin: 0;">
+          <p style="font-size: 0.9375rem; color: var(--zg-text-sub); line-height: 1.5; margin: 0;">
             Deterministic idempotency eliminating duplicate service operations.
           </p>
         </div>
 
-        <div class="orbix-bento-card orbix-bento-card-dark">
+        <div class="zg-bento-card zg-bento-card-dark">
           <div style="font-size: 0.75rem; font-weight: 700; color: #a1a1aa; letter-spacing: 0.1em; text-transform: uppercase;">
             SPECIALIZED PILLARS
           </div>
@@ -611,71 +616,71 @@
     </section>
 
     <!-- 10. FAQ Accordion & Direct Inquiry Bento -->
-    <section class="orbix-faq-section reveal-on-scroll">
-      <div class="orbix-faq-grid">
+    <section class="zg-faq-section reveal-on-scroll">
+      <div class="zg-faq-grid">
         
         <div>
-          <div class="orbix-subhead-pill">Architecture FAQ</div>
-          <h2 style="font-size: clamp(2rem, 3.5vw, 2.5rem); font-weight: 800; letter-spacing: -0.03em; color: var(--orbix-dark); margin-bottom: 1.25rem;">
+          <div class="zg-subhead-pill">Architecture FAQ</div>
+          <h2 style="font-size: clamp(2rem, 3.5vw, 2.5rem); font-weight: 800; letter-spacing: -0.03em; color: var(--zg-dark); margin-bottom: 1.25rem;">
             Got Questions?<br />We've Got Answers.
           </h2>
-          <p style="color: var(--orbix-text-sub); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2.25rem;">
+          <p style="color: var(--zg-text-sub); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2.25rem;">
             Transparent dialogue on how we structure our platforms, our legal identity, and collaborative initiatives.
           </p>
 
-          <div style="background: #ffffff; border: 1px solid var(--orbix-border); border-radius: 20px; padding: 2rem; box-shadow: var(--orbix-shadow-soft);">
+          <div style="background: #ffffff; border: 1px solid var(--zg-border); border-radius: 20px; padding: 2rem; box-shadow: var(--zg-shadow-soft);">
             <div style="font-size: 0.8125rem; font-weight: 700; color: #2563eb; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.08em;">
               DIRECT TECHNICAL DIALOGUE
             </div>
-            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--orbix-dark);">
+            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--zg-dark);">
               Initiate an Inquiry
             </h3>
-            <p style="font-size: 0.925rem; color: var(--orbix-text-sub); line-height: 1.5; margin-bottom: 1.5rem;">
+            <p style="font-size: 0.925rem; color: var(--zg-text-sub); line-height: 1.5; margin-bottom: 1.5rem;">
               Reach our engineering desk directly for architecture dialogue or strategic collaborations.
             </p>
-            <a href="/contact/" class="orbix-btn-pill-dark">Open Contact Desk</a>
+            <a href="/contact/" class="zg-btn-pill-dark">Open Contact Desk</a>
           </div>
         </div>
 
         <!-- FAQ Items -->
-        <div class="orbix-faq-container">
+        <div class="zg-faq-container">
           
-          <div class="orbix-faq-item open">
-            <button class="orbix-faq-question" aria-expanded="true">
+          <div class="zg-faq-item open">
+            <button class="zg-faq-question" aria-expanded="true">
               <span>What is deterministic spatial dispatch?</span>
-              <span class="orbix-faq-icon">+</span>
+              <span class="zg-faq-icon">+</span>
             </button>
-            <div class="orbix-faq-answer">
+            <div class="zg-faq-answer">
               Deterministic spatial dispatch is an architecture wherein physical location coordinates and service demand are calculated within strictly bounded geographical zones, eliminating unpredictable cross-zone latency and cascading service failures.
             </div>
           </div>
 
-          <div class="orbix-faq-item">
-            <button class="orbix-faq-question" aria-expanded="false">
+          <div class="zg-faq-item">
+            <button class="zg-faq-question" aria-expanded="false">
               <span>What is the difference between the flagship platform and Zugado Labs?</span>
-              <span class="orbix-faq-icon">+</span>
+              <span class="zg-faq-icon">+</span>
             </button>
-            <div class="orbix-faq-answer">
+            <div class="zg-faq-answer">
               The flagship platform is our primary commercial initiative in spatial coordination. Zugado Labs is an experimental research division exploring cutting-edge computing concepts, layered research case studies, and stealth prototypes.
             </div>
           </div>
 
-          <div class="orbix-faq-item">
-            <button class="orbix-faq-question" aria-expanded="false">
+          <div class="zg-faq-item">
+            <button class="zg-faq-question" aria-expanded="false">
               <span>How can external organizations collaborate with Zugado?</span>
-              <span class="orbix-faq-icon">+</span>
+              <span class="zg-faq-icon">+</span>
             </button>
-            <div class="orbix-faq-answer">
+            <div class="zg-faq-answer">
               We welcome formal technology inquiries, research collaborations, and prospective team members via our structured contact channels. Statutory particulars are shared upon verified enterprise inquiry.
             </div>
           </div>
 
-          <div class="orbix-faq-item">
-            <button class="orbix-faq-question" aria-expanded="false">
+          <div class="zg-faq-item">
+            <button class="zg-faq-question" aria-expanded="false">
               <span>What technology stack does Zugado rely on?</span>
-              <span class="orbix-faq-icon">+</span>
+              <span class="zg-faq-icon">+</span>
             </button>
-            <div class="orbix-faq-answer">
+            <div class="zg-faq-answer">
               Our frontend is built on lightweight, static-first Vanilla JavaScript and CSS with Vite. Our core infrastructure leverages PostgreSQL spatial extensions, compiled WebAssembly modules, and Linux-hardened micro-daemons for absolute resilience.
             </div>
           </div>
@@ -687,34 +692,34 @@
 
     <!-- 11. Next Steps / Inquiries CTA Strip -->
     <section style="padding: 5rem 1.5rem 7rem; text-align: center; max-width: 780px; margin: 0 auto;" class="reveal-on-scroll">
-      <div class="orbix-subhead-pill">Next Steps</div>
-      <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; color: var(--orbix-dark);">
+      <div class="zg-subhead-pill">Next Steps</div>
+      <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; color: var(--zg-dark);">
         Ready to start a conversation?
       </h2>
-      <p style="font-size: 1.1rem; color: var(--orbix-text-sub); line-height: 1.6; margin-bottom: 2.25rem;">
+      <p style="font-size: 1.1rem; color: var(--zg-text-sub); line-height: 1.6; margin-bottom: 2.25rem;">
         Whether you represent an organization seeking technology dialogue or are interested in our architecture, we welcome direct correspondence.
       </p>
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="/contact/" class="orbix-btn-pill-dark">Initiate an inquiry</a>
-        <a href="/careers/" class="orbix-btn-pill-light">Explore careers</a>
+        <a href="/contact/" class="zg-btn-pill-dark">Initiate an inquiry</a>
+        <a href="/careers/" class="zg-btn-pill-light">Explore careers</a>
       </div>
     </section>
 
   </main>
 
   <!-- 12. Statutory Corporate Footer -->
-  <footer class="site-footer" style="background-color: #ffffff; border-top: 1px solid var(--orbix-border); padding: 5rem 0 3rem;">
+  <footer class="site-footer" style="background-color: #ffffff; border-top: 1px solid var(--zg-border); padding: 5rem 0 3rem;">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="/assets/zugado_logo_theme.png" alt="Zugado Technologies" class="brand-logo-img" style="height: 30px;" />
-          <p style="color: var(--orbix-text-sub); font-size: 0.9375rem; line-height: 1.6; margin-top: 1rem;">
+          <p style="color: var(--zg-text-sub); font-size: 0.9375rem; line-height: 1.6; margin-top: 1rem;">
             Building digital products and exploring emerging technology through disciplined engineering and focused experimentation.
           </p>
         </div>
 
         <div class="footer-col">
-          <h4 style="color: var(--orbix-dark); font-weight: 700;">Company</h4>
+          <h4 style="color: var(--zg-dark); font-weight: 700;">Company</h4>
           <ul class="footer-links">
             <li><a href="/company/" class="footer-link">About &amp; Approach</a></li>
             <li><a href="/careers/" class="footer-link">Careers</a></li>
@@ -723,16 +728,17 @@
         </div>
 
         <div class="footer-col">
-          <h4 style="color: var(--orbix-dark); font-weight: 700;">Products &amp; Labs</h4>
+          <h4 style="color: var(--zg-dark); font-weight: 700;">Products &amp; Labs</h4>
           <ul class="footer-links">
             <li><a href="/products/" class="footer-link">Products Index</a></li>
             <li><a href="/labs/" class="footer-link">Zugado Labs</a></li>
+            <li><a href="/blog/" class="footer-link">Blog &amp; Publications</a></li>
             <li><a href="/labs/contribute/" class="footer-link">Contribute</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4 style="color: var(--orbix-dark); font-weight: 700;">Corporate &amp; Legal</h4>
+          <h4 style="color: var(--zg-dark); font-weight: 700;">Corporate &amp; Legal</h4>
           <ul class="footer-links">
             <li><a href="/privacy/" class="footer-link">Privacy Policy</a></li>
             <li><a href="/terms/" class="footer-link">Terms of Use</a></li>
@@ -741,8 +747,8 @@
         </div>
       </div>
 
-      <div class="footer-bottom" style="border-top: 1px solid var(--orbix-border); margin-top: 3.5rem; padding-top: 2rem;">
-        <div class="footer-statutory" style="color: var(--orbix-text-muted); font-size: 0.8125rem; line-height: 1.6;">
+      <div class="footer-bottom" style="border-top: 1px solid var(--zg-border); margin-top: 3.5rem; padding-top: 2rem;">
+        <div class="footer-statutory" style="color: var(--zg-text-muted); font-size: 0.8125rem; line-height: 1.6;">
           &copy; 2026 Zugado Technologies Private Limited. All rights reserved.<br />
           Registered Indian Private Limited Company. Corporate identity and statutory particulars available upon formal enquiry.
         </div>
