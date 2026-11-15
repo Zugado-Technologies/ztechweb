@@ -536,6 +536,17 @@
 }
 
 /* Draggable Floating Elastic Badges */
+.zg-pill-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.zg-pill-canvas .zg-drag-pill {
+  pointer-events: auto;
+}
+
 .zg-drag-pill {
   position: absolute;
   padding: 0.45rem 1rem;
@@ -1433,11 +1444,12 @@ section,
     padding-top: 4.75rem;
   }
 
-  /* Stacked cards flow naturally on mobile screens to prevent clipping */
+  /* Stacked cards: disable sticky and flow naturally on mobile */
+  .zg-stacked-cards-list,
   .zg-card-scroll-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
   }
   .zg-stacked-card {
     position: relative !important;
@@ -1447,13 +1459,33 @@ section,
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
   }
 
-  /* Manifesto interactive pills positioned below text to avoid text obstruction */
+  /* Manifesto: target the actual section class used in HTML */
+  .zg-manifesto-section,
   .zg-manifesto-container {
-    padding: 3rem 1.25rem 2.5rem;
+    padding: 3rem 1.25rem 2.5rem !important;
+    overflow: visible !important;
   }
   .zg-manifesto-para {
-    font-size: clamp(1.25rem, 5vw, 1.85rem) !important;
-    line-height: 1.45 !important;
+    font-size: clamp(1.15rem, 4.5vw, 1.65rem) !important;
+    line-height: 1.5 !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+  /* Draggable pills: pull out of absolute flow into inline flex row under text */
+  .zg-manifesto-section .zg-drag-pill,
+  .zg-pill-canvas .zg-drag-pill,
+  .zg-drag-pill {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    font-size: 0.78rem !important;
+    padding: 0.45rem 0.95rem !important;
+    display: inline-flex !important;
   }
   .zg-pill-canvas {
     position: relative !important;
@@ -1465,13 +1497,31 @@ section,
     gap: 0.6rem !important;
     margin-top: 2rem !important;
   }
-  .zg-drag-pill {
-    position: relative !important;
-    inset: auto !important;
-    transform: none !important;
-    margin: 0 !important;
-    font-size: 0.78rem !important;
-    padding: 0.45rem 0.95rem !important;
+
+  /* Tabs bar: horizontally scrollable pill strip on mobile */
+  .zg-tabs-bar {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    justify-content: flex-start !important;
+    max-width: 100% !important;
+    gap: 0.35rem !important;
+    padding: 0.35rem !important;
+  }
+  .zg-tabs-bar::-webkit-scrollbar {
+    display: none !important;
+  }
+  .zg-tabs-bar .zg-tab-btn {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    font-size: 0.8rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  /* Process card: less padding on mobile */
+  .zg-process-card {
+    padding: 2rem 1.25rem !important;
   }
 
   /* Grids collapse cleanly on tablet/mobile */
@@ -1489,6 +1539,13 @@ section,
   .zg-stats-bento {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1rem !important;
+  }
+
+  /* Section headings: balanced wrap */
+  .zg-stack-header h2,
+  .zg-process-card h2,
+  .zg-faq-section h2 {
+    text-wrap: balance !important;
   }
 }
 
@@ -1542,12 +1599,20 @@ section,
     letter-spacing: -0.03em !important;
     margin: 1.25rem 0 1rem !important;
     line-height: 1.15 !important;
-    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    text-wrap: balance !important;
+    hyphens: auto !important;
   }
 
   .zg-hero-lead {
     font-size: 0.95rem !important;
     line-height: 1.55 !important;
+  }
+
+  .zg-hero-subtitle {
+    font-size: 0.925rem !important;
+    line-height: 1.6 !important;
   }
 
   .zg-hero-actions,
@@ -1610,7 +1675,44 @@ section,
     border-radius: 20px !important;
   }
 
+  /* Stacked card inner layout: single column with proper text flow */
+  .zg-stacked-card > div {
+    min-width: 0 !important;
+  }
+
+  .zg-stack-title {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+    text-wrap: balance !important;
+  }
+
+  .zg-stack-desc {
+    font-size: 0.925rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .zg-stack-num {
+    font-size: 2.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Inner dark spec boxes in stacked cards */
+  .zg-stacked-card > div:last-child {
+    padding: 1.25rem !important;
+    border-radius: 14px !important;
+  }
+  .zg-stacked-card > div:last-child > div:first-child {
+    font-size: 0.7rem !important;
+  }
+  .zg-stacked-card > div:last-child > div:nth-child(2) {
+    font-size: 1.05rem !important;
+  }
+  .zg-stacked-card > div:last-child > p {
+    font-size: 0.85rem !important;
+  }
+
   /* Footer Layout */
+  .footer-grid,
   .footer-cols {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
@@ -1619,6 +1721,26 @@ section,
     flex-direction: column !important;
     gap: 1rem !important;
     align-items: flex-start !important;
+  }
+  .footer-col h4 {
+    margin-bottom: 0.85rem !important;
+  }
+  .footer-links {
+    gap: 0.65rem !important;
+  }
+  .footer-link {
+    font-size: 0.9rem !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* Trust strip: wrap gracefully */
+  .zg-trust-strip {
+    flex-direction: column !important;
+    gap: 0.35rem !important;
+    text-align: center !important;
+    font-size: 0.8rem !important;
   }
 }
 
@@ -1629,11 +1751,49 @@ section,
   .careers-hero-title,
   .labs-hero-title,
   .contact-hero-title {
-    font-size: 1.75rem !important;
+    font-size: 1.65rem !important;
+    line-height: 1.2 !important;
   }
 
   .zg-hero-section {
     padding: 1.75rem 0.75rem 1.75rem !important;
+  }
+
+  /* Stacked cards: tighter padding on very small screens */
+  .zg-stacked-card {
+    padding: 1.5rem 1rem !important;
+    border-radius: 16px !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Poster card typography */
+  .zg-poster-title {
+    font-size: 1.65rem !important;
+    line-height: 1.15 !important;
+    text-wrap: balance !important;
+  }
+  .zg-poster-desc {
+    font-size: 0.9rem !important;
+  }
+
+  /* Manifesto tighter on small screens */
+  .zg-manifesto-para {
+    font-size: 1.1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Section margins: reduce vertical whitespace */
+  .zg-stack-section,
+  .zg-process-section,
+  .zg-bento-section,
+  .zg-faq-section,
+  .zg-manifesto-section,
+  .zg-orbit-section,
+  .zg-poster-banner {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 
   .zg-dock-cta span {
